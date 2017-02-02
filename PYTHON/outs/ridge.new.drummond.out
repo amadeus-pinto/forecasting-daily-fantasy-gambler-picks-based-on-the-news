@@ -1,0 +1,76 @@
+here
+localizing on Andre Drummond,len=194
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 194 entries, 19 to 44542
+Data columns (total 37 columns):
+contest_ID              194 non-null int64
+date                    194 non-null object
+name                    194 non-null object
+slate_size              194 non-null int64
+percent_own             194 non-null float64
+salary                  194 non-null float64
+max_entries_per_user    194 non-null int64
+total_entries           194 non-null int64
+proj_fc                 194 non-null float64
+proj_mo                 194 non-null float64
+team                    194 non-null object
+opponent                194 non-null object
+score                   194 non-null float64
+position                194 non-null object
+value                   194 non-null float64
+season                  194 non-null float64
+rm.01.score             194 non-null float64
+rm.05.score             194 non-null float64
+rm.10.score             194 non-null float64
+rm.01.salary            194 non-null float64
+rm.05.salary            194 non-null float64
+rm.10.salary            194 non-null float64
+rm.01.value             194 non-null float64
+rm.05.value             194 non-null float64
+rm.10.value             194 non-null float64
+z.salary                194 non-null float64
+z.proj_fc               194 non-null float64
+z.proj_mo               194 non-null float64
+z.v_fc                  194 non-null float64
+z.v_mo                  194 non-null float64
+z.line                  194 non-null float64
+z.total                 194 non-null float64
+line                    194 non-null float64
+total                   194 non-null float64
+v_fc                    194 non-null float64
+v_mo                    194 non-null float64
+max_user_frac           194 non-null float64
+dtypes: float64(28), int64(4), object(5)
+memory usage: 57.6+ KB
+None
+**** doing estimator =  Ridge
+************best params- {'normalize': False, 'alpha': 23.357214690901213}
+%%%%%%%%%%%%%%% error dist %%%%%%%%%%%%%%%%%%%
+               n=194
+              MU=19.4319587629
+              SD=15.2505267537
+         CV_RMSE=10.2499332403
+      train_RMSE=9.46449694614
+best grid params={'normalize': False, 'alpha': 23.357214690901213}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                features    coeffs
+13                z.line  1.794041
+19                z.v_mo  1.745585
+15             z.proj_mo  1.674096
+17               z.total  1.401073
+14             z.proj_fc  1.326263
+0           rm.01.salary  1.022731
+12         max_user_frac  0.617924
+4                proj_mo  0.398295
+1            rm.01.score  0.340921
+3                proj_fc  0.214879
+16              z.salary  0.192223
+10  max_entries_per_user  0.016319
+11         total_entries -0.000018
+8                  total -0.054703
+6                   v_mo -0.466340
+7                   line -0.482110
+5                   v_fc -0.573587
+2            rm.01.value -1.311835
+18                z.v_fc -1.829296
+9             slate_size -2.963991

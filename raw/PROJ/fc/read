@@ -1,0 +1,5 @@
+for fc,
+do parsecurl on raws,
+then do_parsefc
+then go into parsefc,concat
+

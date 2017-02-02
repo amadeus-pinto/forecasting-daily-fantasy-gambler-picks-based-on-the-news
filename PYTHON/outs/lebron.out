@@ -1,0 +1,64 @@
+localizing on LeBron James,len=169
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 169 entries, 2 to 44995
+Data columns (total 30 columns):
+contest_ID              169 non-null int64
+date                    169 non-null object
+name                    169 non-null object
+slate_size              169 non-null int64
+percent_own             169 non-null float64
+salary                  169 non-null float64
+max_entries_per_user    169 non-null int64
+total_entries           169 non-null int64
+proj_fc                 169 non-null float64
+proj_mo                 169 non-null float64
+team                    169 non-null object
+opponent                169 non-null object
+score                   169 non-null float64
+position                169 non-null object
+value                   169 non-null float64
+season                  169 non-null float64
+rm.01.score             169 non-null float64
+rm.05.score             169 non-null float64
+rm.10.score             169 non-null float64
+rm.01.salary            169 non-null float64
+rm.05.salary            169 non-null float64
+rm.10.salary            169 non-null float64
+rm.01.value             169 non-null float64
+rm.05.value             169 non-null float64
+rm.10.value             169 non-null float64
+line                    169 non-null float64
+total                   169 non-null float64
+v_fc                    169 non-null float64
+v_mo                    169 non-null float64
+max_user_frac           169 non-null float64
+dtypes: float64(21), int64(4), object(5)
+memory usage: 40.9+ KB
+None
+**** doing estimator =  RandomForestRegressor
+************best params- {'max_features': 0.5, 'max_depth': None}
+^[[Dmodel.py:55: FutureWarning: sort(columns=....) is deprecated, use sort_values(by=.....)
+  lmfdf.sort('coeffs',ascending=False,inplace=True)
+%%%%%%%%%%%%%%% error dist %%%%%%%%%%%%%%%%%%%
+               n=169
+              MU=41.8715976331
+              SD=23.5382256987
+         CV_RMSE=12.6529536299
+      train_RMSE=4.63919759039
+best grid params={'max_features': 0.5, 'max_depth': None}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                features    coeffs
+9             slate_size  0.464348
+12         max_user_frac  0.200403
+11         total_entries  0.083935
+8                  total  0.041103
+5                   v_fc  0.034878
+6                   v_mo  0.031490
+3                proj_fc  0.030673
+4                proj_mo  0.026441
+1            rm.01.score  0.020360
+2            rm.01.value  0.019798
+7                   line  0.019006
+0           rm.01.salary  0.018931
+10  max_entries_per_user  0.008633
+

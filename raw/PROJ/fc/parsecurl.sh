@@ -1,0 +1,1 @@
+for x in ./curlfi/raw.* ; do  a=`echo $x | awk -F '/' '{print $3}' | awk -F '.' '{print $2}'` ; echo $a ; cat $x | perl -pi -e 's/\{"P/\n{"P/g' | tail +2 | awk -F '}' '{print $1}' | awk -F '{' '{print $2}' | perl -pi -e 's/:null/:"null"/g'  > f.$a ; mv f.$a ./prepfi/ ; done

@@ -1,0 +1,9 @@
+/Library/Python/2.7/site-packages/pandas/core/generic.py:3295: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  self._update_inplace(new_data)
+bets.py:144: FutureWarning: sort(columns=....) is deprecated, use sort_values(by=.....)
+  dldf.sort(ptgname,inplace=True,ascending=False,axis=0)
+bets.py:154: FutureWarning: sort(columns=....) is deprecated, use sort_values(by=.....)
+  dldf.sort(ptgname,inplace=True,ascending=False)

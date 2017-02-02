@@ -1,0 +1,459 @@
+['GradientBoostingRegressor', 'fP']
+name=Aaron_Brooks.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Aaron Brooks.GradientBoostingRegressor.csv
+name=Aaron_Gordon.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Aaron Gordon.GradientBoostingRegressor.csv
+TOO FEW PTS for Adreian_Payne.GradientBoostingRegressor!!!
+name=Al_Horford.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Al Horford.GradientBoostingRegressor.csv
+name=Al_Jefferson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Al Jefferson.GradientBoostingRegressor.csv
+name=Al-Farouq_Aminu.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Al-Farouq Aminu.GradientBoostingRegressor.csv
+name=Alec_Burks.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Alec Burks.GradientBoostingRegressor.csv
+name=Alex_Len.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Alex Len.GradientBoostingRegressor.csv
+TOO FEW PTS for Alexis_Ajinca.GradientBoostingRegressor!!!
+name=Allen_Crabbe.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Allen Crabbe.GradientBoostingRegressor.csv
+name=Alonzo_Gee.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Alonzo Gee.GradientBoostingRegressor.csv
+TOO FEW PTS for Amar'e_Stoudemire.GradientBoostingRegressor!!!
+name=Amir_Johnson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Amir Johnson.GradientBoostingRegressor.csv
+TOO FEW PTS for Anderson_Varejao.GradientBoostingRegressor!!!
+name=Andre_Drummond.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Andre Drummond.GradientBoostingRegressor.csv
+name=Andre_Iguodala.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Andre Iguodala.GradientBoostingRegressor.csv
+TOO FEW PTS for Andre_Miller.GradientBoostingRegressor!!!
+name=Andre_Roberson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Andre Roberson.GradientBoostingRegressor.csv
+name=Andrew_Bogut.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Andrew Bogut.GradientBoostingRegressor.csv
+TOO FEW PTS for Andrew_Harrison.GradientBoostingRegressor!!!
+TOO FEW PTS for Andrew_Nicholson.GradientBoostingRegressor!!!
+name=Andrew_Wiggins.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Andrew Wiggins.GradientBoostingRegressor.csv
+TOO FEW PTS for Anthony_Brown.GradientBoostingRegressor!!!
+name=Anthony_Davis.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Anthony Davis.GradientBoostingRegressor.csv
+name=Anthony_Morrow.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Anthony Morrow.GradientBoostingRegressor.csv
+TOO FEW PTS for Anthony_Tolliver.GradientBoostingRegressor!!!
+TOO FEW PTS for Archie_Goodwin.GradientBoostingRegressor!!!
+TOO FEW PTS for Aron_Baynes.GradientBoostingRegressor!!!
+name=Arron_Afflalo.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Arron Afflalo.GradientBoostingRegressor.csv
+name=Austin_Rivers.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Austin Rivers.GradientBoostingRegressor.csv
+name=Avery_Bradley.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Avery Bradley.GradientBoostingRegressor.csv
+name=Ben_McLemore.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Ben McLemore.GradientBoostingRegressor.csv
+TOO FEW PTS for Beno_Udrih.GradientBoostingRegressor!!!
+name=Bismack_Biyombo.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Bismack Biyombo.GradientBoostingRegressor.csv
+name=Blake_Griffin.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Blake Griffin.GradientBoostingRegressor.csv
+TOO FEW PTS for Boban_Marjanovic.GradientBoostingRegressor!!!
+name=Bobby_Portis.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Bobby Portis.GradientBoostingRegressor.csv
+name=Bojan_Bogdanovic.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Bojan Bogdanovic.GradientBoostingRegressor.csv
+name=Boris_Diaw.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Boris Diaw.GradientBoostingRegressor.csv
+name=Bradley_Beal.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Bradley Beal.GradientBoostingRegressor.csv
+TOO FEW PTS for Brandan_Wright.GradientBoostingRegressor!!!
+name=Brandon_Bass.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Brandon Bass.GradientBoostingRegressor.csv
+name=Brandon_Ingram.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Brandon Ingram.GradientBoostingRegressor.csv
+name=Brandon_Jennings.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Brandon Jennings.GradientBoostingRegressor.csv
+name=Brandon_Knight.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Brandon Knight.GradientBoostingRegressor.csv
+name=Brandon_Rush.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Brandon Rush.GradientBoostingRegressor.csv
+name=Brook_Lopez.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Brook Lopez.GradientBoostingRegressor.csv
+TOO FEW PTS for Bryce_Jones.GradientBoostingRegressor!!!
+TOO FEW PTS for Buddy_Hield.GradientBoostingRegressor!!!
+name=C.J._McCollum.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/C.J. McCollum.GradientBoostingRegressor.csv
+name=C.J._Miles.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/C.J. Miles.GradientBoostingRegressor.csv
+TOO FEW PTS for C.J._Watson.GradientBoostingRegressor!!!
+TOO FEW PTS for Cameron_Payne.GradientBoostingRegressor!!!
+TOO FEW PTS for Carl_Landry.GradientBoostingRegressor!!!
+name=Carmelo_Anthony.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Carmelo Anthony.GradientBoostingRegressor.csv
+name=Chandler_Parsons.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Chandler Parsons.GradientBoostingRegressor.csv
+name=Channing_Frye.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Channing Frye.GradientBoostingRegressor.csv
+TOO FEW PTS for Charlie_Villanueva.GradientBoostingRegressor!!!
+TOO FEW PTS for Chase_Budinger.GradientBoostingRegressor!!!
+TOO FEW PTS for Chris_Andersen.GradientBoostingRegressor!!!
+name=Chris_Bosh.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Chris Bosh.GradientBoostingRegressor.csv
+TOO FEW PTS for Chris_McCullough.GradientBoostingRegressor!!!
+name=Chris_Paul.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Chris Paul.GradientBoostingRegressor.csv
+name=Clint_Capela.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Clint Capela.GradientBoostingRegressor.csv
+name=Cody_Zeller.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Cody Zeller.GradientBoostingRegressor.csv
+name=Cole_Aldrich.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Cole Aldrich.GradientBoostingRegressor.csv
+name=Corey_Brewer.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Corey Brewer.GradientBoostingRegressor.csv
+name=Cory_Joseph.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Cory Joseph.GradientBoostingRegressor.csv
+name=Courtney_Lee.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Courtney Lee.GradientBoostingRegressor.csv
+TOO FEW PTS for Cristiano_Felicio.GradientBoostingRegressor!!!
+name=D'Angelo_Russell.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/D'Angelo Russell.GradientBoostingRegressor.csv
+name=D.J._Augustin.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/D.J. Augustin.GradientBoostingRegressor.csv
+name=Damian_Lillard.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Damian Lillard.GradientBoostingRegressor.csv
+name=Danilo_Gallinari.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Danilo Gallinari.GradientBoostingRegressor.csv
+TOO FEW PTS for Danny_Green.GradientBoostingRegressor!!!
+name=Dante_Cunningham.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Dante Cunningham.GradientBoostingRegressor.csv
+TOO FEW PTS for Danté_Exum.GradientBoostingRegressor!!!
+TOO FEW PTS for Dario_Saric.GradientBoostingRegressor!!!
+name=Darrell_Arthur.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Darrell Arthur.GradientBoostingRegressor.csv
+name=Darren_Collison.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Darren Collison.GradientBoostingRegressor.csv
+name=David_Lee.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/David Lee.GradientBoostingRegressor.csv
+name=David_West.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/David West.GradientBoostingRegressor.csv
+name=DeAndre_Jordan.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/DeAndre Jordan.GradientBoostingRegressor.csv
+TOO FEW PTS for DeAndre_Liggins.GradientBoostingRegressor!!!
+name=DeMar_DeRozan.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/DeMar DeRozan.GradientBoostingRegressor.csv
+name=DeMarcus_Cousins.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/DeMarcus Cousins.GradientBoostingRegressor.csv
+name=DeMarre_Carroll.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/DeMarre Carroll.GradientBoostingRegressor.csv
+name=Dennis_Schroder.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Dennis Schroder.GradientBoostingRegressor.csv
+name=Deron_Williams.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Deron Williams.GradientBoostingRegressor.csv
+name=Derrick_Favors.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Derrick Favors.GradientBoostingRegressor.csv
+name=Derrick_Rose.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Derrick Rose.GradientBoostingRegressor.csv
+name=Derrick_Williams.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Derrick Williams.GradientBoostingRegressor.csv
+name=Devin_Booker.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Devin Booker.GradientBoostingRegressor.csv
+name=Devin_Harris.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Devin Harris.GradientBoostingRegressor.csv
+TOO FEW PTS for Dewayne_Dedmon.GradientBoostingRegressor!!!
+name=Dion_Waiters.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Dion Waiters.GradientBoostingRegressor.csv
+name=Dirk_Nowitzki.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Dirk Nowitzki.GradientBoostingRegressor.csv
+TOO FEW PTS for Domantas_Sabonis.GradientBoostingRegressor!!!
+name=Donald_Sloan.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Donald Sloan.GradientBoostingRegressor.csv
+TOO FEW PTS for Donatas_Motiejunas.GradientBoostingRegressor!!!
+name=Doug_McDermott.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Doug McDermott.GradientBoostingRegressor.csv
+TOO FEW PTS for Dragan_Bender.GradientBoostingRegressor!!!
+name=Draymond_Green.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Draymond Green.GradientBoostingRegressor.csv
+TOO FEW PTS for Drew_Gooden.GradientBoostingRegressor!!!
+name=Dwight_Howard.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Dwight Howard.GradientBoostingRegressor.csv
+name=Dwight_Powell.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Dwight Powell.GradientBoostingRegressor.csv
+name=Dwyane_Wade.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Dwyane Wade.GradientBoostingRegressor.csv
+name=E'Twaun_Moore.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/E'Twaun Moore.GradientBoostingRegressor.csv
+name=Ed_Davis.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Ed Davis.GradientBoostingRegressor.csv
+name=Elfrid_Payton.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Elfrid Payton.GradientBoostingRegressor.csv
+name=Emmanuel_Mudiay.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Emmanuel Mudiay.GradientBoostingRegressor.csv
+name=Enes_Kanter.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Enes Kanter.GradientBoostingRegressor.csv
+name=Eric_Bledsoe.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Eric Bledsoe.GradientBoostingRegressor.csv
+name=Eric_Gordon.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Eric Gordon.GradientBoostingRegressor.csv
+name=Ersan_Ilyasova.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Ersan Ilyasova.GradientBoostingRegressor.csv
+name=Evan_Fournier.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Evan Fournier.GradientBoostingRegressor.csv
+name=Evan_Turner.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Evan Turner.GradientBoostingRegressor.csv
+name=Festus_Ezeli.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Festus Ezeli.GradientBoostingRegressor.csv
+name=Frank_Kaminsky.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Frank Kaminsky.GradientBoostingRegressor.csv
+name=Garrett_Temple.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Garrett Temple.GradientBoostingRegressor.csv
+name=Gary_Harris.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Gary Harris.GradientBoostingRegressor.csv
+name=George_Hill.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/George Hill.GradientBoostingRegressor.csv
+name=Gerald_Green.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Gerald Green.GradientBoostingRegressor.csv
+name=Gerald_Henderson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Gerald Henderson.GradientBoostingRegressor.csv
+name=Giannis_Antetokounmpo.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Giannis Antetokounmpo.GradientBoostingRegressor.csv
+TOO FEW PTS for Glenn_Robinson_III.GradientBoostingRegressor!!!
+name=Goran_Dragic.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Goran Dragic.GradientBoostingRegressor.csv
+name=Gordon_Hayward.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Gordon Hayward.GradientBoostingRegressor.csv
+name=Gorgui_Dieng.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Gorgui Dieng.GradientBoostingRegressor.csv
+name=Greg_Monroe.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Greg Monroe.GradientBoostingRegressor.csv
+TOO FEW PTS for Greivis_Vasquez.GradientBoostingRegressor!!!
+name=Harrison_Barnes.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Harrison Barnes.GradientBoostingRegressor.csv
+name=Hassan_Whiteside.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Hassan Whiteside.GradientBoostingRegressor.csv
+name=Hollis_Thompson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Hollis Thompson.GradientBoostingRegressor.csv
+name=Ian_Clark.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Ian Clark.GradientBoostingRegressor.csv
+name=Ian_Mahinmi.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Ian Mahinmi.GradientBoostingRegressor.csv
+name=Iman_Shumpert.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Iman Shumpert.GradientBoostingRegressor.csv
+name=Isaiah_Canaan.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Isaiah Canaan.GradientBoostingRegressor.csv
+name=Isaiah_Thomas.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Isaiah Thomas.GradientBoostingRegressor.csv
+TOO FEW PTS for Isaiah_Whitehead.GradientBoostingRegressor!!!
+TOO FEW PTS for J.J._Hickson.GradientBoostingRegressor!!!
+name=J.J._Redick.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/J.J. Redick.GradientBoostingRegressor.csv
+name=J.R._Smith.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/J.R. Smith.GradientBoostingRegressor.csv
+name=Jabari_Parker.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jabari Parker.GradientBoostingRegressor.csv
+name=Jae_Crowder.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jae Crowder.GradientBoostingRegressor.csv
+name=Jahlil_Okafor.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jahlil Okafor.GradientBoostingRegressor.csv
+name=Jamal_Crawford.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jamal Crawford.GradientBoostingRegressor.csv
+TOO FEW PTS for Jamal_Murray.GradientBoostingRegressor!!!
+name=Jameer_Nelson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jameer Nelson.GradientBoostingRegressor.csv
+TOO FEW PTS for James_Anderson.GradientBoostingRegressor!!!
+TOO FEW PTS for James_Ennis.GradientBoostingRegressor!!!
+name=James_Harden.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/James Harden.GradientBoostingRegressor.csv
+name=James_Johnson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/James Johnson.GradientBoostingRegressor.csv
+TOO FEW PTS for James_Jones.GradientBoostingRegressor!!!
+name=JaMychal_Green.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/JaMychal Green.GradientBoostingRegressor.csv
+name=Jared_Dudley.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jared Dudley.GradientBoostingRegressor.csv
+name=Jared_Sullinger.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jared Sullinger.GradientBoostingRegressor.csv
+TOO FEW PTS for Jarell_Martin.GradientBoostingRegressor!!!
+TOO FEW PTS for Jarrett_Jack.GradientBoostingRegressor!!!
+TOO FEW PTS for Jason_Smith.GradientBoostingRegressor!!!
+TOO FEW PTS for Jason_Terry.GradientBoostingRegressor!!!
+TOO FEW PTS for Jason_Thompson.GradientBoostingRegressor!!!
+TOO FEW PTS for JaVale_McGee.GradientBoostingRegressor!!!
+TOO FEW PTS for Jaylen_Brown.GradientBoostingRegressor!!!
+name=Jeff_Green.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jeff Green.GradientBoostingRegressor.csv
+name=Jeff_Teague.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jeff Teague.GradientBoostingRegressor.csv
+TOO FEW PTS for Jeff_Withey.GradientBoostingRegressor!!!
+name=Jerami_Grant.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jerami Grant.GradientBoostingRegressor.csv
+TOO FEW PTS for Jeremy_Evans.GradientBoostingRegressor!!!
+name=Jeremy_Lamb.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jeremy Lamb.GradientBoostingRegressor.csv
+name=Jeremy_Lin.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jeremy Lin.GradientBoostingRegressor.csv
+name=Jerian_Grant.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jerian Grant.GradientBoostingRegressor.csv
+name=Jerryd_Bayless.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jerryd Bayless.GradientBoostingRegressor.csv
+name=Jimmy_Butler.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jimmy Butler.GradientBoostingRegressor.csv
+name=Joakim_Noah.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Joakim Noah.GradientBoostingRegressor.csv
+TOO FEW PTS for Jodie_Meeks.GradientBoostingRegressor!!!
+TOO FEW PTS for Joe_Harris.GradientBoostingRegressor!!!
+name=Joe_Ingles.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Joe Ingles.GradientBoostingRegressor.csv
+name=Joe_Johnson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Joe Johnson.GradientBoostingRegressor.csv
+TOO FEW PTS for Joel_Embiid.GradientBoostingRegressor!!!
+name=Joffrey_Lauvergne.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Joffrey Lauvergne.GradientBoostingRegressor.csv
+name=John_Henson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/John Henson.GradientBoostingRegressor.csv
+TOO FEW PTS for John_Jenkins.GradientBoostingRegressor!!!
+name=John_Wall.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/John Wall.GradientBoostingRegressor.csv
+TOO FEW PTS for Johnny_O'Bryant.GradientBoostingRegressor!!!
+name=Jon_Leuer.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jon Leuer.GradientBoostingRegressor.csv
+TOO FEW PTS for Jonas_Jerebko.GradientBoostingRegressor!!!
+name=Jonas_Valanciunas.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jonas Valanciunas.GradientBoostingRegressor.csv
+TOO FEW PTS for Jonathan_Gibson.GradientBoostingRegressor!!!
+name=Jonathon_Simmons.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jonathon Simmons.GradientBoostingRegressor.csv
+name=Jordan_Clarkson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jordan Clarkson.GradientBoostingRegressor.csv
+TOO FEW PTS for Jordan_Farmar.GradientBoostingRegressor!!!
+TOO FEW PTS for Jordan_Hamilton.GradientBoostingRegressor!!!
+name=Jordan_Hill.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jordan Hill.GradientBoostingRegressor.csv
+TOO FEW PTS for Jordan_McRae.GradientBoostingRegressor!!!
+name=Jose_Calderon.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jose Calderon.GradientBoostingRegressor.csv
+TOO FEW PTS for Josh_McRoberts.GradientBoostingRegressor!!!
+name=Josh_Richardson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Josh Richardson.GradientBoostingRegressor.csv
+name=Josh_Smith.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Josh Smith.GradientBoostingRegressor.csv
+name=Jrue_Holiday.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jrue Holiday.GradientBoostingRegressor.csv
+TOO FEW PTS for Juancho_Hernangomez.GradientBoostingRegressor!!!
+name=Julius_Randle.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Julius Randle.GradientBoostingRegressor.csv
+name=Justin_Anderson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Justin Anderson.GradientBoostingRegressor.csv
+TOO FEW PTS for Justin_Hamilton.GradientBoostingRegressor!!!
+TOO FEW PTS for Justin_Holiday.GradientBoostingRegressor!!!
+name=Justise_Winslow.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Justise Winslow.GradientBoostingRegressor.csv
+name=Jusuf_Nurkic.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Jusuf Nurkic.GradientBoostingRegressor.csv
+TOO FEW PTS for K.J._McDaniels.GradientBoostingRegressor!!!
+name=Karl-Anthony_Towns.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Karl-Anthony Towns.GradientBoostingRegressor.csv
+name=Kawhi_Leonard.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Kawhi Leonard.GradientBoostingRegressor.csv
+name=Kelly_Olynyk.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Kelly Olynyk.GradientBoostingRegressor.csv
+TOO FEW PTS for Kelly_Oubre.GradientBoostingRegressor!!!
+name=Kemba_Walker.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Kemba Walker.GradientBoostingRegressor.csv
+TOO FEW PTS for Kendall_Marshall.GradientBoostingRegressor!!!
+name=Kenneth_Faried.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Kenneth Faried.GradientBoostingRegressor.csv
+name=Kent_Bazemore.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Kent Bazemore.GradientBoostingRegressor.csv
+name=Kentavious_Caldwell-Pope.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Kentavious Caldwell-Pope.GradientBoostingRegressor.csv
+name=Kevin_Durant.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Kevin Durant.GradientBoostingRegressor.csv
+TOO FEW PTS for Kevin_Garnett.GradientBoostingRegressor!!!
+name=Kevin_Love.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Kevin Love.GradientBoostingRegressor.csv
+TOO FEW PTS for Kevin_Martin.GradientBoostingRegressor!!!
+TOO FEW PTS for Kevin_Seraphin.GradientBoostingRegressor!!!
+TOO FEW PTS for Kevon_Looney.GradientBoostingRegressor!!!
+name=Khris_Middleton.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Khris Middleton.GradientBoostingRegressor.csv
+TOO FEW PTS for Kirk_Hinrich.GradientBoostingRegressor!!!
+name=Klay_Thompson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Klay Thompson.GradientBoostingRegressor.csv
+name=Kobe_Bryant.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Kobe Bryant.GradientBoostingRegressor.csv
+name=Kosta_Koufos.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Kosta Koufos.GradientBoostingRegressor.csv
+TOO FEW PTS for Kris_Dunn.GradientBoostingRegressor!!!
+TOO FEW PTS for Kris_Humphries.GradientBoostingRegressor!!!
+name=Kristaps_Porzingis.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Kristaps Porzingis.GradientBoostingRegressor.csv
+name=Kyle_Anderson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Kyle Anderson.GradientBoostingRegressor.csv
+name=Kyle_Korver.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Kyle Korver.GradientBoostingRegressor.csv
+name=Kyle_Lowry.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Kyle Lowry.GradientBoostingRegressor.csv
+name=Kyle_O'Quinn.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Kyle O'Quinn.GradientBoostingRegressor.csv
+TOO FEW PTS for Kyle_Singler.GradientBoostingRegressor!!!
+name=Kyrie_Irving.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Kyrie Irving.GradientBoostingRegressor.csv
+TOO FEW PTS for Lamar_Patterson.GradientBoostingRegressor!!!
+name=LaMarcus_Aldridge.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/LaMarcus Aldridge.GradientBoostingRegressor.csv
+name=Lance_Stephenson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Lance Stephenson.GradientBoostingRegressor.csv
+TOO FEW PTS for Lance_Thomas.GradientBoostingRegressor!!!
+name=Langston_Galloway.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Langston Galloway.GradientBoostingRegressor.csv
+name=Larry_Nance_Jr..GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Larry Nance Jr..GradientBoostingRegressor.csv
+name=Lavoy_Allen.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Lavoy Allen.GradientBoostingRegressor.csv
+name=Leandro_Barbosa.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Leandro Barbosa.GradientBoostingRegressor.csv
+name=LeBron_James.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/LeBron James.GradientBoostingRegressor.csv
+name=Lou_Williams.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Lou Williams.GradientBoostingRegressor.csv
+name=Luc_Richard_Mbah_a_Moute.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Luc Richard Mbah a Moute.GradientBoostingRegressor.csv
+TOO FEW PTS for Lucas_Nogueira.GradientBoostingRegressor!!!
+name=Luis_Scola.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Luis Scola.GradientBoostingRegressor.csv
+name=Luke_Babbitt.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Luke Babbitt.GradientBoostingRegressor.csv
+name=Luol_Deng.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Luol Deng.GradientBoostingRegressor.csv
+TOO FEW PTS for Malcolm_Brogdon.GradientBoostingRegressor!!!
+TOO FEW PTS for Malcolm_Delaney.GradientBoostingRegressor!!!
+name=Manu_Ginobili.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Manu Ginobili.GradientBoostingRegressor.csv
+name=Marc_Gasol.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Marc Gasol.GradientBoostingRegressor.csv
+TOO FEW PTS for Marcelo_Huertas.GradientBoostingRegressor!!!
+name=Marcin_Gortat.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Marcin Gortat.GradientBoostingRegressor.csv
+name=Marco_Belinelli.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Marco Belinelli.GradientBoostingRegressor.csv
+name=Marcus_Morris.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Marcus Morris.GradientBoostingRegressor.csv
+name=Marcus_Smart.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Marcus Smart.GradientBoostingRegressor.csv
+name=Marcus_Thornton.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Marcus Thornton.GradientBoostingRegressor.csv
+TOO FEW PTS for Mario_Hezonja.GradientBoostingRegressor!!!
+TOO FEW PTS for Markel_Brown.GradientBoostingRegressor!!!
+name=Markieff_Morris.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Markieff Morris.GradientBoostingRegressor.csv
+TOO FEW PTS for Marquese_Chriss.GradientBoostingRegressor!!!
+name=Marreese_Speights.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Marreese Speights.GradientBoostingRegressor.csv
+name=Marvin_Williams.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Marvin Williams.GradientBoostingRegressor.csv
+name=Mason_Plumlee.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Mason Plumlee.GradientBoostingRegressor.csv
+name=Matt_Barnes.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Matt Barnes.GradientBoostingRegressor.csv
+name=Matthew_Dellavedova.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Matthew Dellavedova.GradientBoostingRegressor.csv
+name=Maurice_Harkless.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Maurice Harkless.GradientBoostingRegressor.csv
+TOO FEW PTS for Metta_World_Peace.GradientBoostingRegressor!!!
+name=Meyers_Leonard.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Meyers Leonard.GradientBoostingRegressor.csv
+name=Michael_Beasley.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Michael Beasley.GradientBoostingRegressor.csv
+name=Michael_Carter-Williams.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Michael Carter-Williams.GradientBoostingRegressor.csv
+name=Michael_Kidd-Gilchrist.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Michael Kidd-Gilchrist.GradientBoostingRegressor.csv
+name=Mike_Conley.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Mike Conley.GradientBoostingRegressor.csv
+TOO FEW PTS for Mike_Dunleavy.GradientBoostingRegressor!!!
+TOO FEW PTS for Mike_Miller.GradientBoostingRegressor!!!
+name=Mike_Muscala.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Mike Muscala.GradientBoostingRegressor.csv
+TOO FEW PTS for Mike_Scott.GradientBoostingRegressor!!!
+TOO FEW PTS for Miles_Plumlee.GradientBoostingRegressor!!!
+TOO FEW PTS for Mindaugas_Kuzminskas.GradientBoostingRegressor!!!
+name=Mirza_Teletovic.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Mirza Teletovic.GradientBoostingRegressor.csv
+TOO FEW PTS for Mo_Williams.GradientBoostingRegressor!!!
+name=Monta_Ellis.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Monta Ellis.GradientBoostingRegressor.csv
+TOO FEW PTS for Montrezl_Harrell.GradientBoostingRegressor!!!
+name=Myles_Turner.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Myles Turner.GradientBoostingRegressor.csv
+name=Nemanja_Bjelica.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Nemanja Bjelica.GradientBoostingRegressor.csv
+name=Nene_Hilario.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Nene Hilario.GradientBoostingRegressor.csv
+name=Nerlens_Noel.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Nerlens Noel.GradientBoostingRegressor.csv
+TOO FEW PTS for Nick_Collison.GradientBoostingRegressor!!!
+name=Nick_Young.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Nick Young.GradientBoostingRegressor.csv
+name=Nicolas_Batum.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Nicolas Batum.GradientBoostingRegressor.csv
+name=Nik_Stauskas.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Nik Stauskas.GradientBoostingRegressor.csv
+name=Nikola_Jokic.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Nikola Jokic.GradientBoostingRegressor.csv
+name=Nikola_Mirotic.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Nikola Mirotic.GradientBoostingRegressor.csv
+name=Nikola_Vucevic.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Nikola Vucevic.GradientBoostingRegressor.csv
+name=Noah_Vonleh.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Noah Vonleh.GradientBoostingRegressor.csv
+TOO FEW PTS for Norman_Powell.GradientBoostingRegressor!!!
+name=Norris_Cole.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Norris Cole.GradientBoostingRegressor.csv
+name=O.J._Mayo.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/O.J. Mayo.GradientBoostingRegressor.csv
+name=Omer_Asik.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Omer Asik.GradientBoostingRegressor.csv
+name=Omri_Casspi.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Omri Casspi.GradientBoostingRegressor.csv
+name=Otto_Porter.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Otto Porter.GradientBoostingRegressor.csv
+TOO FEW PTS for P.J._Hairston.GradientBoostingRegressor!!!
+name=P.J._Tucker.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/P.J. Tucker.GradientBoostingRegressor.csv
+TOO FEW PTS for Pablo_Prigioni.GradientBoostingRegressor!!!
+TOO FEW PTS for Pascal_Siakam.GradientBoostingRegressor!!!
+name=Patrick_Beverley.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Patrick Beverley.GradientBoostingRegressor.csv
+TOO FEW PTS for Patrick_McCaw.GradientBoostingRegressor!!!
+name=Patrick_Patterson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Patrick Patterson.GradientBoostingRegressor.csv
+name=Pau_Gasol.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Pau Gasol.GradientBoostingRegressor.csv
+name=Paul_George.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Paul George.GradientBoostingRegressor.csv
+name=Paul_Millsap.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Paul Millsap.GradientBoostingRegressor.csv
+name=Paul_Pierce.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Paul Pierce.GradientBoostingRegressor.csv
+TOO FEW PTS for Quincy_Acy.GradientBoostingRegressor!!!
+name=Rajon_Rondo.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Rajon Rondo.GradientBoostingRegressor.csv
+name=Ramon_Sessions.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Ramon Sessions.GradientBoostingRegressor.csv
+name=Randy_Foye.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Randy Foye.GradientBoostingRegressor.csv
+TOO FEW PTS for Rashad_Vaughn.GradientBoostingRegressor!!!
+name=Raul_Neto.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Raul Neto.GradientBoostingRegressor.csv
+name=Raymond_Felton.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Raymond Felton.GradientBoostingRegressor.csv
+name=Reggie_Jackson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Reggie Jackson.GradientBoostingRegressor.csv
+TOO FEW PTS for Richard_Jefferson.GradientBoostingRegressor!!!
+TOO FEW PTS for Richaun_Holmes.GradientBoostingRegressor!!!
+name=Ricky_Rubio.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Ricky Rubio.GradientBoostingRegressor.csv
+name=Robert_Covington.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Robert Covington.GradientBoostingRegressor.csv
+name=Robin_Lopez.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Robin Lopez.GradientBoostingRegressor.csv
+name=Rodney_Hood.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Rodney Hood.GradientBoostingRegressor.csv
+TOO FEW PTS for Rodney_McGruder.GradientBoostingRegressor!!!
+name=Rodney_Stuckey.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Rodney Stuckey.GradientBoostingRegressor.csv
+name=Rondae_Hollis-Jefferson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Rondae Hollis-Jefferson.GradientBoostingRegressor.csv
+TOO FEW PTS for Ronnie_Price.GradientBoostingRegressor!!!
+name=Roy_Hibbert.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Roy Hibbert.GradientBoostingRegressor.csv
+name=Rudy_Gay.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Rudy Gay.GradientBoostingRegressor.csv
+name=Rudy_Gobert.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Rudy Gobert.GradientBoostingRegressor.csv
+name=Russell_Westbrook.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Russell Westbrook.GradientBoostingRegressor.csv
+name=Ryan_Anderson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Ryan Anderson.GradientBoostingRegressor.csv
+TOO FEW PTS for Ryan_Kelly.GradientBoostingRegressor!!!
+TOO FEW PTS for Salah_Mejri.GradientBoostingRegressor!!!
+TOO FEW PTS for Sam_Dekker.GradientBoostingRegressor!!!
+TOO FEW PTS for Sasha_Vujacic.GradientBoostingRegressor!!!
+name=Sean_Kilpatrick.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Sean Kilpatrick.GradientBoostingRegressor.csv
+TOO FEW PTS for Semaj_Christon.GradientBoostingRegressor!!!
+name=Serge_Ibaka.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Serge Ibaka.GradientBoostingRegressor.csv
+TOO FEW PTS for Sergio_Rodriguez.GradientBoostingRegressor!!!
+name=Seth_Curry.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Seth Curry.GradientBoostingRegressor.csv
+name=Shabazz_Muhammad.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Shabazz Muhammad.GradientBoostingRegressor.csv
+TOO FEW PTS for Shabazz_Napier.GradientBoostingRegressor!!!
+name=Shane_Larkin.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Shane Larkin.GradientBoostingRegressor.csv
+name=Shaun_Livingston.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Shaun Livingston.GradientBoostingRegressor.csv
+name=Shelvin_Mack.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Shelvin Mack.GradientBoostingRegressor.csv
+name=Solomon_Hill.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Solomon Hill.GradientBoostingRegressor.csv
+TOO FEW PTS for Spencer_Dinwiddie.GradientBoostingRegressor!!!
+TOO FEW PTS for Spencer_Hawes.GradientBoostingRegressor!!!
+name=Stanley_Johnson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Stanley Johnson.GradientBoostingRegressor.csv
+name=Stephen_Curry.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Stephen Curry.GradientBoostingRegressor.csv
+name=Steven_Adams.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Steven Adams.GradientBoostingRegressor.csv
+name=T.J._McConnell.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/T.J. McConnell.GradientBoostingRegressor.csv
+name=T.J._Warren.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/T.J. Warren.GradientBoostingRegressor.csv
+name=Taj_Gibson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Taj Gibson.GradientBoostingRegressor.csv
+TOO FEW PTS for Tarik_Black.GradientBoostingRegressor!!!
+TOO FEW PTS for Tayshaun_Prince.GradientBoostingRegressor!!!
+name=Terrence_Jones.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Terrence Jones.GradientBoostingRegressor.csv
+name=Terrence_Ross.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Terrence Ross.GradientBoostingRegressor.csv
+TOO FEW PTS for Terry_Rozier.GradientBoostingRegressor!!!
+name=Thabo_Sefolosha.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Thabo Sefolosha.GradientBoostingRegressor.csv
+name=Thaddeus_Young.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Thaddeus Young.GradientBoostingRegressor.csv
+TOO FEW PTS for Thomas_Robinson.GradientBoostingRegressor!!!
+TOO FEW PTS for Tiago_Splitter.GradientBoostingRegressor!!!
+name=Tim_Duncan.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Tim Duncan.GradientBoostingRegressor.csv
+name=Tim_Frazier.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Tim Frazier.GradientBoostingRegressor.csv
+name=Tim_Hardaway_Jr..GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Tim Hardaway Jr..GradientBoostingRegressor.csv
+name=Timofey_Mozgov.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Timofey Mozgov.GradientBoostingRegressor.csv
+name=Tobias_Harris.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Tobias Harris.GradientBoostingRegressor.csv
+TOO FEW PTS for Tomas_Satoransky.GradientBoostingRegressor!!!
+TOO FEW PTS for Toney_Douglas.GradientBoostingRegressor!!!
+name=Tony_Allen.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Tony Allen.GradientBoostingRegressor.csv
+name=Tony_Parker.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Tony Parker.GradientBoostingRegressor.csv
+name=Tony_Snell.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Tony Snell.GradientBoostingRegressor.csv
+name=Trevor_Ariza.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Trevor Ariza.GradientBoostingRegressor.csv
+name=Trevor_Booker.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Trevor Booker.GradientBoostingRegressor.csv
+name=Trey_Burke.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Trey Burke.GradientBoostingRegressor.csv
+name=Trey_Lyles.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Trey Lyles.GradientBoostingRegressor.csv
+name=Tristan_Thompson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Tristan Thompson.GradientBoostingRegressor.csv
+TOO FEW PTS for Troy_Daniels.GradientBoostingRegressor!!!
+TOO FEW PTS for Troy_Williams.GradientBoostingRegressor!!!
+name=Ty_Lawson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Ty Lawson.GradientBoostingRegressor.csv
+TOO FEW PTS for Tyler_Ennis.GradientBoostingRegressor!!!
+TOO FEW PTS for Tyler_Hansbrough.GradientBoostingRegressor!!!
+name=Tyler_Johnson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Tyler Johnson.GradientBoostingRegressor.csv
+TOO FEW PTS for Tyler_Zeller.GradientBoostingRegressor!!!
+name=Tyreke_Evans.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Tyreke Evans.GradientBoostingRegressor.csv
+name=Tyson_Chandler.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Tyson Chandler.GradientBoostingRegressor.csv
+TOO FEW PTS for Tyus_Jones.GradientBoostingRegressor!!!
+name=Victor_Oladipo.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Victor Oladipo.GradientBoostingRegressor.csv
+name=Vince_Carter.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Vince Carter.GradientBoostingRegressor.csv
+TOO FEW PTS for Wade_Baldwin_IV.GradientBoostingRegressor!!!
+name=Wayne_Ellington.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Wayne Ellington.GradientBoostingRegressor.csv
+name=Wesley_Johnson.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Wesley Johnson.GradientBoostingRegressor.csv
+name=Wesley_Matthews.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Wesley Matthews.GradientBoostingRegressor.csv
+name=Will_Barton.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Will Barton.GradientBoostingRegressor.csv
+name=Willie_Cauley-Stein.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Willie Cauley-Stein.GradientBoostingRegressor.csv
+TOO FEW PTS for Willie_Reed.GradientBoostingRegressor!!!
+name=Wilson_Chandler.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Wilson Chandler.GradientBoostingRegressor.csv
+TOO FEW PTS for Xavier_Munford.GradientBoostingRegressor!!!
+TOO FEW PTS for Yogi_Ferrell.GradientBoostingRegressor!!!
+name=Zach_LaVine.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Zach LaVine.GradientBoostingRegressor.csv
+name=Zach_Randolph.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Zach Randolph.GradientBoostingRegressor.csv
+name=Zaza_Pachulia.GradientBoostingRegressor,path=../../MYMODELS/COEFFS/Zaza Pachulia.GradientBoostingRegressor.csv
+                       0
+z.salary        0.041884
+total_entries   0.038401
+z.proj_fc       0.034631
+z.proj_mo       0.033737
+max_user_frac   0.030824
+z.sbin.proj_mo  0.029355
+z.v_mo          0.028614
+z.sbin.proj_fc  0.027799
+z.sbin.v_fc     0.025456
+rm.01.score     0.025125
+                                1
+z.proj_fc                0.067613
+z.salary                 0.050157
+z.sbin.proj_mo           0.032050
+fict.proj_mo.03.025.006  0.031247
+z.proj_mo                0.031034
+fict.proj_mu.03.025.006  0.029284
+z.sbin.proj_fc           0.026853
+z.sbin.v_mo              0.026630
+rm.01.opp_total_score    0.026374
+z.v_fc                   0.026356
+                                2
+max_user_frac            0.069463
+total_entries            0.063338
+z.proj_fc                0.057808
+z.salary                 0.048967
+rm.05.team_off_score     0.036632
+fict.proj_mu.03.025.006  0.036583
+z.v_mo                   0.031569
+z.sbin.proj_fc           0.028244
+z.sbin.v_mo              0.026010
+rm.05.opp_off_score      0.026007
+                              3
+rm.01.team_def_score   0.054958
+fict.proj_f03.025.006  0.045757
+z.salary               0.041652
+rm.01.value            0.037404
+z.proj_mo              0.035228
+line                   0.031912
+z.sbin.v_mo            0.031721
+rm.05.value            0.027862
+z.sbin.v_fc            0.027284
+total                  0.026991
+saving to svd.i.fP.GradientBoostingRegressor
+saving to svd.ax.svd.i.fP.GradientBoostingRegressor

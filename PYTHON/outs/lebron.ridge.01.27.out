@@ -1,0 +1,164 @@
+here
+localizing on LeBron James,len=205
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 159 entries, 2 to 50361
+Data columns (total 94 columns):
+contest_ID                  159 non-null int64
+date                        159 non-null object
+name                        159 non-null object
+position                    159 non-null object
+slate_size                  159 non-null int64
+percent_own                 159 non-null float64
+salary                      159 non-null float64
+max_entries_per_user        159 non-null int64
+total_entries               159 non-null int64
+proj_fc                     159 non-null float64
+proj_mo                     159 non-null float64
+status                      159 non-null float64
+team                        159 non-null object
+opponent                    159 non-null object
+score                       159 non-null float64
+line                        159 non-null float64
+total                       159 non-null float64
+v_fc                        159 non-null float64
+v_mo                        159 non-null float64
+max_user_frac               159 non-null float64
+value                       159 non-null float64
+season                      159 non-null float64
+val_exceeds.04              159 non-null float64
+val_exceeds.05              159 non-null float64
+val_exceeds.06              159 non-null float64
+rm.01.score                 159 non-null float64
+rm.05.score                 159 non-null float64
+rm.10.score                 159 non-null float64
+rm.01.salary                159 non-null float64
+rm.05.salary                159 non-null float64
+rm.10.salary                159 non-null float64
+rm.01.value                 159 non-null float64
+rm.05.value                 159 non-null float64
+rm.10.value                 159 non-null float64
+rm.01.val_exceeds.04        159 non-null float64
+rm.05.val_exceeds.04        159 non-null float64
+rm.10.val_exceeds.04        159 non-null float64
+rm.01.val_exceeds.05        159 non-null float64
+rm.05.val_exceeds.05        159 non-null float64
+rm.10.val_exceeds.05        159 non-null float64
+rm.01.val_exceeds.06        159 non-null float64
+rm.05.val_exceeds.06        159 non-null float64
+rm.10.val_exceeds.06        159 non-null float64
+rm.01.opp_total_score       159 non-null float64
+rm.02.opp_total_score       159 non-null float64
+rm.05.opp_total_score       159 non-null float64
+rm.01.opp_def_score         159 non-null float64
+rm.02.opp_def_score         159 non-null float64
+rm.05.opp_def_score         159 non-null float64
+rm.01.opp_off_score         159 non-null float64
+rm.02.opp_off_score         159 non-null float64
+rm.05.opp_off_score         159 non-null float64
+rm.01.team_total_score      159 non-null float64
+rm.02.team_total_score      159 non-null float64
+rm.05.team_total_score      159 non-null float64
+rm.01.team_def_score        159 non-null float64
+rm.02.team_def_score        159 non-null float64
+rm.05.team_def_score        159 non-null float64
+rm.01.team_off_score        159 non-null float64
+rm.02.team_off_score        159 non-null float64
+rm.05.team_off_score        159 non-null float64
+z.salary                    159 non-null float64
+z.proj_fc                   159 non-null float64
+z.proj_mo                   159 non-null float64
+z.v_fc                      159 non-null float64
+z.v_mo                      159 non-null float64
+z.line                      159 non-null float64
+z.total                     159 non-null float64
+sbin                        159 non-null object
+z.sbin.proj_fc              159 non-null float64
+z.sbin.proj_mo              159 non-null float64
+z.sbin.v_fc                 159 non-null float64
+z.sbin.v_mo                 159 non-null float64
+z.sbin.line                 159 non-null float64
+z.sbin.total                159 non-null float64
+counts.sbin                 159 non-null int64
+z.rm.01.opp_total_score     159 non-null float64
+z.rm.02.opp_total_score     159 non-null float64
+z.rm.05.opp_total_score     159 non-null float64
+z.rm.01.opp_def_score       159 non-null float64
+z.rm.02.opp_def_score       159 non-null float64
+z.rm.05.opp_def_score       159 non-null float64
+z.rm.01.opp_off_score       159 non-null float64
+z.rm.02.opp_off_score       159 non-null float64
+z.rm.05.opp_off_score       159 non-null float64
+z.rm.01.team_total_score    159 non-null float64
+z.rm.02.team_total_score    159 non-null float64
+z.rm.05.team_total_score    159 non-null float64
+z.rm.01.team_def_score      159 non-null float64
+z.rm.02.team_def_score      159 non-null float64
+z.rm.05.team_def_score      159 non-null float64
+z.rm.01.team_off_score      159 non-null float64
+z.rm.02.team_off_score      159 non-null float64
+z.rm.05.team_off_score      159 non-null float64
+dtypes: float64(83), int64(5), object(6)
+memory usage: 118.0+ KB
+None
+0.0    152
+1.0      7
+Name: status, dtype: int64
+**** doing estimator =  Ridge
+************best params- {'normalize': True, 'alpha': 0.18329807108324356}
+%%%%%%%%%%%%%%% error dist %%%%%%%%%%%%%%%%%%%
+               n=159
+              MU=40.7823899371
+              SD=22.9368000559
+         CV_RMSE=14.082049705
+      train_RMSE=11.1911327952
+best grid params={'normalize': True, 'alpha': 0.18329807108324356}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+                  features     coeffs
+19    rm.05.val_exceeds.05  17.945450
+20    rm.01.val_exceeds.06   7.757455
+26                  z.v_mo   5.747176
+29          z.sbin.proj_fc   3.754984
+34            z.sbin.total   2.483081
+22                z.salary   2.265862
+25                  z.v_fc   2.194510
+17    rm.05.val_exceeds.04   1.986988
+24               z.proj_mo   1.170814
+32             z.sbin.v_mo   1.071736
+28                 z.total   1.030336
+30          z.sbin.proj_mo   0.938755
+16    rm.01.val_exceeds.04   0.748617
+33             z.sbin.line   0.315381
+6                    total   0.264936
+38     rm.01.opp_def_score   0.101959
+5                     line   0.100924
+36   rm.01.opp_total_score   0.070072
+39     rm.05.opp_def_score   0.053207
+37   rm.05.opp_total_score   0.016536
+46    rm.01.team_off_score   0.005090
+8            total_entries  -0.000066
+42  rm.01.team_total_score  -0.006115
+40     rm.01.opp_off_score  -0.013795
+41     rm.05.opp_off_score  -0.018735
+44    rm.01.team_def_score  -0.028793
+45    rm.05.team_def_score  -0.032078
+43  rm.05.team_total_score  -0.051661
+10             rm.01.score  -0.054356
+47    rm.05.team_off_score  -0.075067
+11             rm.05.score  -0.079978
+9            max_user_frac  -0.137376
+1                  proj_mo  -0.314423
+15             rm.05.value  -0.343622
+0                  proj_fc  -0.369056
+14             rm.01.value  -0.383991
+12            rm.01.salary  -0.842872
+3                     v_mo  -1.091792
+18    rm.01.val_exceeds.05  -1.110151
+23               z.proj_fc  -1.204662
+35             counts.sbin  -1.302533
+27                  z.line  -1.565845
+2                     v_fc  -1.738435
+31             z.sbin.v_fc  -2.083193
+7               slate_size  -2.942371
+13            rm.05.salary  -4.764627
+21    rm.05.val_exceeds.06  -7.775801
+4                   status -10.399543

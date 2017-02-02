@@ -1,0 +1,4 @@
+RUN CURLDATES.SH to generate curl script
+run curl_fc.sh
+OUTS raws
+run ../prep.sh

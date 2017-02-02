@@ -1,0 +1,4 @@
+
+['maximize','n_want','overlap','max_sameteam']
+		maximize,  nwant  overlap    max_sameteam
+python bets.py "['proj_mo',20,    1,                    6]"
