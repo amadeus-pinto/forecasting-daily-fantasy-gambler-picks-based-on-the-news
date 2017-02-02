@@ -4,3 +4,7 @@ raw.*
 *.csv
 *.json
 *.pkl
+
+
+
+####git check-ignore -v 'path'
