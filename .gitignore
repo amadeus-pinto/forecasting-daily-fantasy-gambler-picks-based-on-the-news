@@ -1,8 +1,8 @@
-
+f.201*
 *pkl.gz
 *.csv
-*.sh
 *.json
+raw.*
 *.pkl
 ./*/*.csv
 ./*/*/*.csv
