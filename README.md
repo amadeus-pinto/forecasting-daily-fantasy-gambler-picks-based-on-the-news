@@ -1,5 +1,4 @@
-# The
-long and short of the game is: "fantasy players" (gamblers) submit one or multiple ticket(s) of athletes' names together satisfying a set of constraints (e.g., on the total fantasy salary of the athletes, fantasy positions, etc.) to an online site that takes a rake and pays out a subset of tickets as a function of ticket score, which depends on the athletes' performance as the slate evolves.
+The long and short of the game is: "fantasy players" (gamblers) submit one or multiple ticket(s) of athletes' names together satisfying a set of constraints (e.g., on the total fantasy salary of the athletes, fantasy positions, etc.) to an online site that takes a rake and pays out a subset of tickets as a function of ticket score, which depends on the athletes' performance as the slate evolves.
 
 Broadly, there are two (very different) contest types: a "tournament" game pays out the top ~20%, with the odds growing ~exponentially from 1:1 at the ~20th percentile line (typically first place gets a  ~1000:1 return); a "cash" game pays out the top ~50% fixed 1:1 odds.
 
