@@ -1,6 +1,6 @@
 import pandas as pd
 import glob
-
+import sys
 
 
 def getIandC(alist,blist):
@@ -10,9 +10,18 @@ def getIandC(alist,blist):
 
 if __name__ == '__main__':
 
+	try:	
+		ttype= sys.argv[1]
+		if ttype not in ['gpp','dou']:
+			print 'bad tournament type {}'.format(ttype)
+			sys.exit()
+	except Exception:
+		print 'specify tournament type!'
+		sys.exit()
 
-	writepath = './IPviews/'
-	fname = writepath+'fict.composite.csv'
+
+	writepath = './'+ttype+'_IPviews/'
+	fname = writepath+ttype+'.fict.composite.csv'
 
 
 	#fict_paths =glob.glob(writepath+'*.csv')

@@ -16,8 +16,8 @@ def split_data(X=None,y=None,test_size=0.20):
 	X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size,random_state=42)
 	return X_train, X_test, y_train, y_test
 
-def save_model(model=None,path='this_model',do_zip=True):
-	rootpath = './../MYMODELS/PICKLES/'
+def save_model(model=None,path='this_model',do_zip=True,ttype=None):
+	rootpath = './../'+ttype+'_MYMODELS/PICKLES/'
 	path = rootpath+path+'.pkl'
 	if do_zip:
 		zp = path+'.gz'
@@ -27,14 +27,14 @@ def save_model(model=None,path='this_model',do_zip=True):
 			print 'writing PICKLED model to path=',path
 			pickle.dump(model, f)
 
-def save_preds(preds=None,path='this_model',rootpiece =''):
-	rootpath = './../MYMODELS/'+rootpiece+'PREDS/'
+def save_preds(preds=None,path='this_model',rootpiece ='',ttype=None):
+	rootpath = './../'+ttype+'_MYMODELS/'+rootpiece+'_PREDS/'
 	path = rootpath+path+'.csv'
 	print 'writing specs to ',path
 	preds.to_csv(path,index=False)
 
-def save_specs(specs=None,path='this_model'):
-	rootpath = './../MYMODELS/COEFFS/'
+def save_specs(specs=None,path='this_model',ttype=None):
+	rootpath = './../'+ttype+'_MYMODELS/COEFFS/'
 	path = rootpath+path+'.csv'
 	print 'writing specs to ',path
 	specs.to_csv(path,index=False)
@@ -143,18 +143,27 @@ if __name__ == '__main__':
 
 
 	d = dict_of_grids()
+	ttypel = ['gpp','dou']
 
         try:	
 		modeltype = sys.argv[1]
+		ttype = sys.argv[2]
+		if ttype not in ttypel:
+			print 'unknown tournament type!',ttype
+			sys.exit()
         except Exception:
-		modeltype='ridge'	
+		print "specify modeltype, tournament type!"
+		sys.exit()
 
 	ep = d[modeltype]
 	estimator= ep['e']
 	param_grid=ep['p']
 
-	path = '../DATA/merged/merged.csv'
+	path = '../DATA/merged/'+ttype+'.merged.csv'
 	df = pd.read_csv(path)
+
+	fict_bettor_cols =  [ X for X in df.columns.values.tolist() if 'fict' in X]
+
 	Xcols = proj_cols+vegas_cols+game_cols+momentum_cols+posenv_cols+salenv_cols+team_cols+fict_bettor_cols
 
 
@@ -163,6 +172,7 @@ if __name__ == '__main__':
 
 	for I,plname in enumerate(myplayers):
 		pldf = player(df=df,name=plname)
+
 
 
 		if len(pldf)<5:
@@ -183,12 +193,10 @@ if __name__ == '__main__':
 
 			mypreds['contest_ID']  = cids
 			sname = mymodel.__init__.im_class.__name__
-			save_model(model=mymodel,path=plname+'.'+  sname   ,do_zip=True)
-			save_specs(specs=myspecs,path=plname+'.'+  sname)
-			save_preds(preds=mypreds,path=plname+'.'  +sname,rootpiece ='')
-			save_preds(preds=testpreds,path=plname+'.'+sname,rootpiece= 'test_' )
-	
-	
+			save_model(model=mymodel,path=plname+'.'+  sname   ,do_zip=True    ,ttype=ttype)
+			save_specs(specs=myspecs,path=plname+'.'+  sname                   ,ttype=ttype)
+			save_preds(preds=mypreds,path=plname+'.'  +sname,rootpiece ='cv'  ,ttype=ttype)
+			save_preds(preds=testpreds,path=plname+'.'+sname,rootpiece= 'test',ttype=ttype)
 			v = [plname]+errstats+[modeltype]
 			rl.append(v)
 		else:	
@@ -196,7 +204,7 @@ if __name__ == '__main__':
 			continue
 
 
-	spath = './../MYMODELS/SUMMARIES/'+modeltype+'.csv'
+	spath = './../'+ttype+'_MYMODELS/SUMMARIES/'+modeltype+'.csv'
 	adf =  pd.DataFrame(rl,columns=['name','mean','std','cv_score','train_score','test_score','params','modeltype'])
 	print 'writing to ',spath
 	adf.to_csv(spath,index=False)

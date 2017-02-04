@@ -73,7 +73,15 @@ def add_all_val_exceeds(df=None,vcl=None):
 
 if __name__ == '__main__':
 
-	path='../../DATA/parsed_raw/NBA_GPP_records/gpp.composite.csv' 
+	try:	
+		ttype= sys.argv[1]
+		if ttype not in ['gpp','dou']:
+			print 'bad tournament type {}'.format(ttype)
+			sys.exit()
+	except Exception:
+		print 'specify tournament type!'
+		sys.exit()
+	path='../../DATA/mergeable/'+ttype+'.composite.csv' 
 	cdf = pd.read_csv(path,parse_dates=['date'],
 			date_parser= lambda x: pd.datetime.strptime(x, '%Y-%m-%d')  )
 	

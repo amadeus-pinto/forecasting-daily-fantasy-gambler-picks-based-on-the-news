@@ -87,8 +87,8 @@ def get_agg(zcol=None,df=None,prefix=None):
 	outdf.drop_duplicates(inplace=True)
 	return outdf
 
-def write_dist_by_team(mydf =None,zscols=None):
-	rootpath='./tenv/'
+def write_dist_by_team(mydf =None,zscols=None,ttype=None):
+	rootpath='./'+ttype+'_tenv/'
 	mudf = mydf.groupby('contest_ID').mean()[zscols]
 	stddf= mydf.groupby('contest_ID').std() [zscols]
 	mudf.columns = ['mu.'+X for X in mudf.columns.values.tolist()]
@@ -98,12 +98,12 @@ def write_dist_by_team(mydf =None,zscols=None):
 	print '###'*25+'writing DF TO ',writepath
 	df.to_csv(writepath,index=True)
 
-def write_Z_team():
-	rootpath='./tenv/'
+def write_Z_team(ttype=None):
 	composite_df=pd.DataFrame()
-	path ='./tenv/mu.sd.team.csv'
+	rootpath='./'+ttype+'_tenv/'
+	path ='./'+ttype+'_tenv/mu.sd.team.csv'
 	tpath = './rolling/team.roll.composite.csv'
-	protopath = '../../DATA/merged/proto_merged.csv'
+	protopath = '../../DATA/merged/'+ttype+'.proto_merged.csv'
 	cdf = pd.read_csv(path,index_col=0)
 	tdf = pd.read_csv(tpath)
 	pdf = pd.read_csv(protopath)
@@ -128,14 +128,14 @@ def write_Z_team():
 			composite_df = composite_df.append(a,ignore_index=True)
 		print '###'*10+'growing z.team_len={},***  %done={}'.format( len(composite_df),
 				100.0*I/len(np.unique(cdf.index.values.tolist())   ))
-	fname = rootpath+'Z.team.csv'
+	fname = rootpath+'Z.'+ttype+'.team.csv'
 	composite_df.to_csv(fname,index=False)
 	print 'wrote Z.team.csv; len={},path={}'.format(len(composite_df),fname)
 
 
-def write_team():
+def write_team(ttype=None):
 	teampath = './rolling/team.roll.composite.csv'
-	protopath = '../../DATA/merged/proto_merged.csv'
+	protopath = '../../DATA/merged/'+ttype+'.proto_merged.csv'
 	print 'writing Zteam!'
 	df  = pd.read_csv(protopath)
 	tdf = pd.read_csv(teampath)
@@ -143,19 +143,28 @@ def write_team():
 	zcols = [X for X in zcols if 'rm' in X]
 	mdf = pd.merge(df,tdf,how='left')
 	mdf=mdf[tdf.columns.values.tolist()+['contest_ID']]
-	write_dist_by_team(mydf= mdf,zscols=zcols)
+	write_dist_by_team(mydf= mdf,zscols=zcols,ttype=ttype)
 
 if __name__ == '__main__':
+
+	try:	
+		ttype= sys.argv[1]
+		if ttype not in ['gpp','dou']:
+			print 'bad tournament type {}'.format(ttype)
+			sys.exit()
+	except Exception:
+		print 'specify tournament type!'
+		sys.exit()
 
 	relcols = []
 
 	rerun_write_rolling_team=True 
 	rerun_write_team  =      True
-	rerun_write_Z_team  =     True
+	rerun_write_Z_team  =    True
 
 	if rerun_write_rolling_team:
 		write_rolling_team()
 	if rerun_write_team:
-		write_team()
+		write_team(ttype=ttype)
 	if rerun_write_Z_team:
-		write_Z_team()
+		write_Z_team(ttype=ttype)

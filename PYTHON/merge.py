@@ -7,15 +7,12 @@ def compute_score(idf):
         idf['score']=idf['points']+1.2*idf['rebounds']+1.5*idf['assists']+2.0*idf['steals']+2.0*idf['blocks']-1.0*idf['turnovers']
         return idf
 
-def get_fict():
+def get_fict(ttype=None):
 	pathroot = '../DATA/mergeable/'
-	df = pd.read_csv(pathroot+'fict.composite.csv')
+	df = pd.read_csv(pathroot+ttype+'.fict.composite.csv')
 	df['date']=pd.to_datetime(df['date'])
 	df = df.drop_duplicates()
 	return df
-
-
-
 
 def get_ssdf():
 	pathroot = '../DATA/mergeable/'
@@ -58,10 +55,18 @@ def get_proj():
 	print mdf.describe()
 	return mdf[pcols]
 
-def get_fdf():
+def get_fdf(ttype=None):
 	mdf = pd.DataFrame()
 	pathroot = '../DATA/mergeable/'
-	filel=['NBA_GPP.event.csv','gpp.composite.csv']
+	if ttype=='gpp':
+		filel=['NBA_GPP.event.csv','gpp.composite.csv']
+	elif ttype=='dou':
+		filel=['NBA_DOU.event.csv','dou.composite.csv']
+
+	else:
+		print 'invalid TOURNEY TYPE... shouldn\'t get here.'
+		sys.exit()
+
 	fcols = ['contest_ID','date','name','position','slate_size','percent_own','salary','max_entries_per_user','total_entries']
 	for fi in filel:
 		if mdf.empty:
@@ -74,16 +79,16 @@ def get_fdf():
 	
 	return mdf[fcols]
 
-def get_pos_envplr():
-	pathroot = '../DATA/mergeable/Z.pos.composite.csv'
+def get_pos_envplr(ttype=None):
+	pathroot = '../DATA/mergeable/Z.'+ttype+'.pos.composite.csv'
 	df =  pd.read_csv(pathroot)
 	#df.drop('z.rm.01.val_exceeds.06',1,inplace=True)
 	print 'WARNING FIX VARu!!!!!'
 	df = df.drop_duplicates()
 	return df
 
-def get_envteam():
-	pathroot = '../DATA/mergeable/Z.team.csv'
+def get_envteam(ttype=None):
+	pathroot = '../DATA/mergeable/Z.'+ttype+'.team.csv'
 	df =  pd.read_csv(pathroot)
 	df['date']=pd.to_datetime(df['date'])
 	print df.info()
@@ -92,8 +97,8 @@ def get_envteam():
 	print [X for X in df.columns.values.tolist() if 'rm' in X]
 	return df
 
-def get_sal_envplr():
-	pathroot = '../DATA/mergeable/Z.sbin.composite.csv'
+def get_sal_envplr(ttype=None):
+	pathroot = '../DATA/mergeable/Z.'+ttype+'.sbin.composite.csv'
 	df =  pd.read_csv(pathroot)
 	#df.drop('z.sbin.rm.01.val_exceeds.06',1,inplace=True)
 	print df.info()
@@ -154,11 +159,16 @@ def add_log_transform(df=None,colname=None):
 	df['log.'+colname] = np.log(df[colname]+1)
 	return df
 
-def get_baseline_df():
+def get_baseline_df(ttype=None):
+
+	#player
+	#seas
+	#'fc.composite.csv','mo.composite.csv'
+	#NBA_DOU.event.csv','dou.composite.csv
 	ssdf = get_ssdf()
 	spdf = get_spdf()
 	pdf =  get_proj()
-	fdf =  get_fdf()
+	fdf =  get_fdf(ttype=ttypestr)
 
 	df = fdf
 
@@ -180,7 +190,7 @@ def get_baseline_df():
 	###########################
 
 
-	wrpath = '../DATA/merged/proto_merged.csv'
+	wrpath = '../DATA/merged/'+ttype+'.proto_merged.csv'
 	print 'writing to ',wrpath
 	print df.info(verbose=True,null_counts=True)
 	df = df.drop_duplicates()
@@ -188,15 +198,27 @@ def get_baseline_df():
 
 	return df
 
-def add_feats(df):
+def add_feats(df,ttype):
+	#player_roll
+	#team_roll
+	#z.pos
+	#sal.pos
+	#fict
 	vpdf = get_plr()
 	vtdf = get_tea()
-	epdf = get_pos_envplr()
-	esdf = get_sal_envplr()
+	epdf = get_pos_envplr(ttype=ttype)
+	esdf = get_sal_envplr(ttype=ttype)
 
-	etdf = get_envteam()
-	fbdf = get_fict()
+	etdf = get_envteam(ttype=ttype)
+	fbdf = get_fict(ttype=ttype)
 	
+#	print vpdf.info()
+#	print vtdf.info()
+#	print epdf.info()
+#	print esdf.info()
+#	print etdf.info()
+#	print fbdf.info()
+
 	df = merge_with_big (big=df,small=vpdf)
 	df = merge_with_big (big=df,small=vtdf)
 
@@ -215,23 +237,37 @@ def add_feats(df):
 
 if __name__ == '__main__':
 
-	writepath='../DATA/merged/merged.csv'
+	try:	
+		ttypestr= sys.argv[1]
+		get_baseline = int(sys.argv[2])
+		if ttypestr not in ['gpp','dou']:
+			print 'bad tournament type {}'.format(ttypestr)
+			sys.exit()
+		if get_baseline not in [0,1]:
+			print 'bad baseline option spec. '
+			sys.exit()
+	except Exception:
+		print 'SPECIFY tournament type (gpp,dou) , whether to get baseline df! (1,0)!'
+		sys.exit()
 
-	df = get_baseline_df()
-	df = add_feats(df)
+	writepath='../DATA/merged/'+ttypestr+'.merged.csv'
 
-	print 'writing to-',writepath
-	df.to_csv(writepath,index=False)
-	print df.info(verbose=True,null_counts=True)
-	print df.describe()
-
-	print '====================='
-	print '====================='
-	print '====================='
-	print 'LeBron'
-	le= df.loc[df.name=='LeBron James']
-	print le.info()
-	print '====================='
-	print '====================='
-	print '====================='
-
+	if get_baseline==True:
+		df = get_baseline_df(ttype=ttypestr)
+		print 'wrote baseline. cd to ../raw/(IPslns,PLAYERS,TEAMS) and construct feats. '
+	else:
+		df = pd.read_csv('../DATA/merged/'+ttypestr+'.proto_merged.csv')
+		df['date']=pd.to_datetime(df['date'])
+		df = add_feats(df,ttypestr)
+	
+		print 'writing to-',writepath
+		df.to_csv(writepath,index=False)
+		print df.info(verbose=True,null_counts=True)
+		print df.describe()
+	
+		print '====================='
+		print 'LeBron'
+		le= df.loc[df.name=='LeBron James']
+		print le.info()
+		print '====================='
+	

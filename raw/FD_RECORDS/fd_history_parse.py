@@ -3,13 +3,21 @@ import sys
 import time
 import math
 import glob
+import sys
 
 
-#path1 = './ALL/gpps/15253-23803603.json'
-#path1 = './ALL/doubleUps/14216-21172256.json'
 
-pathl=  glob.glob("./NBA_GPP/*")
-#pathl=  glob.glob("./NBA_DOU/*")
+try:	
+	pathlstr= sys.argv[1]
+	if pathlstr not in ['NBA_GPP','NBA_DOU']:
+		print 'bad tournament type {}'.format(pathlstr)
+		sys.exit()
+except Exception:
+	pathlstr= 'NBA_GPP'
+
+
+pathl=  glob.glob("./"+pathlstr+"/*")
+print pathl
 tournament_type = pathl[0].split('/')[1]
 write_path = '../../DATA/parsed_raw/'+tournament_type+'_records/'
 tournament_writestr = write_path+tournament_type+'.event'
@@ -39,15 +47,13 @@ plsthl =[]
 plownl=[]
 plteamsl=[]
 pltophl=[]
-#pathl=pathl[0:5]
+
 for path in pathl:
 	pdf = pd.DataFrame()
 	qdf = pd.read_json(path)
 	this_date = pd.to_datetime(time.strftime('%Y-%m-%d %H:%M', time.localtime(qdf['start'][0])))
 	this_id = qdf['contestId'][0]
 	plwr = player_writestr+'.'+str(this_id)
-	#contestname = qdf['game']['name']
-	#this_size = qdf['game']['size']['max']
 	print '*******************', path,this_id,plwr
 	for key,value in qdf['players'].iteritems():
 		if isinstance(value, dict):

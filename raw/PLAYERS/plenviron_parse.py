@@ -34,8 +34,8 @@ def get_agg(zcol=None,df=None,prefix=None):
 	return outdf
 
 
-def write_dist_by_position(mydf =None,zscols=None):
-	rootpath='./plenv/'
+def write_dist_by_position(mydf =None,zscols=None,ttype=None):
+	rootpath='./'+ttype+'_plenv/'
 	###could make this lest repetitive by specifying agg. function
 	mudf = mydf.groupby(['contest_ID','position']).mean().sort('percent_own',ascending=False)[zscols]
 	stddf= mydf.groupby(['contest_ID','position']).std().sort('percent_own',ascending=False) [zscols]
@@ -59,10 +59,10 @@ def get_index_joined_composite(dbp_paths=None):
 	return composite_df
 
 
-def Z_write_dist_by_position(cdf=None,rel_cols=None):
+def Z_write_dist_by_position(cdf=None,rel_cols=None,ttype=None):
 	composite_df=pd.DataFrame()
 	mod_df = cdf[rel_cols].set_index('contest_ID')
-	dbp_paths =glob.glob('./plenv/*.csv')
+	dbp_paths =glob.glob('./'+ttype+'_plenv/*.csv')
 	composite_df = get_index_joined_composite(dbp_paths) 
 
 	posl=cdf.position.unique()
@@ -81,7 +81,7 @@ def Z_write_dist_by_position(cdf=None,rel_cols=None):
 		outDF.drop_duplicates(inplace=True)
 		cidl = outDF.index.values.tolist()
 		outDF['contest_ID'] = cidl 
-		fname = writepath+'Z.pos'+strp+'.csv'
+		fname = writepath+'Z.'+ttype+'.pos'+strp+'.csv'
 		outDF.to_csv(fname,index=False)
 		print 'pos={},len={},path={}'.format(pos,len(outDF),fname)
 
@@ -102,7 +102,7 @@ def write_binsize(df=None,binname=None):
 
 
 
-def Z_write_dist_by_salary(cdf=None,rel_cols=None):
+def Z_write_dist_by_salary(cdf=None,rel_cols=None,ttype=None):
 	r_df = pd.DataFrame()
 	for I,cid in enumerate(cdf.contest_ID.unique()):
 		cid_df = get_df_subset_iseq(cdf,'contest_ID',cid)
@@ -129,9 +129,9 @@ def Z_write_dist_by_salary(cdf=None,rel_cols=None):
 		else:	r_df = r_df.append(sldf,ignore_index=True)
 		print '###'*10+'growing zsbin df_len={},this_cid={}; this zsbin df_len={},***  %done={}'.format( len(r_df),
 												cid ,len(sldf),100.0*I/len(cdf.contest_ID.unique()))
-	fname = writepath+'Z.sbin.composite.csv'
+	fname = writepath+'Z.'+ttype+'.sbin.composite.csv'
 	r_df.to_csv(fname,index=False)
-	print 'wrote Z.sbin.csv; len={},path={}'.format(len(r_df),fname)
+	print 'wrote {}; len={},path={}'.format(fname, len(r_df),fname)
 
 
 def get_Z_score(df=None,colname=None,colprependstr='sbin'):
@@ -148,34 +148,35 @@ def get_Z_score(df=None,colname=None,colprependstr='sbin'):
 
 
 if __name__ == '__main__':
+	try:	
+		ttype= sys.argv[1]
+		if ttype not in ['gpp','dou']:
+			print 'bad tournament type {}'.format(ttype)
+			sys.exit()
+	except Exception:
+		print 'specify tournament type!'
+		sys.exit()
 
 	rerun_write_dist_by_position   = True  
 	rerun_Z_write_dist_by_position = True
 	rerun_Z_write_dist_by_salary   = True
 
-	writepath = './plenv/'
-	path='../../DATA/merged/proto_merged.csv' 
+	writepath = './'+ttype+'_plenv/'
+	path='../../DATA/merged/'+ttype+'.proto_merged.csv' 
 
-	zscols=['salary','proj_fc','proj_mo', 'v_fc', 'v_mo']#,'line','total']
+	zscols=['salary','proj_fc','proj_mo', 'v_fc', 'v_mo']
 	
-	#['rm.01.value','rm.01.score','rm.01.salary',
-	#'rm.01.val_exceeds.04','rm.01.val_exceeds.05','rm.01.val_exceeds.06']
 
 	rel_cols = ['contest_ID','name','position']+zscols
 	cdf = pd.read_csv(path,parse_dates=['date'],
 			date_parser= lambda x: pd.datetime.strptime(x, '%Y-%m-%d')  )
 
 	if rerun_write_dist_by_position:
-		write_dist_by_position(mydf=cdf,zscols=zscols)
+		write_dist_by_position(mydf=cdf,zscols=zscols,ttype=ttype)
 
 	if rerun_Z_write_dist_by_position:
-		Z_write_dist_by_position(cdf=cdf,rel_cols=rel_cols)
+		Z_write_dist_by_position(cdf=cdf,rel_cols=rel_cols,ttype=ttype)
 
 	if rerun_Z_write_dist_by_salary:
-		Z_write_dist_by_salary(cdf=cdf,rel_cols=['proj_fc','proj_mo','v_fc','v_mo'])
-
-		#,'line','total'
-		#'rm.01.value','rm.01.score','rm.01.salary','rm.01.val_exceeds.04'
-		#,'rm.01.val_exceeds.05','rm.01.val_exceeds.06'
-
+		Z_write_dist_by_salary(cdf=cdf,rel_cols=['proj_fc','proj_mo','v_fc','v_mo'],ttype=ttype)
 

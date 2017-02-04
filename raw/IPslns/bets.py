@@ -6,6 +6,7 @@ import scipy.stats as stats
 from scipy.stats import norm
 import numpy as np
 import ast
+import os,sys
 
 
 
@@ -145,7 +146,7 @@ def get_fict_b_df(rl=None,ptgname=None):
 	dldf=dldf[['name',ptgname]]
 	return dldf
 
-def get_fict_b_name(options): return 'fict.'+options['maximize']+'.'+str(options['overlap']).zfill(2)+'.'+str(options['n_want']).zfill(3)+'.'+str(options['max_sameteam']).zfill(3)
+def get_fict_b_name(options): return options['tournament_type']+'.fict.'+options['maximize']+'.'+str(options['overlap']).zfill(2)+'.'+str(options['n_want']).zfill(3)+'.'+str(options['max_sameteam']).zfill(3)
 def get_pops(rl=None,options=None,df=None):
 	ptgname = get_fict_b_name(options) 
 	dldf = get_fict_b_df(rl=rl,ptgname = ptgname)
@@ -179,9 +180,10 @@ def set_options():
 	n_want=5         		#total want
 	overlap=1       		#tolerated overlap with prev
 	max_sameteam=6          	# N=(0-6)     max number pl from same team 
+	tournament_type='gpp'
 	#lockl=['mylock1','mylock2']	#require rostered 'mylockX' 
 	#c_ID = None
-	dict_str = ['maximize','n_want','overlap','max_sameteam']
+	dict_str = ['maximize','n_want','overlap','max_sameteam','tournament_type']
 
         try:	
 		argl= ast.literal_eval(sys.argv[1])
@@ -203,9 +205,8 @@ def get_avg_proj(df=None,options=None,mul=['proj_fc','proj_mo']):
 	
 
 def getdf(options):
-	path = '../../DATA/merged/proto_merged.csv'
+	path = '../../DATA/merged/'+options['tournament_type']+'.proto_merged.csv'
 	df = pd.read_csv(path)
-	#df['name'] = df['name'].apply(lambda x: x.encode('utf-8').strip())
 	df['date']=pd.to_datetime(df['date'])
 	df = add_pos_bool(df)
 	df = get_avg_proj(df=df,options=options)
@@ -218,17 +219,14 @@ def df_subset(df=None,colname=None,colvalue=None):
 
 
 if __name__ == '__main__':
-
-
 	options=set_options()
 	df = getdf(options)
-	writepath = './IPviews/'
+	writepath = './'+options['tournament_type']+'_IPviews/'
 	fpiece = get_fict_b_name(options)
 	fpath = writepath+fpiece+'.csv'
 	df_fict = pd.DataFrame()
 	
 	doing_ids = df.contest_ID.unique()
-	#doing_ids=doing_ids#
 
 	for this_id,i in zip(doing_ids,range(1,len(doing_ids)+1)):
 		print 'DOING ID=',this_id
