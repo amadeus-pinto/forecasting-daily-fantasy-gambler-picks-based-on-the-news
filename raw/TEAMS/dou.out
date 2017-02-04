@@ -1,0 +1,2511 @@
+['opp_total_score', 'opp_def_score', 'opp_off_score', 'team_total_score', 'team_def_score', 'team_off_score', 'season', 'date', 'team', 'opponent']
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 4122 entries, 0 to 4121
+Data columns (total 10 columns):
+opp_total_score     4122 non-null float64
+opp_def_score       4122 non-null float64
+opp_off_score       4122 non-null float64
+team_total_score    4122 non-null float64
+team_def_score      4122 non-null float64
+team_off_score      4122 non-null float64
+season              4122 non-null int64
+date                4122 non-null datetime64[ns]
+team                4122 non-null object
+opponent            4122 non-null object
+dtypes: datetime64[ns](1), float64(6), int64(1), object(2)
+memory usage: 322.1+ KB
+None
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.05.team_off_score
+#########################   writing pl=CHI,on len=132 to ./rolling/CHI.csv; 0.0 %done 
+DOING SEASON= 2015
+LEN_df=103,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=151,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=103,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=151,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=103,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=151,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=103,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=151,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=103,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=151,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=103,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=151,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=103,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=151,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=103,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=151,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=103,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=151,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=103,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=151,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=103,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=151,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=103,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=151,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=103,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=151,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=103,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=151,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=103,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=151,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=103,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=151,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=103,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=151,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=103,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=151,col=rm.05.team_off_score
+#########################   writing pl=CLE,on len=151 to ./rolling/CLE.csv; 3.33333333333 %done 
+DOING SEASON= 2015
+LEN_df=92,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=142,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=142,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=142,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=142,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=142,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=142,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=142,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=142,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=142,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=142,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=142,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=142,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=142,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=142,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=142,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=142,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=142,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=142,col=rm.05.team_off_score
+#########################   writing pl=ATL,on len=142 to ./rolling/ATL.csv; 6.66666666667 %done 
+DOING SEASON= 2015
+LEN_df=86,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=135,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=135,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=135,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=135,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=135,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=135,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=135,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=135,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=135,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=135,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=135,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=135,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=135,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=135,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=135,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=135,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=135,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=135,col=rm.05.team_off_score
+#########################   writing pl=DET,on len=135 to ./rolling/DET.csv; 10.0 %done 
+DOING SEASON= 2015
+LEN_df=106,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=156,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=106,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=156,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=106,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=156,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=106,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=156,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=106,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=156,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=106,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=156,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=106,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=156,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=106,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=156,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=106,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=156,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=106,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=156,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=106,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=156,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=106,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=156,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=106,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=156,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=106,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=156,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=106,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=156,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=106,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=156,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=106,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=156,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=106,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=156,col=rm.05.team_off_score
+#########################   writing pl=GSW,on len=156 to ./rolling/GSW.csv; 13.3333333333 %done 
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.05.team_off_score
+#########################   writing pl=NOR,on len=132 to ./rolling/NOR.csv; 16.6666666667 %done 
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.05.team_off_score
+#########################   writing pl=MIL,on len=130 to ./rolling/MIL.csv; 20.0 %done 
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.05.team_off_score
+#########################   writing pl=NYK,on len=133 to ./rolling/NYK.csv; 23.3333333333 %done 
+DOING SEASON= 2015
+LEN_df=88,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.05.team_off_score
+#########################   writing pl=BOS,on len=137 to ./rolling/BOS.csv; 26.6666666667 %done 
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.team_off_score
+#########################   writing pl=PHI,on len=131 to ./rolling/PHI.csv; 30.0 %done 
+DOING SEASON= 2015
+LEN_df=86,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=86,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.05.team_off_score
+#########################   writing pl=MEM,on len=137 to ./rolling/MEM.csv; 33.3333333333 %done 
+DOING SEASON= 2015
+LEN_df=96,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=146,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=96,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=146,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=96,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=146,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=96,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=146,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=96,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=146,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=96,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=146,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=96,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=146,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=96,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=146,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=96,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=146,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=96,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=146,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=96,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=146,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=96,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=146,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=96,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=146,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=96,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=146,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=96,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=146,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=96,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=146,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=96,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=146,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=96,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=146,col=rm.05.team_off_score
+#########################   writing pl=MIA,on len=146 to ./rolling/MIA.csv; 36.6666666667 %done 
+DOING SEASON= 2015
+LEN_df=89,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=139,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=139,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=139,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=139,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=139,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=139,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=139,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=139,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=139,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=139,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=139,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=139,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=139,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=139,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=139,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=139,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=139,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=139,col=rm.05.team_off_score
+#########################   writing pl=CHA,on len=139 to ./rolling/CHA.csv; 40.0 %done 
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.team_off_score
+#########################   writing pl=SAC,on len=131 to ./rolling/SAC.csv; 43.3333333333 %done 
+DOING SEASON= 2015
+LEN_df=88,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=138,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=138,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=138,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=138,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=138,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=138,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=138,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=138,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=138,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=138,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=138,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=138,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=138,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=138,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=138,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=138,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=138,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=88,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=138,col=rm.05.team_off_score
+#########################   writing pl=LAC,on len=138 to ./rolling/LAC.csv; 46.6666666667 %done 
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=134,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=134,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=134,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=134,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=134,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=134,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=134,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=134,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=134,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=134,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=134,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=134,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=134,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=134,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=134,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=134,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=134,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=134,col=rm.05.team_off_score
+#########################   writing pl=LAL,on len=134 to ./rolling/LAL.csv; 50.0 %done 
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.team_off_score
+#########################   writing pl=MIN,on len=131 to ./rolling/MIN.csv; 53.3333333333 %done 
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=133,col=rm.05.team_off_score
+#########################   writing pl=ORL,on len=133 to ./rolling/ORL.csv; 56.6666666667 %done 
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.team_off_score
+#########################   writing pl=WAS,on len=131 to ./rolling/WAS.csv; 60.0 %done 
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.team_off_score
+#########################   writing pl=BKN,on len=131 to ./rolling/BKN.csv; 63.3333333333 %done 
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=132,col=rm.05.team_off_score
+#########################   writing pl=UTA,on len=132 to ./rolling/UTA.csv; 66.6666666667 %done 
+DOING SEASON= 2015
+LEN_df=102,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=152,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=102,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=152,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=102,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=152,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=102,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=152,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=102,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=152,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=102,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=152,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=102,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=152,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=102,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=152,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=102,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=152,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=102,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=152,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=102,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=152,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=102,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=152,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=102,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=152,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=102,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=152,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=102,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=152,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=102,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=152,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=102,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=152,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=102,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=152,col=rm.05.team_off_score
+#########################   writing pl=TOR,on len=152 to ./rolling/TOR.csv; 70.0 %done 
+DOING SEASON= 2015
+LEN_df=89,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=89,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=137,col=rm.05.team_off_score
+#########################   writing pl=IND,on len=137 to ./rolling/IND.csv; 73.3333333333 %done 
+DOING SEASON= 2015
+LEN_df=87,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=140,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=140,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=140,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=140,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=140,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=140,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=140,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=140,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=140,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=140,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=140,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=140,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=140,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=140,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=140,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=140,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=140,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=140,col=rm.05.team_off_score
+#########################   writing pl=HOU,on len=140 to ./rolling/HOU.csv; 76.6666666667 %done 
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=130,col=rm.05.team_off_score
+#########################   writing pl=DEN,on len=130 to ./rolling/DEN.csv; 80.0 %done 
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=82,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=131,col=rm.05.team_off_score
+#########################   writing pl=PHO,on len=131 to ./rolling/PHO.csv; 83.3333333333 %done 
+DOING SEASON= 2015
+LEN_df=87,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=136,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=136,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=136,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=136,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=136,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=136,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=136,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=136,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=136,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=136,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=136,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=136,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=136,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=136,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=136,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=136,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=136,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=87,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=136,col=rm.05.team_off_score
+#########################   writing pl=DAL,on len=136 to ./rolling/DAL.csv; 86.6666666667 %done 
+DOING SEASON= 2015
+LEN_df=100,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=150,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=100,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=150,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=100,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=150,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=100,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=150,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=100,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=150,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=100,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=150,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=100,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=150,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=100,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=150,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=100,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=150,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=100,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=150,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=100,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=150,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=100,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=150,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=100,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=150,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=100,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=150,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=100,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=150,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=100,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=150,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=100,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=150,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=100,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=150,col=rm.05.team_off_score
+#########################   writing pl=OKC,on len=150 to ./rolling/OKC.csv; 90.0 %done 
+DOING SEASON= 2015
+LEN_df=92,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=141,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=141,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=141,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=141,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=141,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=141,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=141,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=141,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=141,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=141,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=141,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=141,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=141,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=141,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=141,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=141,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=141,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=92,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=141,col=rm.05.team_off_score
+#########################   writing pl=SAS,on len=141 to ./rolling/SAS.csv; 93.3333333333 %done 
+DOING SEASON= 2015
+LEN_df=93,col=rm.01.opp_total_score
+DOING SEASON= 2016
+LEN_df=143,col=rm.01.opp_total_score
+DOING SEASON= 2015
+LEN_df=93,col=rm.02.opp_total_score
+DOING SEASON= 2016
+LEN_df=143,col=rm.02.opp_total_score
+DOING SEASON= 2015
+LEN_df=93,col=rm.05.opp_total_score
+DOING SEASON= 2016
+LEN_df=143,col=rm.05.opp_total_score
+DOING SEASON= 2015
+LEN_df=93,col=rm.01.opp_def_score
+DOING SEASON= 2016
+LEN_df=143,col=rm.01.opp_def_score
+DOING SEASON= 2015
+LEN_df=93,col=rm.02.opp_def_score
+DOING SEASON= 2016
+LEN_df=143,col=rm.02.opp_def_score
+DOING SEASON= 2015
+LEN_df=93,col=rm.05.opp_def_score
+DOING SEASON= 2016
+LEN_df=143,col=rm.05.opp_def_score
+DOING SEASON= 2015
+LEN_df=93,col=rm.01.opp_off_score
+DOING SEASON= 2016
+LEN_df=143,col=rm.01.opp_off_score
+DOING SEASON= 2015
+LEN_df=93,col=rm.02.opp_off_score
+DOING SEASON= 2016
+LEN_df=143,col=rm.02.opp_off_score
+DOING SEASON= 2015
+LEN_df=93,col=rm.05.opp_off_score
+DOING SEASON= 2016
+LEN_df=143,col=rm.05.opp_off_score
+DOING SEASON= 2015
+LEN_df=93,col=rm.01.team_total_score
+DOING SEASON= 2016
+LEN_df=143,col=rm.01.team_total_score
+DOING SEASON= 2015
+LEN_df=93,col=rm.02.team_total_score
+DOING SEASON= 2016
+LEN_df=143,col=rm.02.team_total_score
+DOING SEASON= 2015
+LEN_df=93,col=rm.05.team_total_score
+DOING SEASON= 2016
+LEN_df=143,col=rm.05.team_total_score
+DOING SEASON= 2015
+LEN_df=93,col=rm.01.team_def_score
+DOING SEASON= 2016
+LEN_df=143,col=rm.01.team_def_score
+DOING SEASON= 2015
+LEN_df=93,col=rm.02.team_def_score
+DOING SEASON= 2016
+LEN_df=143,col=rm.02.team_def_score
+DOING SEASON= 2015
+LEN_df=93,col=rm.05.team_def_score
+DOING SEASON= 2016
+LEN_df=143,col=rm.05.team_def_score
+DOING SEASON= 2015
+LEN_df=93,col=rm.01.team_off_score
+DOING SEASON= 2016
+LEN_df=143,col=rm.01.team_off_score
+DOING SEASON= 2015
+LEN_df=93,col=rm.02.team_off_score
+DOING SEASON= 2016
+LEN_df=143,col=rm.02.team_off_score
+DOING SEASON= 2015
+LEN_df=93,col=rm.05.team_off_score
+DOING SEASON= 2016
+LEN_df=143,col=rm.05.team_off_score
+#########################   writing pl=POR,on len=143 to ./rolling/POR.csv; 96.6666666667 %done 
+writing Zteam!
+###########################################################################writing DF TO  ./dou_tenv/mu.sd.team.csv
+##############################growing z.team_len=64,***  %done=0.0
+##############################growing z.team_len=208,***  %done=0.332225913621
+##############################growing z.team_len=283,***  %done=0.664451827243
+##############################growing z.team_len=322,***  %done=0.996677740864
+##############################growing z.team_len=374,***  %done=1.32890365449
+##############################growing z.team_len=469,***  %done=1.66112956811
+##############################growing z.team_len=541,***  %done=1.99335548173
+##############################growing z.team_len=580,***  %done=2.32558139535
+##############################growing z.team_len=641,***  %done=2.65780730897
+##############################growing z.team_len=746,***  %done=2.99003322259
+##############################growing z.team_len=813,***  %done=3.32225913621
+##############################growing z.team_len=893,***  %done=3.65448504983
+##############################growing z.team_len=997,***  %done=3.98671096346
+##############################growing z.team_len=1045,***  %done=4.31893687708
+##############################growing z.team_len=1088,***  %done=4.6511627907
+##############################growing z.team_len=1167,***  %done=4.98338870432
+##############################growing z.team_len=1220,***  %done=5.31561461794
+##############################growing z.team_len=1309,***  %done=5.64784053156
+##############################growing z.team_len=1426,***  %done=5.98006644518
+##############################growing z.team_len=1477,***  %done=6.3122923588
+##############################growing z.team_len=1601,***  %done=6.64451827243
+##############################growing z.team_len=1693,***  %done=6.97674418605
+##############################growing z.team_len=1745,***  %done=7.30897009967
+##############################growing z.team_len=1839,***  %done=7.64119601329
+##############################growing z.team_len=1930,***  %done=7.97342192691
+##############################growing z.team_len=2041,***  %done=8.30564784053
+##############################growing z.team_len=2097,***  %done=8.63787375415
+##############################growing z.team_len=2214,***  %done=8.97009966777
+##############################growing z.team_len=2297,***  %done=9.3023255814
+##############################growing z.team_len=2372,***  %done=9.63455149502
+##############################growing z.team_len=2456,***  %done=9.96677740864
+##############################growing z.team_len=2530,***  %done=10.2990033223
+##############################growing z.team_len=2649,***  %done=10.6312292359
+##############################growing z.team_len=2770,***  %done=10.9634551495
+##############################growing z.team_len=2857,***  %done=11.2956810631
+##############################growing z.team_len=2925,***  %done=11.6279069767
+##############################growing z.team_len=3035,***  %done=11.9601328904
+##############################growing z.team_len=3115,***  %done=12.292358804
+##############################growing z.team_len=3221,***  %done=12.6245847176
+##############################growing z.team_len=3303,***  %done=12.9568106312
+##############################growing z.team_len=3380,***  %done=13.2890365449
+##############################growing z.team_len=3478,***  %done=13.6212624585
+##############################growing z.team_len=3538,***  %done=13.9534883721
+##############################growing z.team_len=3643,***  %done=14.2857142857
+##############################growing z.team_len=3720,***  %done=14.6179401993
+##############################growing z.team_len=3830,***  %done=14.950166113
+##############################growing z.team_len=3889,***  %done=15.2823920266
+##############################growing z.team_len=4016,***  %done=15.6146179402
+##############################growing z.team_len=4106,***  %done=15.9468438538
+##############################growing z.team_len=4151,***  %done=16.2790697674
+##############################growing z.team_len=4258,***  %done=16.6112956811
+##############################growing z.team_len=4317,***  %done=16.9435215947
+##############################growing z.team_len=4459,***  %done=17.2757475083
+##############################growing z.team_len=4509,***  %done=17.6079734219
+##############################growing z.team_len=4642,***  %done=17.9401993355
+##############################growing z.team_len=4699,***  %done=18.2724252492
+##############################growing z.team_len=4745,***  %done=18.6046511628
+##############################growing z.team_len=4840,***  %done=18.9368770764
+##############################growing z.team_len=4887,***  %done=19.26910299
+##############################growing z.team_len=5037,***  %done=19.6013289037
+##############################growing z.team_len=5121,***  %done=19.9335548173
+##############################growing z.team_len=5237,***  %done=20.2657807309
+##############################growing z.team_len=5296,***  %done=20.5980066445
+##############################growing z.team_len=5423,***  %done=20.9302325581
+##############################growing z.team_len=5497,***  %done=21.2624584718
+##############################growing z.team_len=5589,***  %done=21.5946843854
+##############################growing z.team_len=5649,***  %done=21.926910299
+##############################growing z.team_len=5715,***  %done=22.2591362126
+##############################growing z.team_len=5822,***  %done=22.5913621262
+##############################growing z.team_len=5865,***  %done=22.9235880399
+##############################growing z.team_len=5971,***  %done=23.2558139535
+##############################growing z.team_len=6020,***  %done=23.5880398671
+##############################growing z.team_len=6127,***  %done=23.9202657807
+##############################growing z.team_len=6178,***  %done=24.2524916944
+##############################growing z.team_len=6272,***  %done=24.584717608
+##############################growing z.team_len=6340,***  %done=24.9169435216
+##############################growing z.team_len=6420,***  %done=25.2491694352
+##############################growing z.team_len=6467,***  %done=25.5813953488
+##############################growing z.team_len=6559,***  %done=25.9136212625
+##############################growing z.team_len=6667,***  %done=26.2458471761
+##############################growing z.team_len=6719,***  %done=26.5780730897
+##############################growing z.team_len=6816,***  %done=26.9102990033
+##############################growing z.team_len=6907,***  %done=27.2425249169
+##############################growing z.team_len=6969,***  %done=27.5747508306
+##############################growing z.team_len=7030,***  %done=27.9069767442
+##############################growing z.team_len=7085,***  %done=28.2392026578
+##############################growing z.team_len=7140,***  %done=28.5714285714
+##############################growing z.team_len=7251,***  %done=28.903654485
+##############################growing z.team_len=7326,***  %done=29.2358803987
+##############################growing z.team_len=7434,***  %done=29.5681063123
+##############################growing z.team_len=7520,***  %done=29.9003322259
+##############################growing z.team_len=7584,***  %done=30.2325581395
+##############################growing z.team_len=7688,***  %done=30.5647840532
+##############################growing z.team_len=7770,***  %done=30.8970099668
+##############################growing z.team_len=7859,***  %done=31.2292358804
+##############################growing z.team_len=7927,***  %done=31.561461794
+##############################growing z.team_len=8036,***  %done=31.8936877076
+##############################growing z.team_len=8113,***  %done=32.2259136213
+##############################growing z.team_len=8179,***  %done=32.5581395349
+##############################growing z.team_len=8257,***  %done=32.8903654485
+##############################growing z.team_len=8304,***  %done=33.2225913621
+##############################growing z.team_len=8403,***  %done=33.5548172757
+##############################growing z.team_len=8452,***  %done=33.8870431894
+##############################growing z.team_len=8531,***  %done=34.219269103
+##############################growing z.team_len=8608,***  %done=34.5514950166
+##############################growing z.team_len=8660,***  %done=34.8837209302
+##############################growing z.team_len=8741,***  %done=35.2159468439
+##############################growing z.team_len=8808,***  %done=35.5481727575
+##############################growing z.team_len=8908,***  %done=35.8803986711
+##############################growing z.team_len=8944,***  %done=36.2126245847
+##############################growing z.team_len=8983,***  %done=36.5448504983
+##############################growing z.team_len=9029,***  %done=36.877076412
+##############################growing z.team_len=9119,***  %done=37.2093023256
+##############################growing z.team_len=9174,***  %done=37.5415282392
+##############################growing z.team_len=9240,***  %done=37.8737541528
+##############################growing z.team_len=9280,***  %done=38.2059800664
+##############################growing z.team_len=9339,***  %done=38.5382059801
+##############################growing z.team_len=9392,***  %done=38.8704318937
+##############################growing z.team_len=9477,***  %done=39.2026578073
+##############################growing z.team_len=9523,***  %done=39.5348837209
+##############################growing z.team_len=9565,***  %done=39.8671096346
+##############################growing z.team_len=9616,***  %done=40.1993355482
+##############################growing z.team_len=9654,***  %done=40.5315614618
+##############################growing z.team_len=9709,***  %done=40.8637873754
+##############################growing z.team_len=9743,***  %done=41.196013289
+##############################growing z.team_len=9805,***  %done=41.5282392027
+##############################growing z.team_len=9858,***  %done=41.8604651163
+##############################growing z.team_len=9918,***  %done=42.1926910299
+##############################growing z.team_len=9947,***  %done=42.5249169435
+##############################growing z.team_len=9991,***  %done=42.8571428571
+##############################growing z.team_len=10070,***  %done=43.1893687708
+##############################growing z.team_len=10114,***  %done=43.5215946844
+##############################growing z.team_len=10157,***  %done=43.853820598
+##############################growing z.team_len=10213,***  %done=44.1860465116
+##############################growing z.team_len=10240,***  %done=44.5182724252
+##############################growing z.team_len=10320,***  %done=44.8504983389
+##############################growing z.team_len=10372,***  %done=45.1827242525
+##############################growing z.team_len=10415,***  %done=45.5149501661
+##############################growing z.team_len=10481,***  %done=45.8471760797
+##############################growing z.team_len=10518,***  %done=46.1794019934
+##############################growing z.team_len=10582,***  %done=46.511627907
+##############################growing z.team_len=10624,***  %done=46.8438538206
+##############################growing z.team_len=10700,***  %done=47.1760797342
+##############################growing z.team_len=10748,***  %done=47.5083056478
+##############################growing z.team_len=10800,***  %done=47.8405315615
+##############################growing z.team_len=10845,***  %done=48.1727574751
+##############################growing z.team_len=10895,***  %done=48.5049833887
+##############################growing z.team_len=10954,***  %done=48.8372093023
+##############################growing z.team_len=10995,***  %done=49.1694352159
+##############################growing z.team_len=11020,***  %done=49.5016611296
+##############################growing z.team_len=11070,***  %done=49.8338870432
+##############################growing z.team_len=11141,***  %done=50.1661129568
+##############################growing z.team_len=11186,***  %done=50.4983388704
+##############################growing z.team_len=11242,***  %done=50.8305647841
+##############################growing z.team_len=11271,***  %done=51.1627906977
+##############################growing z.team_len=11319,***  %done=51.4950166113
+##############################growing z.team_len=11384,***  %done=51.8272425249
+##############################growing z.team_len=11433,***  %done=52.1594684385
+##############################growing z.team_len=11477,***  %done=52.4916943522
+##############################growing z.team_len=11535,***  %done=52.8239202658
+##############################growing z.team_len=11596,***  %done=53.1561461794
+##############################growing z.team_len=11658,***  %done=53.488372093
+##############################growing z.team_len=11716,***  %done=53.8205980066
+##############################growing z.team_len=11752,***  %done=54.1528239203
+##############################growing z.team_len=11788,***  %done=54.4850498339
+##############################growing z.team_len=11831,***  %done=54.8172757475
+##############################growing z.team_len=11879,***  %done=55.1495016611
+##############################growing z.team_len=11918,***  %done=55.4817275748
+##############################growing z.team_len=11945,***  %done=55.8139534884
+##############################growing z.team_len=11986,***  %done=56.146179402
+##############################growing z.team_len=12027,***  %done=56.4784053156
+##############################growing z.team_len=12056,***  %done=56.8106312292
+##############################growing z.team_len=12083,***  %done=57.1428571429
+##############################growing z.team_len=12114,***  %done=57.4750830565
+##############################growing z.team_len=12145,***  %done=57.8073089701
+##############################growing z.team_len=12176,***  %done=58.1395348837
+##############################growing z.team_len=12212,***  %done=58.4717607973
+##############################growing z.team_len=12244,***  %done=58.803986711
+##############################growing z.team_len=12288,***  %done=59.1362126246
+##############################growing z.team_len=12325,***  %done=59.4684385382
+##############################growing z.team_len=12350,***  %done=59.8006644518
+##############################growing z.team_len=12373,***  %done=60.1328903654
+##############################growing z.team_len=12395,***  %done=60.4651162791
+##############################growing z.team_len=12425,***  %done=60.7973421927
+##############################growing z.team_len=12451,***  %done=61.1295681063
+##############################growing z.team_len=12475,***  %done=61.4617940199
+##############################growing z.team_len=12503,***  %done=61.7940199336
+##############################growing z.team_len=12527,***  %done=62.1262458472
+##############################growing z.team_len=12554,***  %done=62.4584717608
+##############################growing z.team_len=12580,***  %done=62.7906976744
+##############################growing z.team_len=12607,***  %done=63.122923588
+##############################growing z.team_len=12635,***  %done=63.4551495017
+##############################growing z.team_len=12665,***  %done=63.7873754153
+##############################growing z.team_len=12690,***  %done=64.1196013289
+##############################growing z.team_len=12724,***  %done=64.4518272425
+##############################growing z.team_len=12752,***  %done=64.7840531561
+##############################growing z.team_len=12777,***  %done=65.1162790698
+##############################growing z.team_len=12806,***  %done=65.4485049834
+##############################growing z.team_len=12832,***  %done=65.780730897
+##############################growing z.team_len=12861,***  %done=66.1129568106
+##############################growing z.team_len=12887,***  %done=66.4451827243
+##############################growing z.team_len=12913,***  %done=66.7774086379
+##############################growing z.team_len=12932,***  %done=67.1096345515
+##############################growing z.team_len=12966,***  %done=67.4418604651
+##############################growing z.team_len=12994,***  %done=67.7740863787
+##############################growing z.team_len=13035,***  %done=68.1063122924
+##############################growing z.team_len=13071,***  %done=68.438538206
+##############################growing z.team_len=13112,***  %done=68.7707641196
+##############################growing z.team_len=13161,***  %done=69.1029900332
+##############################growing z.team_len=13224,***  %done=69.4352159468
+##############################growing z.team_len=13272,***  %done=69.7674418605
+##############################growing z.team_len=13313,***  %done=70.0996677741
+##############################growing z.team_len=13347,***  %done=70.4318936877
+##############################growing z.team_len=13435,***  %done=70.7641196013
+##############################growing z.team_len=13487,***  %done=71.096345515
+##############################growing z.team_len=13545,***  %done=71.4285714286
+##############################growing z.team_len=13595,***  %done=71.7607973422
+##############################growing z.team_len=13621,***  %done=72.0930232558
+##############################growing z.team_len=13682,***  %done=72.4252491694
+##############################growing z.team_len=13746,***  %done=72.7574750831
+##############################growing z.team_len=13834,***  %done=73.0897009967
+##############################growing z.team_len=13871,***  %done=73.4219269103
+##############################growing z.team_len=13922,***  %done=73.7541528239
+##############################growing z.team_len=13966,***  %done=74.0863787375
+##############################growing z.team_len=14004,***  %done=74.4186046512
+##############################growing z.team_len=14061,***  %done=74.7508305648
+##############################growing z.team_len=14099,***  %done=75.0830564784
+##############################growing z.team_len=14182,***  %done=75.415282392
+##############################growing z.team_len=14229,***  %done=75.7475083056
+##############################growing z.team_len=14307,***  %done=76.0797342193
+##############################growing z.team_len=14350,***  %done=76.4119601329
+##############################growing z.team_len=14382,***  %done=76.7441860465
+##############################growing z.team_len=14443,***  %done=77.0764119601
+##############################growing z.team_len=14488,***  %done=77.4086378738
+##############################growing z.team_len=14557,***  %done=77.7408637874
+##############################growing z.team_len=14621,***  %done=78.073089701
+##############################growing z.team_len=14659,***  %done=78.4053156146
+##############################growing z.team_len=14698,***  %done=78.7375415282
+##############################growing z.team_len=14737,***  %done=79.0697674419
+##############################growing z.team_len=14795,***  %done=79.4019933555
+##############################growing z.team_len=14857,***  %done=79.7342192691
+##############################growing z.team_len=14899,***  %done=80.0664451827
+##############################growing z.team_len=14951,***  %done=80.3986710963
+##############################growing z.team_len=15014,***  %done=80.73089701
+##############################growing z.team_len=15050,***  %done=81.0631229236
+##############################growing z.team_len=15128,***  %done=81.3953488372
+##############################growing z.team_len=15160,***  %done=81.7275747508
+##############################growing z.team_len=15235,***  %done=82.0598006645
+##############################growing z.team_len=15302,***  %done=82.3920265781
+##############################growing z.team_len=15369,***  %done=82.7242524917
+##############################growing z.team_len=15448,***  %done=83.0564784053
+##############################growing z.team_len=15500,***  %done=83.3887043189
+##############################growing z.team_len=15565,***  %done=83.7209302326
+##############################growing z.team_len=15625,***  %done=84.0531561462
+##############################growing z.team_len=15704,***  %done=84.3853820598
+##############################growing z.team_len=15743,***  %done=84.7176079734
+##############################growing z.team_len=15788,***  %done=85.049833887
+##############################growing z.team_len=15848,***  %done=85.3820598007
+##############################growing z.team_len=15889,***  %done=85.7142857143
+##############################growing z.team_len=15944,***  %done=86.0465116279
+##############################growing z.team_len=16016,***  %done=86.3787375415
+##############################growing z.team_len=16063,***  %done=86.7109634551
+##############################growing z.team_len=16096,***  %done=87.0431893688
+##############################growing z.team_len=16161,***  %done=87.3754152824
+##############################growing z.team_len=16208,***  %done=87.707641196
+##############################growing z.team_len=16275,***  %done=88.0398671096
+##############################growing z.team_len=16308,***  %done=88.3720930233
+##############################growing z.team_len=16366,***  %done=88.7043189369
+##############################growing z.team_len=16423,***  %done=89.0365448505
+##############################growing z.team_len=16487,***  %done=89.3687707641
+##############################growing z.team_len=16534,***  %done=89.7009966777
+##############################growing z.team_len=16590,***  %done=90.0332225914
+##############################growing z.team_len=16700,***  %done=90.365448505
+##############################growing z.team_len=16778,***  %done=90.6976744186
+##############################growing z.team_len=16861,***  %done=91.0299003322
+##############################growing z.team_len=16954,***  %done=91.3621262458
+##############################growing z.team_len=17038,***  %done=91.6943521595
+##############################growing z.team_len=17120,***  %done=92.0265780731
+##############################growing z.team_len=17189,***  %done=92.3588039867
+##############################growing z.team_len=17232,***  %done=92.6910299003
+##############################growing z.team_len=17283,***  %done=93.023255814
+##############################growing z.team_len=17391,***  %done=93.3554817276
+##############################growing z.team_len=17468,***  %done=93.6877076412
+##############################growing z.team_len=17525,***  %done=94.0199335548
+##############################growing z.team_len=17593,***  %done=94.3521594684
+##############################growing z.team_len=17700,***  %done=94.6843853821
+##############################growing z.team_len=17757,***  %done=95.0166112957
+##############################growing z.team_len=17859,***  %done=95.3488372093
+##############################growing z.team_len=17942,***  %done=95.6810631229
+##############################growing z.team_len=17975,***  %done=96.0132890365
+##############################growing z.team_len=18075,***  %done=96.3455149502
+##############################growing z.team_len=18161,***  %done=96.6777408638
+##############################growing z.team_len=18284,***  %done=97.0099667774
+##############################growing z.team_len=18347,***  %done=97.342192691
+##############################growing z.team_len=18435,***  %done=97.6744186047
+##############################growing z.team_len=18518,***  %done=98.0066445183
+##############################growing z.team_len=18603,***  %done=98.3388704319
+##############################growing z.team_len=18653,***  %done=98.6710963455
+##############################growing z.team_len=18742,***  %done=99.0033222591
+##############################growing z.team_len=18851,***  %done=99.3355481728
+##############################growing z.team_len=18915,***  %done=99.6677740864
+wrote Z.team.csv; len=18915,path=./dou_tenv/Z.dou.team.csv
