@@ -84,9 +84,13 @@ def get_cv_model(estimator=None,param_grid=None,X=None,y=None,num_folds=0,proces
 	print lmfdf
 	return estimator,lmfdf,errorst,cvpreds,tdf
 
-def player(df=None,name=None):
+def player(df=None,name=None,do_loadXy=False):
 	print 'localizing on {},len={}'.format(name,len(df.loc[df.name==name]))
-	return df.loc[df.name==name].dropna()
+	if do_loadXy==True:
+		return load_Xy(df=df.loc[df.name==name].dropna())
+		
+	else:
+		return df.loc[df.name==name].dropna()
 
 def summarize_grid_search_model(headers,y,y_test,y_train,coeffs,test_preds,train_preds,grid):
 	print headers
@@ -110,40 +114,34 @@ def summarize_grid_search_model(headers,y,y_test,y_train,coeffs,test_preds,train
 	print "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
 	return lmfdf,errorst
 
+def load_Xy(df=None,drop_these=[]):
+	proj_cols = ['proj_fc','proj_mo','v_fc','v_mo','status']
+	vegas_cols = ['line','total']
+	game_cols = ['slate_size','max_user_frac','total_entries','log.slate_size']
+	momentum_cols = ['rm.01.score', 'rm.05.score',  'rm.01.salary', 'rm.05.salary',  'rm.01.value', 'rm.05.value', 'rm.01.val_exceeds.04', 'rm.05.val_exceeds.04',  'rm.01.val_exceeds.05', 'rm.05.val_exceeds.05', 'rm.01.val_exceeds.06', 'rm.05.val_exceeds.06'] 
+	posenv_cols = ['z.salary', 'z.proj_fc', 'z.proj_mo', 'z.v_fc', 'z.v_mo']
+	salenv_cols = ['z.sbin.proj_fc', 'z.sbin.proj_mo', 'z.sbin.v_fc', 'z.sbin.v_mo']
+	team_cols  =['rm.01.opp_total_score', 'rm.05.opp_total_score', 'rm.01.opp_def_score', 'rm.05.opp_def_score', 'rm.01.opp_off_score', 'rm.05.opp_off_score', 'rm.01.team_total_score', 'rm.05.team_total_score', 'rm.01.team_def_score',  'rm.05.team_def_score', 'rm.01.team_off_score', 'rm.05.team_off_score']
+	team_env_cols = ['z.rm.01.opp_total_score', 'z.rm.02.opp_total_score', 'z.rm.05.opp_total_score', 'z.rm.01.opp_def_score', 'z.rm.02.opp_def_score', 'z.rm.05.opp_def_score', 'z.rm.01.opp_off_score', 'z.rm.02.opp_off_score', 'z.rm.05.opp_off_score', 'z.rm.01.team_total_score', 'z.rm.02.team_total_score', 'z.rm.05.team_total_score', 'z.rm.01.team_def_score', 'z.rm.02.team_def_score', 'z.rm.05.team_def_score', 'z.rm.01.team_off_score', 'z.rm.02.team_off_score', 'z.rm.05.team_off_score'] 
+	fict_bettor_cols =  [ X for X in df.columns.values.tolist() if 'fict' in X]
+	ystr = 'percent_own'
+
+	Xcols = proj_cols+vegas_cols+game_cols+momentum_cols+posenv_cols+salenv_cols+team_cols+fict_bettor_cols
+	X =df[Xcols]
+	y =df[ystr]
+
+	return X,y
+
+
+
+
 
 
 if __name__ == '__main__':
-	print 'here'
-
-	
-	proj_cols = ['proj_fc','proj_mo',
-			'v_fc','v_mo',
-			'status']
-	vegas_cols = ['line','total']
-	game_cols = ['slate_size','max_user_frac','total_entries','log.slate_size']
-	
-	momentum_cols = ['rm.01.score', 'rm.05.score',  'rm.01.salary', 'rm.05.salary',  'rm.01.value', 'rm.05.value', 'rm.01.val_exceeds.04', 'rm.05.val_exceeds.04',  'rm.01.val_exceeds.05', 'rm.05.val_exceeds.05', 'rm.01.val_exceeds.06', 'rm.05.val_exceeds.06'] 
-
-	posenv_cols = ['z.salary', 'z.proj_fc', 'z.proj_mo', 'z.v_fc', 'z.v_mo']#, 'z.line', 'z.total']
-
-	salenv_cols = ['z.sbin.proj_fc', 'z.sbin.proj_mo', 'z.sbin.v_fc', 'z.sbin.v_mo']#, 'z.sbin.line', 'z.sbin.total', 'counts.sbin']
-
-	team_cols  =['rm.01.opp_total_score', 'rm.05.opp_total_score', 'rm.01.opp_def_score', 'rm.05.opp_def_score', 'rm.01.opp_off_score', 'rm.05.opp_off_score', 'rm.01.team_total_score', 'rm.05.team_total_score', 'rm.01.team_def_score',  'rm.05.team_def_score', 'rm.01.team_off_score', 'rm.05.team_off_score']
-
-	team_env_cols = ['z.rm.01.opp_total_score', 'z.rm.02.opp_total_score', 'z.rm.05.opp_total_score', 'z.rm.01.opp_def_score', 'z.rm.02.opp_def_score', 'z.rm.05.opp_def_score', 'z.rm.01.opp_off_score', 'z.rm.02.opp_off_score', 'z.rm.05.opp_off_score', 
-			'z.rm.01.team_total_score', 'z.rm.02.team_total_score', 'z.rm.05.team_total_score', 'z.rm.01.team_def_score', 'z.rm.02.team_def_score', 'z.rm.05.team_def_score', 'z.rm.01.team_off_score', 'z.rm.02.team_off_score', 'z.rm.05.team_off_score'] 
-	ystr = 'percent_own'
-
-	fict_bettor_cols = [
-		'fict.proj_fc.03.025.006', 'fict.proj_fc.04.025.006', 'fict.proj_fc.05.025.006', 'fict.proj_fc.06.025.006', 'fict.proj_fc.07.025.006', 
-		'fict.proj_fc.08.001.006', 'fict.proj_fc.08.025.006', 'fict.proj_mo.03.025.006', 'fict.proj_mo.04.025.006', 'fict.proj_mo.05.025.006', 'fict.proj_mo.06.025.006', 
-		'fict.proj_mo.07.025.006', 'fict.proj_mo.07.050.006', 'fict.proj_mo.08.001.006', 'fict.proj_mo.08.025.006', 'fict.proj_mu.03.025.006', 
-		'fict.proj_mu.04.025.006', 'fict.proj_mu.05.025.006', 'fict.proj_mu.06.025.006', 'fict.proj_mu.07.025.006', 'fict.proj_mu.08.001.006', 'fict.proj_mu.08.025.006'
-		]
-
 
 	d = dict_of_grids()
 	ttypel = ['gpp','dou']
+	modeltypel=d.keys()
 
         try:	
 		modeltype = sys.argv[1]
@@ -152,7 +150,7 @@ if __name__ == '__main__':
 			print 'unknown tournament type!',ttype
 			sys.exit()
         except Exception:
-		print "specify modeltype, tournament type!"
+		print "specify modeltype {}, tournament type {}!".format(modeltypel,ttypel)
 		sys.exit()
 
 	ep = d[modeltype]
@@ -162,35 +160,20 @@ if __name__ == '__main__':
 	path = '../DATA/merged/'+ttype+'.merged.csv'
 	df = pd.read_csv(path)
 
-	fict_bettor_cols =  [ X for X in df.columns.values.tolist() if 'fict' in X]
-
-	Xcols = proj_cols+vegas_cols+game_cols+momentum_cols+posenv_cols+salenv_cols+team_cols+fict_bettor_cols
-
-
 	myplayers = df.name.unique()
 	rl=[]
 
 	for I,plname in enumerate(myplayers):
 		pldf = player(df=df,name=plname)
-
-
-
-		if len(pldf)<5:
-			print 'SMALL DF for PLAYER=',plname
-			continue
-		X = pldf[Xcols]
-		y = pldf[ystr]
+		if len(pldf)<5: continue
+		X,y = load_Xy(df=pldf)
 		cids = pldf.ix[X.index.values.tolist()].contest_ID.values.tolist()
-
 		print '============doing {}; {}% done =============='.format(plname, 100.0*I/len(myplayers)    )
 		print X.info(verbose=True,null_counts=True)
 		print '=================================='
-
 		mymodel,myspecs,errstats,mypreds,testpreds = get_cv_model(estimator=ep['e'],param_grid=ep['p'],X=X,y=y,num_folds=5)
 
-	
 		if type(mymodel)!=int:
-
 			mypreds['contest_ID']  = cids
 			sname = mymodel.__init__.im_class.__name__
 			save_model(model=mymodel,path=plname+'.'+  sname   ,do_zip=True    ,ttype=ttype)
@@ -199,9 +182,7 @@ if __name__ == '__main__':
 			save_preds(preds=testpreds,path=plname+'.'+sname,rootpiece= 'test',ttype=ttype)
 			v = [plname]+errstats+[modeltype]
 			rl.append(v)
-		else:	
-			print "EXITING!"
-			continue
+		else:	continue
 
 
 	spath = './../'+ttype+'_MYMODELS/SUMMARIES/'+modeltype+'.csv'

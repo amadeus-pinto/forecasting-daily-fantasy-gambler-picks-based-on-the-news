@@ -4,6 +4,8 @@ raw.*
 *.csv
 *.json
 *.pkl
+from_gstudent_pull4.sh
+push_to_narbe.sh
 
 
 
