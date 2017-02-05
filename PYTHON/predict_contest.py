@@ -55,7 +55,7 @@ def do_contest(df=None,ttype=None):
 	specs = get_contest_specs(df=df)
 	print '############################# doing contest,date,len:  {}'.format(specs)
 	plnames = df.name.values.tolist()
-	plnames = plnames[0:3]
+	#plnames = plnames[0:3]
 	for plname in plnames:
 		contestl.append( pred_player(df=df,plname = plname,ttype=ttype))
 	pcdf  = pd.DataFrame(contestl)
