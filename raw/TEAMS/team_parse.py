@@ -40,7 +40,8 @@ def get_team_data():
 	mdf = compute_team_score(df=mdf,is_opp=True)
 	mdf = compute_team_score(df=mdf,is_opp=False)
 	teamsccols = [X for X in mdf.columns.values.tolist() if 'score' in X]
-	return mdf[teamsccols+keepl]
+	mdf= mdf[teamsccols+keepl]
+	return mdf
 	
 def compute_team_score(df=None,is_opp=False):
 	if is_opp:mystr = 'o_'; cstr = 'opp'
@@ -96,6 +97,11 @@ def write_dist_by_team(mydf =None,zscols=None,ttype=None):
 	df = mudf.join(stddf)
 	writepath = rootpath+'mu.sd.team.csv'
 	print '###'*25+'writing DF TO ',writepath
+	#print df.info()
+	#print df
+	#print writepath
+	#print df.loc[df.contest_ID==207225060]
+	#sys.exit()
 	df.to_csv(writepath,index=True)
 
 def write_Z_team(ttype=None):
@@ -108,7 +114,8 @@ def write_Z_team(ttype=None):
 	tdf = pd.read_csv(tpath)
 	pdf = pd.read_csv(protopath)
 	mdf = pd.merge(pdf,tdf,how='left')
-	
+
+
 	zscols = [X for X in mdf.columns.values.tolist() if 'rm' in X]
 	
 	for I,cid in enumerate(cdf.index.values.tolist()):
@@ -158,7 +165,7 @@ if __name__ == '__main__':
 
 	relcols = []
 
-	rerun_write_rolling_team=True 
+	rerun_write_rolling_team=False 
 	rerun_write_team  =      True
 	rerun_write_Z_team  =    True
 
