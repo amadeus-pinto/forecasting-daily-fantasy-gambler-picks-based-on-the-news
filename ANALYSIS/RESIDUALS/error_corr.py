@@ -15,12 +15,10 @@ def merge_preds(modell=['RandomForestRegressor','GradientBoostingRegressor','Rid
 		print 'modeltype=',modeltype
 		for X in  glob.glob(path+'/*'+modeltype+'.csv'):
 			print 'doing path=',X
+			print X
 			df = pd.read_csv(X)
-			name = X.split('/')[-1].split('.'+modeltype+'.csv')[0].replace(' ','_')
+			name = X.split('/')[-1].split('.'+modeltype+'.csv')[0]
 			df['name']  = name
-			if predtype=='test':
-				df.rename(columns={'test_pred':'test.'+modeltype},inplace=True)	
-				#hack fix because test/val pred cols inconsistently labeled
 			d[name].append(df)
 
 	for key in d.keys():
@@ -33,11 +31,28 @@ def merge_preds(modell=['RandomForestRegressor','GradientBoostingRegressor','Rid
 		print '************ writing {} to {}'.format(key,fi)
 		mydf.to_csv(fi,index=False)
 
+def concat_merge(path=None):
+	pll =   glob.glob(path+'/*.csv')
+	c_df =pd.DataFrame()
+	for X in pll:
+		this = pd.read_csv(X)
+		if c_df.empty:
+			c_df =this
+		else:
+			c_df = pd.concat([c_df,this])
+	c_df.to_csv(writepath+'composite.csv',index=False)
+	return c_df
+	
+	
+
 
 def get_residual(df=None,modell=['RandomForestRegressor','GradientBoostingRegressor','Ridge','Lasso'],predtype=None):
 	if predtype=='val': impstr = 'cv'
-	else: impstr = 'test.'
+	else: impstr = 'test'
+	print df
 	pcols = [X for X in df.columns.values.tolist() if impstr in X]
+	idcols = [X for X in df.columns.values.tolist() if 'contest_ID' in X]
+	df.drop(idcols,1,inplace=True)
 	rescols = []
 
 	for X in pcols:
@@ -54,34 +69,35 @@ def get_residual(df=None,modell=['RandomForestRegressor','GradientBoostingRegres
 
 
 if __name__ == '__main__':
-	redo_merge_preds=True
 	redo_merge_preds= False
 
 
-	ptypes = ['val','test']
-	ptype_dict = {'val':'PREDS','test':'test_PREDS'}
-	readpath_piece = '../../MYMODELS/'
+	ptype_dict = {'val':'cv_PREDS','test':'test_PREDS'}
         try:	
 		predtype = sys.argv[1]
-		if predtype not in ptypes:
-			print '*** predtype {}. choose from {}'.format(predtype, ptypes)
+		ttype = sys.argv[2]
+		if predtype not in ptype_dict.keys():
+			print '*** predtype {}. choose from {}'.format(predtype, ptype_dict.keys())
 			sys.exit()
-        except Exception: predtype = 'val'
+        except Exception: predtype = 'val' ; ttype='gpp'
 
+	readpath_piece = '../../'+ttype+'_MYMODELS/'
 	path = readpath_piece+ptype_dict[predtype]+'/'
 	writepath = './DATA/'+predtype+'/'
-	mpath =writepath+'/*.csv'
-
+	composite_path = writepath+'composite.csv'
 
 	if redo_merge_preds:
-		pldict = merge_preds(path = path,writepath=writepath,predtype=predtype)
-	
-	composite_path = writepath+'composite.csv'
-	df = pd.read_csv(composite_path)
+		merge_preds(path = path,writepath=writepath,predtype=predtype)
+		df = concat_merge(path=writepath)
+
+	else:
+		df = pd.read_csv(composite_path)
+	df.dropna(inplace=True)
+
 	cdf = get_residual(df=df,predtype=predtype)
-	print cdf.info()
-	sns.heatmap(cdf.corr(),center=0,annot=True)
+	print cdf.info(verbose=True,null_counts=True)
+	sns.heatmap(cdf.corr(),center=0.5,annot=True)
 	plt.xticks(rotation=45,fontsize=7)
 	plt.yticks(rotation=45,fontsize=7)
-	plt.xticks(rotation=45,fontsize=7)
-	plt.savefig(predtype+'.heat.png')
+	plt.title('model residual corrs')
+	plt.savefig(ttype+'.'+predtype+'.corrmat.png')

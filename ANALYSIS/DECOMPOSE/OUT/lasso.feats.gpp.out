@@ -1,0 +1,49 @@
+                             0
+features                      
+rm.05.val_exceeds.06  0.403520
+log.slate_size        0.249207
+z.salary              0.088754
+z.proj_mo             0.034886
+v_fc                  0.021926
+rm.05.value           0.016396
+z.proj_fc             0.016253
+rm.01.value           0.014704
+z.v_fc                0.014435
+rm.01.val_exceeds.06  0.013806
+                             1
+features                      
+z.proj_mo             0.167810
+rm.05.val_exceeds.04  0.136248
+rm.05.val_exceeds.05  0.101051
+z.salary              0.095906
+rm.05.val_exceeds.06  0.079063
+v_fc                  0.058705
+log.slate_size        0.052800
+rm.05.value           0.034072
+rm.01.val_exceeds.05  0.031932
+rm.01.salary          0.027108
+                             2
+features                      
+rm.01.salary          0.146857
+rm.05.val_exceeds.05  0.108815
+z.sbin.proj_mo        0.080612
+rm.01.val_exceeds.06  0.072064
+rm.05.val_exceeds.06  0.063338
+z.sbin.v_mo           0.050431
+rm.01.val_exceeds.05  0.048450
+rm.05.salary          0.037442
+z.proj_mo             0.034475
+v_fc                  0.032872
+                             3
+features                      
+log.slate_size        0.231332
+z.salary              0.182658
+rm.05.val_exceeds.05  0.107193
+rm.05.val_exceeds.06  0.076539
+status                0.057975
+rm.05.score           0.029764
+rm.01.val_exceeds.05  0.029288
+max_user_frac         0.024158
+rm.01.val_exceeds.06  0.023682
+rm.01.value           0.021384
+saving to svd.i.features.gpp.Lasso

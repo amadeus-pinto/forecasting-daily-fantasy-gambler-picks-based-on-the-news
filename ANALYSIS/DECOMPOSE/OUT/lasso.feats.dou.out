@@ -1,0 +1,49 @@
+                             0
+features                      
+rm.05.val_exceeds.05  0.294701
+max_user_frac         0.228179
+log.slate_size        0.067969
+z.proj_mo             0.064584
+rm.05.val_exceeds.04  0.042538
+z.v_mo                0.033940
+v_fc                  0.030456
+z.sbin.v_mo           0.027164
+z.v_fc                0.023331
+rm.05.value           0.021022
+                             1
+features                      
+rm.01.val_exceeds.06  0.156250
+max_user_frac         0.136503
+rm.05.val_exceeds.05  0.118261
+rm.05.val_exceeds.04  0.087525
+rm.05.val_exceeds.06  0.062442
+z.salary              0.055694
+z.proj_mo             0.037582
+rm.01.val_exceeds.04  0.035418
+z.v_mo                0.032150
+rm.05.salary          0.030998
+                             2
+features                      
+rm.05.salary          0.144260
+rm.01.salary          0.135385
+rm.05.val_exceeds.04  0.128078
+rm.05.value           0.079455
+z.v_fc                0.062359
+z.sbin.v_mo           0.057458
+z.salary              0.047272
+rm.01.val_exceeds.06  0.044467
+z.sbin.proj_mo        0.041904
+z.sbin.v_fc           0.026064
+                             3
+features                      
+rm.05.val_exceeds.04  0.120745
+rm.05.val_exceeds.05  0.107571
+max_user_frac         0.086140
+log.slate_size        0.076222
+rm.01.val_exceeds.06  0.075423
+z.sbin.v_mo           0.062536
+v_fc                  0.047644
+rm.01.val_exceeds.05  0.040389
+v_mo                  0.037589
+z.salary              0.032468
+saving to svd.i.features.dou.Lasso
