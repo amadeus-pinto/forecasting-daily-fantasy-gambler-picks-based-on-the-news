@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import sys
 import glob
 import seaborn as sns
+from scipy import stats
 
 
 def contest(df=None,name=None):
@@ -49,7 +50,7 @@ def get_basal(ttype=None):
 	df = pd.read_csv(path)
 	return df[kcols]
 
-def do_contest_rmsd_by_pos(df=None,do_norm=None):
+def do_build_contest_rmsd_by_pos(df=None,do_norm=None):
 	writedf = pd.DataFrame()
 	for cid in df.contest_ID.unique():
 		print 'doing CID=',cid
@@ -96,9 +97,48 @@ def plot_slate_pos_error_ratio(posdf=None,model_err=None,do_norm=None,ttype=None
 	plt.xlabel('rmse:std ownership%/model='+model_err)
 	plt.savefig('ratio.jan.'+model_err+'.n.'+str(int(do_norm))+'.'+ttype+'.png')
 
+def load_test_composite(ttype=None):
+	testpath = '../../DATA/merged/test.'+ttype+'.merged.csv'
+	testdf = pd.read_csv(testpath)
+	return testdf[['name','position','score','contest_ID']].dropna()
+
+
+def plot_exp_pts(df=None,ttype=None,model=None):
+	ctest = load_test_composite(ttype=ttype)
+	mdf = pd.merge(ctest,df)
+	print mdf.info()
+
+	true_mul=[]
+	mod_mul=[]
+	sl_df = pd.DataFrame()
+	for cid in mdf.contest_ID.unique():
+		print 'doing CID=',cid
+		co_df = contest(df=mdf,name=cid)
+		true_mul.append(np.sum( 0.01*co_df['true']*co_df['score']))
+		mod_mul.append( np.sum( 0.01*co_df[model]*co_df['score']))
+	sl_df['<true>'] = true_mul
+	sl_df['<'+model+'>'] = mod_mul
+	x = sl_df['<true>'].values.tolist(),
+	y = sl_df['<'+model+'>'].values.tolist()
+	
+	slope, intercept, r_value, p_value, std_err = stats.linregress(x,y)
+	plX = np.arange(np.min(x),np.max(x))
+	plY = intercept+slope*plX
+	
+	plt.scatter(x,y,color='red')
+	plt.plot(plX,plY)
+
+	plt.xlabel('<  contest fantasy points > /true')
+	plt.ylabel('<  contest fantasy points > /model= '+model+' ;"R**2='+ str(round(r_value**2,2)))
+	plt.legend()
+	plt.savefig('field.'+model+'.'+ttype+'.png')
+	plt.clf()
+
+	
 def load_contest_rmsd_by_pos(do_norm=None):
 	mypath = './DATA/pos_rmsd.normed_'+str(int(do_norm))+'.csv'
 	return pd.read_csv(mypath)
+
 if __name__ == '__main__':
 
         try:	
@@ -118,16 +158,12 @@ if __name__ == '__main__':
 	#plot_model(df=df,model='GradientBoostingRegressor',ttype=ttype)
 
 	if redo_rmsd_by_pos:
-		do_contest_rmsd_by_pos(df=df,do_norm=do_norm)
+		do_build_contest_rmsd_by_pos(df=df,do_norm=do_norm)
 	else:
 		posdf = load_contest_rmsd_by_pos(do_norm=do_norm)
-	print posdf
 
-	
-	plot_slate_pos_error_ratio(posdf=posdf,model_err='GradientBoostingRegressor',do_norm=do_norm,ttype=ttype)
-	#plot_slate_pos_error(posdf=posdf,model_err='GradientBoostingRegressor',do_norm=do_norm,ttype=ttype)
-	#plot_slate_pos_error(posdf=posdf,model_err='mean',do_norm=do_norm,ttype=ttype)
-	#plot_slate_pos_error(posdf=posdf,model_err='mean')
-
+	modell=['RandomForestRegressor','GradientBoostingRegressor','Ridge','Lasso','mean']
+	for X in modell:
+		plot_exp_pts(df=df,ttype=ttype,model=X)
 
 
