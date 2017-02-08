@@ -74,9 +74,11 @@ def plot_model(df=None,model=None,ttype=None):
 		plt.scatter(df.loc[df.position==X].true.values.tolist(),
 				df.loc[df.position==X][model].values.tolist(),color=cmap(i / float(len(posl))    ),label=posl[i] ,alpha=0.75)
 	plt.legend()
-	plt.ylabel('%ownership/model='+model)
-	plt.xlabel('%ownership/true')
+	mod_dict = {'RandomForestRegressor':'rfr','Lasso':'Lasso','Ridge':'ridge','GradientBoostingRegressor':'gbr','mean':'mean'}
+	plt.ylabel('%ownership/model='+mod_dict[model],size=20)
+	plt.xlabel('%ownership/true',size=20)
 	plt.savefig('jan.'+model+'.'+ttype+'.png')
+	plt.clf()
 
 
 def plot_slate_pos_error(posdf=None,model_err=None,do_norm=None,ttype=None):
@@ -104,6 +106,7 @@ def load_test_composite(ttype=None):
 
 
 def plot_exp_pts(df=None,ttype=None,model=None):
+	mod_dict = {'RandomForestRegressor':'rfr','Lasso':'Lasso','Ridge':'ridge','GradientBoostingRegressor':'gbr','mean':'mean'}
 	ctest = load_test_composite(ttype=ttype)
 	mdf = pd.merge(ctest,df)
 	print mdf.info()
@@ -127,9 +130,10 @@ def plot_exp_pts(df=None,ttype=None,model=None):
 	
 	plt.scatter(x,y,color='red')
 	plt.plot(plX,plY)
+	
 
-	plt.xlabel('<  contest fantasy points > /true')
-	plt.ylabel('<  contest fantasy points > /model= '+model+' ;"R**2='+ str(round(r_value**2,2)))
+	plt.xlabel('<contest score> /true' ,size = 20)
+	plt.ylabel('<contest score> /model= '+mod_dict[model]+' ;"R**2='+ str(round(r_value**2,2)), size=20)
 	plt.legend()
 	plt.savefig('field.'+model+'.'+ttype+'.png')
 	plt.clf()
@@ -155,14 +159,16 @@ if __name__ == '__main__':
 	bdf = get_basal(ttype=ttype) 
 	df = pd.merge(df,bdf,on='name')
 
-	#plot_model(df=df,model='GradientBoostingRegressor',ttype=ttype)
+	modell=['RandomForestRegressor','GradientBoostingRegressor','Ridge','Lasso','mean']
+	for model in modell:
+		plot_model(df=df,model=model,ttype=ttype)
+	sys.exit()
 
 	if redo_rmsd_by_pos:
 		do_build_contest_rmsd_by_pos(df=df,do_norm=do_norm)
 	else:
 		posdf = load_contest_rmsd_by_pos(do_norm=do_norm)
 
-	modell=['RandomForestRegressor','GradientBoostingRegressor','Ridge','Lasso','mean']
 	for X in modell:
 		plot_exp_pts(df=df,ttype=ttype,model=X)
 
