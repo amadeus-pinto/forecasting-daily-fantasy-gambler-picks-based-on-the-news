@@ -72,11 +72,13 @@ def plot_model(df=None,model=None,ttype=None):
 	cmap = plt.cm.Accent
 	for i,X in enumerate(posl): 
 		plt.scatter(df.loc[df.position==X].true.values.tolist(),
-				df.loc[df.position==X][model].values.tolist(),color=cmap(i / float(len(posl))    ),label=posl[i] ,alpha=0.75)
+				df.loc[df.position==X][model].values.tolist(),
+				color=cmap(i / float(len(posl))    ),label=posl[i] ,alpha=0.75)
 	plt.legend()
 	mod_dict = {'RandomForestRegressor':'rfr','Lasso':'Lasso','Ridge':'ridge','GradientBoostingRegressor':'gbr','mean':'mean'}
-	plt.ylabel('%ownership/model='+mod_dict[model],size=20)
-	plt.xlabel('%ownership/true',size=20)
+	plt.title('model='+model,size=20)
+	plt.ylabel('predicted %ownership',size=20)
+	plt.xlabel('true %ownership',size=20)
 	plt.savefig('jan.'+model+'.'+ttype+'.png')
 	plt.clf()
 
@@ -132,8 +134,11 @@ def plot_exp_pts(df=None,ttype=None,model=None):
 	plt.plot(plX,plY)
 	
 
-	plt.xlabel('<contest score> /true' ,size = 20)
-	plt.ylabel('<contest score> /model= '+mod_dict[model]+' ;"R**2='+ str(round(r_value**2,2)), size=20)
+	#plt.title(mod_dict[model]+';"R**2='+ str(round(r_value**2,2)),size=20)
+	plt.title(mod_dict[model],size=20)
+
+	plt.xlabel('true       < contest score > ', size = 20)
+	plt.ylabel('predicted  < contest score > ', size=20)
 	plt.legend()
 	plt.savefig('field.'+model+'.'+ttype+'.png')
 	plt.clf()
@@ -162,12 +167,11 @@ if __name__ == '__main__':
 	modell=['RandomForestRegressor','GradientBoostingRegressor','Ridge','Lasso','mean']
 	for model in modell:
 		plot_model(df=df,model=model,ttype=ttype)
-	sys.exit()
 
-	if redo_rmsd_by_pos:
-		do_build_contest_rmsd_by_pos(df=df,do_norm=do_norm)
-	else:
-		posdf = load_contest_rmsd_by_pos(do_norm=do_norm)
+#	if redo_rmsd_by_pos:
+#		do_build_contest_rmsd_by_pos(df=df,do_norm=do_norm)
+#	else:
+#		posdf = load_contest_rmsd_by_pos(do_norm=do_norm)
 
 	for X in modell:
 		plot_exp_pts(df=df,ttype=ttype,model=X)
