@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In October of 2015, an employee of the daily fantasy (DF) gambling site DraftKings leveraged his site's user data to win $350,000 on a rival DF site, FanDuel, resulting in [allegations of insider trading, and renewed concern for consumer protection against exploitation by an unregulated industry](https://www.nytimes.com/2015/10/06/sports/fanduel-draftkings-fantasy-employees-bet-rivals.html?_r=0). In a zero-sum game, knowledge of opponents' positions (the field's picks) ahead of market represents a serious advantage (or serious abuse when applied by the same people making the market). The expected value of a pick I, ```V(pick_I)```, is a product of the probability ```P``` of pick I's success and its associated payout ```p```:
+In October of 2015, an employee of the daily fantasy sports (DFS) gambling site DraftKings leveraged his site's user data to win $350,000 on a competitor site, FanDuel, resulting in [allegations of insider trading, and renewed concern for consumer protection against exploitation by an unregulated industry](https://www.nytimes.com/2015/10/06/sports/fanduel-draftkings-fantasy-employees-bet-rivals.html?_r=0). In a zero-sum game, knowledge of opponents' positions (the field's picks) ahead of market (the contest) represents a serious advantage (or serious abuse when applied by the same people making the market). The expected value of a pick I, ```V(pick_I)```, is a product of the probability ```P``` of pick I's success and its associated payout ```p```:
 
 	V(pick_I) = sum_J P(S_JI)*p(S_JI;w_I).
 
@@ -10,20 +10,20 @@ In October of 2015, an employee of the daily fantasy (DF) gambling site DraftKin
 
 Apart from the intrinsic neatness of explaining/predicting the decisions a collection of people make given incomplete information and perceived utility, knowledge of athlete market shares can potentially help one accurately project outcomes of entire fantasy contests themselves... Specifically, if one has a "good" estimate of the covariance matrix of athlete fantasy output, one can collect statistics from an ensemble of Monte-Carlo-sampled contests, each one represented in a set of tickets giving rise to the predicted market. A basic application of such a simulation would be ranking the tickets by probability of profitability, etc.
 
-##The Long and Short of DF Mechanics
+##The Long and Short of DFS Mechanics
 
 "Fantasy owners" (the gamblers) submit one or multiple ticket(s) of athletes' names together satisfying a set of constraints (e.g., on the total fantasy salary of the athletes, fantasy positions, etc.) to an online site (a.k.a. the bookie - FanDuel, DraftKings, etc.) which takes a rake and pays out a subset of tickets as a function of ticket score, determined as a linear combination of ticket athletes' accumulated game stats after bets are locked. Broadly, there are two (very different) contest types: a "tournament" game pays out the top ~20%, with payout odds growing ~exponentially from 1:1 at the ~20th percentile line (a typical first place ticket's return is ~1000:1); a "cash" game pays out the top ~50% fixed 1:1 odds. Naturally, these payouts force fantasy owners to favor higher-variance players (riskier positions) in "tournaments" and lower-variance players (safer positions) in "cash" games. This causes lower-mean/higher-variance distributions of ticket scores in the former and higher-mean/lower-variance distributions in the latter. See [this](https://www.fanduel.com/nba-guide?t=rules) FanDuel tutorial for more (or less).
 
 ##Specifics
 
-What causes gamblers to make the choices they make with the news they have, and how accurately can I predict the field of wagers in a given contest? 
+What causes gamblers to make the choices they make with the information they have, and how accurately can I predict the field of wagers in a given contest? 
 
 I set out to answer these questions using scraped contest records of field ownerships in past FanDuel NBA contests (thanks to [@brainydfs](http://brainydfs.com/)), historic athlete performance data from [sportsdatabase.com](http://sportsdatabase.com/), the news leading up to the particular contest (e.g., "industry" fantasy output projections from [basketballmonster.com](http://basketballmonster.com), [fantasycrunchers.com](http://fantasycrunchers.com), and others, themselves the output of decidedly mediocre regression models, available injury/roster reporting, etc.), and elements of the fantasy game mechanics presumed to impact fantasy gamblers' decisions. (These and others are detailed below.) I trained and validated ~400 player-centered models (estimators include ridge, lasso, random forest, and gradient-boosted regressors) on over 700 "tournament" contests from the 2016 season and the first two months of the 2017 season, holding out January 2017 slates for model testing.
 
 ## Results
-a. training/validating player models
+a. training/validating player-centered models
 
-  see this
+  Below is a plot of athletes' average ownerships against their standard deviations. Colors correspond to K-Means decomposition (n=5) of the matrix of player models by respective model coefficients. Clustering of player models (only implicitly included in the model parameters) indicates similar model composition among athletes in close proximity on the mean-standard deviation plane. 
 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.sig.Lasso.gpp.png )
 
@@ -223,7 +223,7 @@ c. models of tournament means
 d. potential for stacking
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/RESIDUALS/gpp.val.corrmat.png )
 ##Model factors
-  Follow the links below to view pair distributions of dependent and independent variables of LeBron James observations. (Bear in mind that different variables are important for different athlete models).
+  Follow the links below to view pair distributions of dependent and independent variables of LeBron James ownership observations. (Bear in mind that different variables are important for different athlete models).
 
 1. ["industry" valuation](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/value.png)
   * proj_fc: fantasycrunchers fantasy score projection
