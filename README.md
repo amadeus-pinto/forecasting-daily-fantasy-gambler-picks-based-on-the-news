@@ -2,10 +2,10 @@
 
 ## Introduction
 
-In October of 2015, an employee of the daily fantasy gambling site DraftKings leveraged his site's user data to win $350,000 on a rival daily fantasy site, FanDuel, resulting in a huge scandal and allegations of insider trading. In a zero-sum game, knowledge of opponents' positions (the field's picks) ahead of market represents a serious advantage (or serious abuse if this information is leveraged by the same people setting the market). The expected value of a pick, V(pick), is a product of the probability of that pick's success and its associated payout:
-	V(pick_I) = sum J P(S_JI)*A(S_J;w_I),
+In October of 2015, an employee of the daily fantasy gambling site DraftKings leveraged his site's user data to win $350,000 on a rival daily fantasy site, FanDuel, resulting in a huge scandal and allegations of insider trading. In a zero-sum game, knowledge of opponents' positions (the field's picks) ahead of market represents a serious advantage (or serious abuse if this information is leveraged by the same people setting the market). The expected value of a pick I, V(pick_I), is a product of the probability P of pick I's success and its associated payout A:
+	V(pick_I) = \sum_J P(S_J^I)*A(S_J;w_I).
 
-where P(S_JI) depends on the probability of pick I's performance S_J and is independent of gamblers' perceptions, and A(S_JI) depends on gamblers' valuations A(pick_J) = A(pick_J[( S_J; w_J(gamblers)])), where w_I represents the market share (also weight/ownership/share) in pick_I. {w} is the quantity of interest here, and models projecting field ownerships ahead of the market are the goal of this project. 
+P depends on the probability of pick I's score J, S_J^I, and is independent of gamblers' perceptions, and A depends on pick I's scoreat state J and gamblers' collective valuation of I, where w_I represents the market share (also weight/ownership/share) in pick_I. {w} is the quantity of interest here, and models projecting field ownerships ahead of the market are the goal of this project. 
 
 Apart from the intrinsic neatness of explaining/predicting the decisions a collection of people make given incomplete information and perceived utility, knowledge of athlete market shares can potentially help one accurately project outcomes of entire fantasy contests themselves... Specifically, if one has a "good" estimate of the covariance matrix of athlete fantasy output, one can collect statistics from an ensemble of Monte-Carlo-sampled contests, each one represented in a set of tickets giving rise to the predicted ownership percentages. A basic application of such a simulation would be ranking the tickets by probability of profitability, etc.
 
@@ -17,7 +17,7 @@ Apart from the intrinsic neatness of explaining/predicting the decisions a colle
 
 What causes gamblers to make the choices they make with the news they have, and how accurately can I predict the field of wagers in a given contest? 
 
-I set out to answer these questions using scraped contest records of field ownerships in past FanDuel NBA contests (thanks to [@brainydfs](http://brainydfs.com/)), historic athlete performance data from <http://sportsdatabase.com/>, the news leading up to the particular contest (e.g., "industry" fantasy output projections from <http://basketballmonster.com>, <http://fantasycrunchers.com>, and others, themselves the output of regression models, available injury/roster reporting, etc.), and elements of the fantasy game mechanics presumed to impact fantasy gamblers' decisions. (These and others are detailed below.) I trained and validated 400+ player-centered models (estimators include Ridge, Lasso, Random Forest, and gradient-boosted regressors) on over 700 "tournament" contests from the 2016 season and the first two months of the 2017 season, holding out January 2017 slates for model testing.
+I set out to answer these questions using scraped contest records of field ownerships in past FanDuel NBA contests (thanks to [@brainydfs](http://brainydfs.com/)), historic athlete performance data from <http://sportsdatabase.com/>, the news leading up to the particular contest (e.g., "industry" fantasy output projections from <http://basketballmonster.com>, <http://fantasycrunchers.com>, and others, themselves the output of -surprisingly mediocre- regression models, available injury/roster reporting, etc.), and elements of the fantasy game mechanics presumed to impact fantasy gamblers' decisions. (These and others are detailed below.) I trained and validated 400+ player-centered models (estimators include Ridge, Lasso, Random Forest, and gradient-boosted regressors) on over 700 "tournament" contests from the 2016 season and the first two months of the 2017 season, holding out January 2017 slates for model testing.
 
 ## Results & Discussion
 
@@ -33,7 +33,7 @@ I set out to answer these questions using scraped contest records of field owner
   * 	line: sportsdatabase matchup line                       
   * 	total: sportsdatabase matchup total 
 
-3. momentum (rolling mean -rm- of previous Y=1-,5-,10-game windows; computed with sportsdatabase queries) - 
+3. momentum (rolling mean - abbreviated below as "rm" - of previous Y=1-,5-,10-game windows; computed with sportsdatabase queries) - 
   * 	rm.Y.score: recent score        
   * 	rm.Y.salary: recent salary        
   * 	rm.Y.value : recent value
@@ -58,5 +58,5 @@ I set out to answer these questions using scraped contest records of field owner
 
 6. fictituous gambler portfolios ( X=worldview,Y=max overlap w/previous solution,Z=number of tickets  ) -
    This type of feature is arguably the most interesting. It is constructed as follows:
-   For each contest, initialize a set of fictitious gamblers, each with a specified "worldview", risk-reward tolerance, and number ofbets. For each fictitious gambler, solve the integer programming problem of constructing a number of unique bets (tickets), each maximizing projected fantasy points (enumerated by worldview) subject to feasibility constraints (FanDuel's salary cap, position requirements, etc.) and risk-reward tolerance constraints (maximum number of athelete overlaps to previous integer programming solution).
+   For each contest, initialize a set of fictitious gamblers, each with a specified "worldview", risk-reward tolerance, and number of bets. For each fictitious gambler, solve the integer programming problem of constructing a number of unique bets (tickets), each maximizing projected fantasy points (enumerated by worldview) subject to feasibility constraints (FanDuel's salary cap, position requirements, etc.) and risk-reward tolerance constraints (maximum number of athelete overlaps with previous integer programming solution in fictitous gambler's portfolio).
   * 	gpp.fict.proj_X.Y.Z: X=(fantasycrunchers,basketballmonster,their average),Y=(2,4,6); Z=25 
