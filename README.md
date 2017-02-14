@@ -23,7 +23,7 @@ I set out to answer these questions using scraped contest records of field owner
 ## Results
   * training/validating player-centered models
 
-   Below is a plot of athletes' average ownerships against their standard deviations. Colors correspond to K-Means decomposition (n=5) of the matrix of player models by respective model coefficients. Clustering of player models (only implicitly included in the model parameters) indicates similar model composition among athletes in close proximity on the mean-standard deviation plane. 
+   Below is a plot of athletes' average ownerships against their standard deviations. Colors correspond to k-Means decomposition (n=5) of the matrix of player models by respective model coefficients. Clustering of player models (only implicitly included in the model parameters) indicates similar model composition among athletes in close proximity on the mean-standard deviation plane. In other words, it turns out that common factors drive (un)popular athletes' market share.
 
    ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.sig.Lasso.gpp.png )
 
