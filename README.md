@@ -3,9 +3,9 @@
 ## Introduction
 
 In October of 2015, an employee of the daily fantasy gambling site DraftKings leveraged his site's user data to win $350,000 on a rival daily fantasy site, FanDuel, resulting in a huge scandal and allegations of insider trading. In a zero-sum game, knowledge of opponents' positions (the field's picks) ahead of market represents a serious advantage (or serious abuse if this information is leveraged by the same people setting the market). The expected value of a pick I, V(pick_I), is a product of the probability P of pick I's success and its associated payout A:
-	V(pick_I) = \sum_J P(S_J^I)*A(S_J;w_I).
+	V(pick_I) = \sum_J P(S_JI)*A(S_J;w_I).
 
-P depends on the probability of pick I's score J, S_J^I, and is independent of gamblers' perceptions, and A depends on pick I's scoreat state J and gamblers' collective valuation of I, where w_I represents the market share (also weight/ownership/share) in pick_I. {w} is the quantity of interest here, and models projecting field ownerships ahead of the market are the goal of this project. 
+P depends on the probability of pick I's score J, S_JI, and is independent of gamblers' perceptions, and payout A depends on pick I's score and gamblers' collective valuation of I, where w_I represents the market share (also termed "weight" or "ownership") in pick_I. {w} is the quantity of interest here, and models projecting field ownerships ahead of the market are the goal of this project. 
 
 Apart from the intrinsic neatness of explaining/predicting the decisions a collection of people make given incomplete information and perceived utility, knowledge of athlete market shares can potentially help one accurately project outcomes of entire fantasy contests themselves... Specifically, if one has a "good" estimate of the covariance matrix of athlete fantasy output, one can collect statistics from an ensemble of Monte-Carlo-sampled contests, each one represented in a set of tickets giving rise to the predicted ownership percentages. A basic application of such a simulation would be ranking the tickets by probability of profitability, etc.
 
@@ -20,6 +20,9 @@ What causes gamblers to make the choices they make with the news they have, and 
 I set out to answer these questions using scraped contest records of field ownerships in past FanDuel NBA contests (thanks to [@brainydfs](http://brainydfs.com/)), historic athlete performance data from <http://sportsdatabase.com/>, the news leading up to the particular contest (e.g., "industry" fantasy output projections from <http://basketballmonster.com>, <http://fantasycrunchers.com>, and others, themselves the output of -surprisingly mediocre- regression models, available injury/roster reporting, etc.), and elements of the fantasy game mechanics presumed to impact fantasy gamblers' decisions. (These and others are detailed below.) I trained and validated 400+ player-centered models (estimators include Ridge, Lasso, Random Forest, and gradient-boosted regressors) on over 700 "tournament" contests from the 2016 season and the first two months of the 2017 season, holding out January 2017 slates for model testing.
 
 ## Results & Discussion
+1. models
+2. field predictions
+
 
 ##Model factors
 
