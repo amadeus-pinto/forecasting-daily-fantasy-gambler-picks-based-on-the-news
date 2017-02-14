@@ -23,9 +23,12 @@ I set out to answer these questions using scraped contest records of field owner
 1. models
 
 2. models of tournament means
-  *each dot
+  each dot
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/FIGS/field.Lasso.gpp.png)
-  *inb
+
+
+  this thi
+
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/FIGS/field.mean.gpp.png )
 
 
