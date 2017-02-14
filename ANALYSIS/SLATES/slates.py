@@ -76,7 +76,7 @@ def plot_model(df=None,model=None,ttype=None):
 				color=cmap(i / float(len(posl))    ),label=posl[i] ,alpha=0.75)
 	plt.legend()
 	mod_dict = {'RandomForestRegressor':'rfr','Lasso':'Lasso','Ridge':'ridge','GradientBoostingRegressor':'gbr','mean':'mean'}
-	plt.title('model='+model,size=20)
+	#plt.title('model='+model,size=20)
 	plt.ylabel('predicted %ownership',size=20)
 	plt.xlabel('true %ownership',size=20)
 	plt.savefig('jan.'+model+'.'+ttype+'.png')
@@ -134,7 +134,7 @@ def plot_exp_pts(df=None,ttype=None,model=None):
 	plt.plot(plX,plY)
 	
 
-	plt.title(mod_dict[model]+'; R2='+ str(round(r_value**2,2)),size=20)
+	plt.title(' R2='+ str(round(r_value**2,2)),size=20)
 	#plt.title(mod_dict[model],size=20)
 
 	plt.xlabel('true       < contest score > ', size = 20)
