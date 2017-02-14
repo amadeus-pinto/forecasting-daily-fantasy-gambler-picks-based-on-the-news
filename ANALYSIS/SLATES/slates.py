@@ -134,8 +134,8 @@ def plot_exp_pts(df=None,ttype=None,model=None):
 	plt.plot(plX,plY)
 	
 
-	#plt.title(mod_dict[model]+';"R**2='+ str(round(r_value**2,2)),size=20)
-	plt.title(mod_dict[model],size=20)
+	plt.title(mod_dict[model]+';"R**2='+ str(round(r_value**2,2)),size=20)
+	#plt.title(mod_dict[model],size=20)
 
 	plt.xlabel('true       < contest score > ', size = 20)
 	plt.ylabel('predicted  < contest score > ', size=20)
