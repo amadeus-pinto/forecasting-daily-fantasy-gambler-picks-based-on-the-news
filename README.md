@@ -2,7 +2,7 @@
 
 ## Introduction
 
-In October of 2015, an employee of the daily fantasy gambling site DraftKings leveraged his site's user data to win $350,000 on a rival daily fantasy site, FanDuel, resulting in a huge scandal and allegations of insider trading. In a zero-sum game, knowledge of opponents' positions (the field's picks) ahead of market represents a serious advantage (or serious abuse if this information is leveraged by the same people setting the market). The expected value of a pick I, V(pick_I), is a product of the probability P of pick I's success and its associated payout A:
+In October of 2015, an employee of the daily fantasy gambling site DraftKings leveraged his site's user data to win $350,000 on a rival daily fantasy site, FanDuel, resulting in a huge scandal and allegations of insider trading. In a zero-sum game, knowledge of opponents' positions (the field's picks) ahead of market represents a serious advantage (or serious abuse if this information is applied by the same people setting the market). The expected value of a pick I, V(pick_I), is a product of the probability P of pick I's success and its associated payout A:
 	V(pick_I) = \sum_J P(S_JI)*A(S_J;w_I).
 
 P depends on the probability of pick I's score J, S_JI, and is independent of gamblers' perceptions, and payout A depends on pick I's score and gamblers' collective valuation of I, where w_I represents the market share (also termed "weight" or "ownership") in pick_I. {w} is the quantity of interest here, and models projecting field ownerships ahead of the market are the goal of this project. 
@@ -23,12 +23,11 @@ I set out to answer these questions using scraped contest records of field owner
 1. models
 
 2. models of tournament means
-  ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/FIGS/field.Lasso.gpp.png)
+  ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.RandomForestRegressor.gpp.png)
 
-  this thi
-
-  ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/FIGS/field.mean.gpp.png)
-  the R2. Of course  
+  ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/
+FIGS/field.mean.gpp.png)
+  Substituting training set mean ownerships in the tournament mean equation, predicted means are wildly unrealistic.  
 
 ##Model factors
 
