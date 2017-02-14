@@ -3,9 +3,9 @@
 ## Introduction
 
 In October of 2015, an employee of the daily fantasy (DF) gambling site DraftKings leveraged his site's user data to win $350,000 on a rival DF site, FanDuel, resulting in a huge scandal and allegations of insider trading. In a zero-sum game, knowledge of opponents' positions (the field's picks) ahead of market represents a serious advantage (or serious abuse if this information is applied by the same people setting the market). The expected value of a pick I, V(pick_I), is a product of the probability P of pick I's success and its associated payout A:
-	V(pick_I) = \sum_J P(S_JI)*A(S_J;w_I).
+	V(pick_I) = sum_J P(S_JI)*A(S_J;w_I).
 
-P depends on the probability of pick I's score J, S_JI, and is independent of gamblers' perceptions, and payout A depends on pick I's score and gamblers' collective valuation of I, where w_I represents the "market share" (also "weight" or "ownership") in pick_I. {w} is the quantity of interest here, and models projecting field ownerships ahead of the market are the goal of this project. 
+P is the probability of pick I's score J, S_JI, and is independent of gamblers' perceptions, and payout A depends on pick I's score and gamblers' collective valuation of I, where w_I represents the "market share" (also "weight" or "ownership") in pick_I. {w} is the quantity of interest here, and models projecting field ownerships ahead of the market are the goal of this project. 
 
 Apart from the intrinsic neatness of explaining/predicting the decisions a collection of people make given incomplete information and perceived utility, knowledge of athlete market shares can potentially help one accurately project outcomes of entire fantasy contests themselves... Specifically, if one has a "good" estimate of the covariance matrix of athlete fantasy output, one can collect statistics from an ensemble of Monte-Carlo-sampled contests, each one represented in a set of tickets giving rise to the predicted market. A basic application of such a simulation would be ranking the tickets by probability of profitability, etc.
 
@@ -31,6 +31,9 @@ I set out to answer these questions using scraped contest records of field owner
   Substituting training set mean ownerships in the tournament mean equation, predicted means are wildly unrealistic.  
 
 ##Model factors
+  these
+  ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/RESIDUALS/gpp.val.corrmat.png )
+  ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/mu.sig.Lasso.gpp.png )
 
 1. "industry" valuation 
   * proj_fc: fantasycrunchers fantasy score projection
@@ -69,3 +72,4 @@ I set out to answer these questions using scraped contest records of field owner
    This type of feature is arguably the most interesting. It is constructed as follows:
    For each contest, initialize a set of fictitious gamblers, each with a specified "worldview", risk-reward tolerance, and number of bets. For each fictitious gambler, solve the integer programming problem of constructing a number of unique bets (tickets), each maximizing projected fantasy points (enumerated by worldview) subject to feasibility constraints (FanDuel's salary cap, position requirements, etc.) and risk-reward tolerance constraints (maximum number of athelete overlaps with previous integer programming solution in fictitous gambler's portfolio).
   * 	gpp.fict.proj_X.Y.Z: X=(fantasycrunchers,basketballmonster,their average),Y=(2,4,6); Z=25 
+
