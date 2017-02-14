@@ -56,7 +56,7 @@ I set out to answer these questions using scraped contest records of field owner
   * 	slate_size: number of NBA games in slate 
   * 	log.slate_size: log( number of NBA games in slate)
 
-6. fictituous gambler portfolios ( X=worldview,Y=max overlap w/previous solution,Z=number of tickers  ) -
+6. fictituous gambler portfolios ( X=worldview,Y=max overlap w/previous solution,Z=number of tickets  ) -
   * 	gpp.fict.proj_X.Y.Z: X=(fantasycrunchers,basketballmonster,their average),Y=(2,4,6); Z=25 
-
-   sldl
+   This type of feature is arguably the most interesting. It is constructed as follows:
+   For each contest, initialize a set of fictitious gamblers, each with a specified "worldview", risk-reward tolerance, and number ofbets. For each fictitious gambler, solve the integer programming problem of constructing a number of unique bets (tickets), each maximizing projected fantasy points (enumerated by worldview) subject to feasibility constraints (FanDuel's salary cap, position requirements, etc.) and risk-reward tolerance constraints (maximum number of athelete overlaps to previous integer programming solution).
