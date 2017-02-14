@@ -22,7 +22,8 @@ I set out to answer these questions using scraped contest records of field owner
 ## Results & Discussion
 1. models
 2. field predictions
-![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/FIGS/field.Lasso.gpp.png "Logo Title Text 1")
+![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/FIGS/field.Lasso.gpp.png)
+![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/FIGS/field.mean.gpp.png )
 
 
 ##Model factors
