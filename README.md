@@ -3,7 +3,7 @@
 ## Introduction
 
 In October of 2015, an employee of the daily fantasy gambling site DraftKings leveraged his site's user data to win $350,000 on a rival daily fantasy site, FanDuel, resulting in a huge scandal and allegations of insider trading. In a zero-sum game, knowledge of opponents' positions (the field's picks) ahead of market represents a serious advantage (or serious abuse if this information is leveraged by the same people setting the market). The expected value of a pick, V(pick), is a product of the probability of that pick's success and its associated payout:
-	V(pick_I) = sum J P(S_J)*A(S_J;w_I),
+	V(pick_I) = sum J P(S_  *A(S_J;w_I),
 
 where P(pick_J) depends on the probability of pick performance S_J and is independent of gamblers' perceptions, and A(pick_J) depends on gamblers' valuations A(pick_J) = A(pick_J[( S_J; w_J(gamblers)])), where w represents the market share (also weight/ownership/share) in the pick. {w} is the quantity of interest here, and models projecting field ownerships ahead of the market are the goal of this project. 
 
@@ -29,31 +29,31 @@ Apart from the intrinsic neatness of explaining/predicting the decisions a colle
   * v_mo: basketballmonster value (proj_mo/salary)                      
 
 2. vegas quantities -
-⋅⋅* 	line    	            : sportsdatabase matchup line                       
-⋅⋅* 	total   	            : sportsdatabase matchup total 
+  * 	line: sportsdatabase matchup line                       
+  * 	total: sportsdatabase matchup total 
 
 3. momentum (rolling mean -rm- of previous Y=1-,5-,10-game windows; computed with sportsdatabase queries) - 
-⋅⋅* 	rm.Y.score                  : recent score        
-⋅⋅* 	rm.Y.salary                 : recent salary        
-⋅⋅* 	rm.Y.value                  : recent value
-⋅⋅* 	rm.Y.val_exceeds.X          : recent value has exceeded X=4,5,6
-⋅⋅* 	rm.Y.opp_total_score        : recent opponent total score
-⋅⋅* 	rm.Y.opp_off_score          : recent opponent offensive score
-⋅⋅* 	rm.Y.opp_def_score          : recent opponent defensive score
-⋅⋅* 	rm.Y.team_total_score       : recent team total score   
-⋅⋅* 	rm.Y.team_def_score         : recent team defensive score   
-⋅⋅* 	rm.Y.team_off_score         : recent team offensive score   
+  * 	rm.Y.score: recent score        
+  * 	rm.Y.salary: recent salary        
+  * 	rm.Y.value : recent value
+  * 	rm.Y.val_exceeds.X: recent value has exceeded X=4,5,6
+  * 	rm.Y.opp_total_score: recent opponent total score
+  * 	rm.Y.opp_off_score: recent opponent offensive score
+  * 	rm.Y.opp_def_score: recent opponent defensive score
+  * 	rm.Y.team_total_score: recent team total score   
+  * 	rm.Y.team_def_score: recent team defensive score   
+  * 	rm.Y.team_off_score: recent team offensive score   
 
 4. player standard score (value-over-replacement within X=salary,position class) - 
-⋅⋅* 	z.X.proj_fc                 : z-score of fantasycruncher projections within class X
-⋅⋅* 	z.X.proj_mo                 : z-score of basketballmonster projections within class X          
-⋅⋅* 	z.X.v_fc                    : z-score of fantasycruncher value within class X 
-⋅⋅* 	z.X.v_mo                    : z-score of basketballmonster value within class X       
+  * 	z.X.proj_fc: z-score of fantasycruncher projections within class X
+  * 	z.X.proj_mo: z-score of basketballmonster projections within class X          
+  * 	z.X.v_fc: z-score of fantasycruncher value within class X 
+  * 	z.X.v_mo: z-score of basketballmonster value within class X       
 
 5. game mechanics - 
-⋅⋅* 	max_user_frac               : maximum tickets per user / total contest tickets
-⋅⋅* 	slate_size                  : number of NBA games in slate 
-⋅⋅* 	log.slate_size              : log( number of NBA games in slate)
+  * 	max_user_frac: maximum tickets per user / total contest tickets
+  * 	slate_size: number of NBA games in slate 
+  * 	log.slate_size: log( number of NBA games in slate)
 
 6. fictituous gambler portfolios ( X=worldview,Y=max overlap w/previous solution,Z=number of tickers  ) -
-⋅⋅* 	gpp.fict.proj_X.Y.Z  : X=(fantasycrunchers,basketballmonster,their average),Y=(2,4,6); Z=25 
+  * 	gpp.fict.proj_X.Y.Z: X=(fantasycrunchers,basketballmonster,their average),Y=(2,4,6); Z=25 
