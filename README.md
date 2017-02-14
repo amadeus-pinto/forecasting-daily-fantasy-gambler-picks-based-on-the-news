@@ -23,10 +23,10 @@ Apart from the intrinsic neatness of explaining/predicting the decisions a colle
 ##Model factors
 
 1. "industry" valuation 
-⋅⋅* proj_fc: fantasycrunchers fantasy score projection
-⋅⋅* proj_mo: basketballmonster fantasy score projection
-⋅⋅* v_fc: fantasycrunchers value  (proj_fc /salary)                      
-⋅⋅* v_mo: basketballmonster value (proj_mo/salary)                      
+⋅⋅1. proj_fc: fantasycrunchers fantasy score projection
+⋅⋅2. proj_mo: basketballmonster fantasy score projection
+⋅⋅3. v_fc: fantasycrunchers value  (proj_fc /salary)                      
+⋅⋅4. v_mo: basketballmonster value (proj_mo/salary)                      
 
 2. vegas quantities -
 ⋅⋅* 	line    	            : sportsdatabase matchup line                       
