@@ -3,7 +3,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import sys
 import glob
-import seaborn as sns
 from scipy import stats
 
 
@@ -73,12 +72,25 @@ def plot_model(df=None,model=None,ttype=None):
 	for i,X in enumerate(posl): 
 		plt.scatter(df.loc[df.position==X].true.values.tolist(),
 				df.loc[df.position==X][model].values.tolist(),
-				color=cmap(i / float(len(posl))    ),label=posl[i] ,alpha=0.75)
-	plt.legend()
+				color=cmap(i / float(len(posl))    ),label=posl[i] ,alpha=0.25,edgecolor='black',lw=0.2)
+	plt.legend(  prop={'size':8},loc='lower right' )
 	mod_dict = {'RandomForestRegressor':'rfr','Lasso':'Lasso','Ridge':'ridge','GradientBoostingRegressor':'gbr','mean':'mean'}
 	#plt.title('model='+model,size=20)
-	plt.ylabel('predicted %ownership',size=20)
-	plt.xlabel('true %ownership',size=20)
+
+	x = df['true'].values.tolist()
+	y = df[model].values.tolist() 
+	slope, intercept, r_value, p_value, std_err = stats.linregress(x,y)
+	plX = np.arange(np.min(x),np.max(x))
+	plY = intercept+slope*plX
+
+	plt.plot(plX,plY,linestyle='--',alpha=0.5,color='black')
+	plt.text(np.max(plX)-1,np.max(plY)-1,' R**2='+ str(round(r_value**2,2)),size=10)
+
+
+	plt.xlim([np.min(x)-1,np.max(x)+1])
+	plt.ylim([np.min(y)-1,np.max(y)+1])
+	plt.ylabel('predicted ownership',size=20)
+	plt.xlabel('true ownership',size=20)
 	plt.savefig('jan.'+model+'.'+ttype+'.png')
 	plt.clf()
 
@@ -86,7 +98,7 @@ def plot_model(df=None,model=None,ttype=None):
 def plot_slate_pos_error(posdf=None,model_err=None,do_norm=None,ttype=None):
 	posl = ['PG','SG','C','PF','SF']
 	for pos in posl: plt.hist(posdf.loc[posdf.position==pos]['se_'+model_err],bins=25,label=pos,alpha=0.75)
-	plt.legend()
+	plt.legend(prop={'size':8} )
 	plt.xlabel('rmse ownership%/model='+model_err)
 	plt.savefig('rmse.jan.'+model_err+'.n.'+str(int(do_norm))+'.'+ttype+'.png')
 	plt.clf()
@@ -97,7 +109,7 @@ def plot_slate_pos_error_ratio(posdf=None,model_err=None,do_norm=None,ttype=None
 	posl = ['PG','SG','C','PF','SF']
 	posdf['se_ratio'] = posdf['se_'+model_err]/posdf['se_mean']
 	for pos in posl: plt.hist(posdf.loc[posdf.position==pos]['se_ratio'],bins=25,label=pos,alpha=0.75,normed=True)
-	plt.legend()
+	plt.legend(prop={'size':8})
 	plt.xlabel('rmse:std ownership%/model='+model_err)
 	plt.savefig('ratio.jan.'+model_err+'.n.'+str(int(do_norm))+'.'+ttype+'.png')
 
@@ -107,7 +119,7 @@ def load_test_composite(ttype=None):
 	return testdf[['name','position','score','contest_ID']].dropna()
 
 
-def plot_exp_pts(df=None,ttype=None,model=None):
+def plot_exp_pts(df=None,ttype=None,model=None,pthreshU = 500,pthreshL=0):
 	mod_dict = {'RandomForestRegressor':'rfr','Lasso':'Lasso','Ridge':'ridge','GradientBoostingRegressor':'gbr','mean':'mean'}
 	ctest = load_test_composite(ttype=ttype)
 	mdf = pd.merge(ctest,df)
@@ -120,9 +132,11 @@ def plot_exp_pts(df=None,ttype=None,model=None):
 		print 'doing CID=',cid
 		co_df = contest(df=mdf,name=cid)
 		true_mul.append(np.sum( 0.01*co_df['true']*co_df['score']))
-		mod_mul.append( np.sum( 0.01*co_df[model]*co_df['score']))
+		mod_mul.append(np.sum( 0.01*co_df[model]*co_df['score']))
 	sl_df['<true>'] = true_mul
 	sl_df['<'+model+'>'] = mod_mul
+	sl_df = sl_df.loc[sl_df['<true>']<=pthreshU]
+	sl_df = sl_df.loc[sl_df['<true>']>=pthreshL]
 	x = sl_df['<true>'].values.tolist(),
 	y = sl_df['<'+model+'>'].values.tolist()
 	
@@ -130,16 +144,19 @@ def plot_exp_pts(df=None,ttype=None,model=None):
 	plX = np.arange(np.min(x),np.max(x))
 	plY = intercept+slope*plX
 	
-	plt.scatter(x,y,color='red')
-	plt.plot(plX,plY)
+	plt.scatter(x,y,color='red',edgecolor='black')
+	plt.plot(plX,plY,linestyle='--',alpha=0.5)
 	
 
-	plt.title(' R2='+ str(round(r_value**2,2)),size=20)
+	#plt.title(' R2='+ str(round(r_value**2,2)),size=20)
 	#plt.title(mod_dict[model],size=20)
 
-	plt.xlabel('true       < contest score > ', size = 20)
-	plt.ylabel('predicted  < contest score > ', size=20)
-	plt.legend()
+	plt.text(np.max(plX)-10,np.max(plY)-10,' R**2='+ str(round(r_value**2,2)),size=10)
+	plt.xlabel('true <contest score> ', size = 20)
+	plt.ylabel('predicted <contest score> ', size = 20)
+	plt.xlim([np.min(x)-5,np.max(x)+5])
+	plt.ylim([np.min(y)-5,np.max(y)+5])
+	plt.legend(prop={'size':8})
 	plt.savefig('field.'+model+'.'+ttype+'.png')
 	plt.clf()
 
