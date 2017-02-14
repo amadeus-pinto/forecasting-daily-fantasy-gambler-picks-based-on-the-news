@@ -27,9 +27,8 @@ I set out to answer these questions using scraped contest records of field owner
 
   this thi
 
-  ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/FIGS/field.mean.gpp.png )
-
-  The R2. Of course  
+  ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/FIGS/field.mean.gpp.png)
+  the R2. Of course  
 
 ##Model factors
 
