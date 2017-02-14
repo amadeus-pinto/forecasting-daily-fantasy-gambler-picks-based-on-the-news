@@ -23,15 +23,15 @@ I set out to answer these questions using scraped contest records of field owner
 ## Results
 a. training/validating player-centered models
 
-  Below is a plot of athletes' average ownerships against their standard deviations. Colors correspond to K-Means decomposition (n=5) of the matrix of player models by respective model coefficients. Clustering of player models (only implicitly included in the model parameters) indicates similar model composition among athletes in close proximity on the mean-standard deviation plane. 
+   Below is a plot of athletes' average ownerships against their standard deviations. Colors correspond to K-Means decomposition (n=5) of the matrix of player models by respective model coefficients. Clustering of player models (only implicitly included in the model parameters) indicates similar model composition among athletes in close proximity on the mean-standard deviation plane. 
 
-  ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.sig.Lasso.gpp.png )
+   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.sig.Lasso.gpp.png )
 
-  see that
+   see that
 
-  ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/sig.ratio.Lasso.gpp.png )
+   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/sig.ratio.Lasso.gpp.png )
 
-  the table below
+   the table below
 
 |name|mean|std|rmse(train)|rmse(val)|R2|
 |---|---|---|---|---|---|
