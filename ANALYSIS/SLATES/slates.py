@@ -156,7 +156,7 @@ if __name__ == '__main__':
         except Exception:
 		ttype = 'gpp'
 		do_norm=False
-	redo_rmsd_by_pos=False
+#	redo_rmsd_by_pos=False
 
 
 	readpath = '../../'+ttype+'_MYMODELS/test_SLATE_PREDS/composite.csv'
