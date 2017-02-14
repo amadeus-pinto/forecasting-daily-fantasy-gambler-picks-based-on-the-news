@@ -35,19 +35,18 @@ I set out to answer these questions using scraped contest records of field owner
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/RESIDUALS/gpp.val.corrmat.png )
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.sig.Lasso.gpp.png )
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/sig.ratio.Lasso.gpp.png )
-  [here](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/sig.ratio.Lasso.gpp.png )
 
-1. "industry" valuation 
+1. ["industry" valuation](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/value.png)
   * proj_fc: fantasycrunchers fantasy score projection
   * proj_mo: basketballmonster fantasy score projection
-  * v_fc: fantasycrunchers value  (proj_fc /salary)                      
-  * v_mo: basketballmonster value (proj_mo/salary)                      
+  * v_fc: fantasycrunchers value  (projection /salary)                      
+  * v_mo: basketballmonster value (projection /salary)                      
 
-2. vegas quantities -
+2. [vegas quantities](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/vegas.png )
   * 	line: sportsdatabase matchup line                       
   * 	total: sportsdatabase matchup total 
 
-3. momentum (rolling mean - abbreviated below as "rm" - of previous Y=1-,5-,10-game windows; computed with sportsdatabase queries) - 
+3. [momentum](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/momentum.png) (rolling mean - abbreviated below as "rm" - of previous Y=1-,5-,10-game windows; computed with sportsdatabase queries) - 
   * 	rm.Y.score: recent score        
   * 	rm.Y.salary: recent salary        
   * 	rm.Y.value : recent value
@@ -59,18 +58,18 @@ I set out to answer these questions using scraped contest records of field owner
   * 	rm.Y.team_def_score: recent team defensive score   
   * 	rm.Y.team_off_score: recent team offensive score   
 
-4. player standard score (value-over-replacement within X=salary,position class) - 
+4. [value over replacement](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/environ.png) (standard score within X=salary,position class) - 
   * 	z.X.proj_fc: z-score of fantasycruncher projections within class X
   * 	z.X.proj_mo: z-score of basketballmonster projections within class X          
   * 	z.X.v_fc: z-score of fantasycruncher value within class X 
   * 	z.X.v_mo: z-score of basketballmonster value within class X       
 
-5. game mechanics - 
+5. [game mechanics](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/mechs.png) - 
   * 	max_user_frac: maximum tickets per user / total contest tickets
   * 	slate_size: number of NBA games in slate 
   * 	log.slate_size: log( number of NBA games in slate)
 
-6. fictituous gambler portfolios ( X=worldview,Y=max overlap w/previous solution,Z=number of tickets  ) -
+6. [fictituous gambler portfolios](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/fict.png) ( X=worldview,Y=max overlap w/previous solution,Z=number of tickets  ) -
    This type of feature is arguably the most interesting. It is constructed as follows:
    For each contest, initialize a set of fictitious gamblers, each with a specified "worldview", risk-reward tolerance, and number of bets. For each fictitious gambler, solve the integer programming problem of constructing a number of unique bets (tickets), each maximizing projected fantasy points (enumerated by worldview) subject to feasibility constraints (FanDuel's salary cap, position requirements, etc.) and risk-reward tolerance constraints (maximum number of athelete overlaps with previous integer programming solution in fictitous gambler's portfolio).
   * 	gpp.fict.proj_X.Y.Z: X=(fantasycrunchers,basketballmonster,their average),Y=(2,4,6); Z=25 
