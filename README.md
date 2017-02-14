@@ -21,9 +21,12 @@ What causes gamblers to make the choices they make with the news they have, and 
 I set out to answer these questions using scraped contest records of field ownerships in past FanDuel NBA contests (thanks to [@brainydfs](http://brainydfs.com/)), historic athlete performance data from [sportsdatabase.com](http://sportsdatabase.com/), the news leading up to the particular contest (e.g., "industry" fantasy output projections from [basketballmonster.com](http://basketballmonster.com), [fantasycrunchers.com](http://fantasycrunchers.com), and others, themselves the output of decidedly mediocre regression models, available injury/roster reporting, etc.), and elements of the fantasy game mechanics presumed to impact fantasy gamblers' decisions. (These and others are detailed below.) I trained and validated ~400 player-centered models (estimators include ridge, lasso, random forest, and gradient-boosted regressors) on over 700 "tournament" contests from the 2016 season and the first two months of the 2017 season, holding out January 2017 slates for model testing.
 
 ## Results
-a. training/validation models
+a. training/validating player models
+  see this
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.sig.Lasso.gpp.png )
+  see that
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/sig.ratio.Lasso.gpp.png )
+  the table below
 
 |name|mean|std|rmse(train)|rmse(val)|R2|
 |---|---|---|---|---|---|
@@ -215,18 +218,17 @@ c. models of tournament means
 d. potential for stacking
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/RESIDUALS/gpp.val.corrmat.png )
 ##Model factors
-  Follow the links below to view pair distributions of dependent and independent variables of LeBron James observations. Please bear in mind that different variables are important for different athletes.  (**: interesting!) 
-
+  Follow the links below to view pair distributions of dependent and independent variables of LeBron James observations. (Bear in mind that different variables are important for different athlete models).
 
 1. ["industry" valuation](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/value.png)
   * proj_fc: fantasycrunchers fantasy score projection
   * proj_mo: basketballmonster fantasy score projection
-  * v_fc: fantasycrunchers value  (projection /salary)                      
-  * v_mo: basketballmonster value (projection /salary)                      
+  * v_fc: fantasycrunchers value  (projection /salary)
+  * v_mo: basketballmonster value (projection /salary)
 
 2. [vegas quantities](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/vegas.png )
-  * 	line: sportsdatabase matchup line                       
-  * 	total: sportsdatabase matchup total 
+  * 	line: sportsdatabase matchup line            
+  * 	total: sportsdatabase matchup total
 
 3. [momentum](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/momentum.png) (rolling mean - abbreviated below as "rm" - of previous Y=1-,5-,10-game windows; computed with sportsdatabase queries) - 
   * 	rm.Y.score: recent score        
