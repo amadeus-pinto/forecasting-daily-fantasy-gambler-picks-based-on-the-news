@@ -1,9 +1,8 @@
 #Forecasting Daily Fantasy Gamblers' Picks Based on the News
 
-
 ## Introduction
 
-In October of 2015, an employee of the daily fantasy gambling site DraftKings leveraged his site's user data to win $350,000 on a rival daily fantasy site, FanDuel, resulting in a huge scandal and allegations of insider trading. In a zero-sum game, knowledge of opponents' positions (the field's picks) ahead of market represents a serious advantage (especially distressing if utilized the same people setting the market). Specifically, the expected value of a pick, V(pick), is a product of the probability of that pick's success and its associated payout:
+In October of 2015, an employee of the daily fantasy gambling site DraftKings leveraged his site's user data to win $350,000 on a rival daily fantasy site, FanDuel, resulting in a huge scandal and allegations of insider trading. In a zero-sum game, knowledge of opponents' positions (the field's picks) ahead of market represents a serious advantage (or serious abuse if this information is leveraged by the same people setting the market). The expected value of a pick, V(pick), is a product of the probability of that pick's success and its associated payout:
 	V(pick_I) = sum J P(S_J)*A(S_J;w_I),
 
 where P(pick_J) depends on the probability of pick performance S_J and is independent of gamblers' perceptions, and A(pick_J) depends on gamblers' valuations A(pick_J) = A(pick_J[( S_J; w_J(gamblers)])), where w represents the market share (also weight/ownership/share) in the pick. {w} is the quantity of interest here, and models projecting field ownerships ahead of the market are the goal of this project. 
@@ -23,17 +22,17 @@ Apart from the intrinsic neatness of explaining/predicting the decisions a colle
 
 ##Model factors
 
-1. "industry" valuation - 
-⋅⋅* 	proj_fc 	            : fantasycrunchers fantasy score projection
-⋅⋅* 	proj_mo 	            : basketballmonster fantasy score projection
-⋅⋅* 	v_fc    	            : fantasycrunchers value  (proj_fc /salary)                      
-⋅⋅* 	v_mo    	            : basketballmonster value (proj_mo/salary)                      
+1. "industry" valuation 
+⋅⋅* proj_fc 	            : fantasycrunchers fantasy score projection
+⋅⋅* proj_mo 	            : basketballmonster fantasy score projection
+⋅⋅* v_fc    	            : fantasycrunchers value  (proj_fc /salary)                      
+⋅⋅* v_mo    	            : basketballmonster value (proj_mo/salary)                      
 
 2. vegas quantities -
 ⋅⋅* 	line    	            : sportsdatabase matchup line                       
 ⋅⋅* 	total   	            : sportsdatabase matchup total 
 
-3. momentum (rolling mean of previous Y=1-,5-,10-game windows; computed with sportsdatabase queries) - 
+3. momentum (rolling mean -rm- of previous Y=1-,5-,10-game windows; computed with sportsdatabase queries) - 
 ⋅⋅* 	rm.Y.score                  : recent score        
 ⋅⋅* 	rm.Y.salary                 : recent salary        
 ⋅⋅* 	rm.Y.value                  : recent value
