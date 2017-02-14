@@ -19,11 +19,25 @@ What causes gamblers to make the choices they make with the news they have, and 
 
 I set out to answer these questions using scraped contest records of field ownerships in past FanDuel NBA contests (thanks to [@brainydfs](http://brainydfs.com/)), historic athlete performance data from <http://sportsdatabase.com/>, the news leading up to the particular contest (e.g., "industry" fantasy output projections from <http://basketballmonster.com>, <http://fantasycrunchers.com>, and others, themselves the output of decidedly mediocre regression models, available injury/roster reporting, etc.), and elements of the fantasy game mechanics presumed to impact fantasy gamblers' decisions. (These and others are detailed below.) I trained and validated 400+ player-centered models (estimators include Ridge, Lasso, Random Forest, and gradient-boosted regressors) on over 700 "tournament" contests from the 2016 season and the first two months of the 2017 season, holding out January 2017 slates for model testing.
 
-## Results & Discussion
+## Results
 a. training/validation models
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.sig.Lasso.gpp.png )
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/sig.ratio.Lasso.gpp.png )
+  
+  
+|name|mean|std|cv_score|train_score|test_score|
+|---|---|---|---|---|
+|Anthony Davis|37.6802197802|22.2974310834|11.1536821421|11.1542144774|9.42783571919|
+|Stephen Curry|40.2421641791|22.5911944232|10.4332356052|9.53188243093|7.79943795076|
+|LeBron James|41.9718562874|23.5288837306|11.8259324967|10.6638153162|9.21278685356|
+|Harrison Barnes|28.0086956522|18.662648422|8.35956976911|7.48857983708|6.76184234785|
+|Nikola Mirotic|15.9467032967|15.0348520061|6.91842655275|12.1848916035|5.57747380116|
+|Eric Gordon|15.987037037|13.2128077543|6.29605062982|4.89242680954|5.12273751067|
+|Jimmy Butler|36.1865|22.4739041501|9.16687639786|15.6473987755|7.44529681081|
+|Klay Thompson|32.6866666667|18.2376687919|9.69068231134|9.44735772254|7.77871644008|
+|Mo Williams|11.3941176471|11.8432393516|6.35622170022|4.85414752292|3.77792585742|
 
+  
 b. models in hold-out
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.RandomForestRegressor.gpp.png)
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.mean.gpp.png)
@@ -37,7 +51,8 @@ c. models of tournament means
 d. potential for stacking
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/RESIDUALS/gpp.val.corrmat.png )
 ##Model factors
-  Follow the links below to view pair distributions of dependent and independent variables of LeBron James observations.  
+  Follow the links below to view pair distributions of dependent and independent variables of LeBron James observations. Please bear in mind that different variables are important for different athletes.  (**: interesting!) 
+
 
 1. ["industry" valuation](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/value.png)
   * proj_fc: fantasycrunchers fantasy score projection
@@ -72,8 +87,8 @@ d. potential for stacking
   * 	slate_size: number of NBA games in slate 
   * 	log.slate_size: log( number of NBA games in slate)
 
-6. [fictituous gambler portfolios](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/fict.png) ( X=worldview,Y=max overlap w/previous solution,Z=number of tickets  ) -
-   This type of feature is arguably the most interesting. It is constructed as follows:
-   For each contest, initialize a set of fictitious gamblers, each with a specified "worldview", risk-reward tolerance, and number of bets. For each fictitious gambler, solve the integer programming problem of constructing a number of unique bets (tickets), each maximizing projected fantasy points (enumerated by worldview) subject to feasibility constraints (FanDuel's salary cap, position requirements, etc.) and risk-reward tolerance constraints (maximum number of athelete overlaps with previous integer programming solution in fictitous gambler's portfolio).
+6. [**fictituous gambler portfolios](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/fict.png) ( X=worldview,Y=max overlap w/previous solution,Z=number of tickets  ) -
+   This type of feature is arguably the most interesting, and without a doubt among the most predictive. It is constructed as follows:
+   For each contest, initialize a set of fictitious gamblers, each with a specified "worldview", risk-reward tolerance, and number of bets. For each fictitious gambler, solve the integer programming problem of constructing a number of unique bets (tickets), each maximizing projected fantasy points (enumerated by worldview) subject to feasibility constraints (FanDuel's salary cap, position requirements, etc.) and risk-reward tolerance constraints (maximum number of athelete overlaps with previous integer programming solution in fictitous gambler's portfolio). For each athlete in the slate, construct a vector of fictitious holdings, each entry the proportions of each fictitious portfolio in that athlete. 
   * 	gpp.fict.proj_X.Y.Z: X=(fantasycrunchers,basketballmonster,their average),Y=(2,4,6); Z=25 
 
