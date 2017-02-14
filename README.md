@@ -22,10 +22,15 @@ I set out to answer these questions using scraped contest records of field owner
 
 ## Results
 a. training/validating player models
+
   see this
+
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.sig.Lasso.gpp.png )
+
   see that
+
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/sig.ratio.Lasso.gpp.png )
+
   the table below
 
 |name|mean|std|rmse(train)|rmse(val)|R2|
