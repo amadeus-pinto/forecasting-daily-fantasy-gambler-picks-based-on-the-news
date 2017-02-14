@@ -25,7 +25,7 @@ a. training/validation models
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/sig.ratio.Lasso.gpp.png )
 
 |name|mean|std|rmse(train)|rmse(val)|R2|
-|--|--|--|--|--|--|
+|---|---|---|---|---|---|
 |Russell Westbrook|49.5|20.15|8.14|9.04|0.8|
 |James Harden|45.22|23.94|11.11|10.57|0.81|
 |Kevin Durant|42.23|23.19|9.88|10.9|0.78|
