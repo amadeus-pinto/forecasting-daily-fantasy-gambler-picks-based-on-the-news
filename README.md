@@ -21,7 +21,7 @@ What causes gamblers to make the choices they make with the information they hav
 I set out to answer these questions using scraped contest records of field ownerships in past FanDuel NBA contests (thanks to [@brainydfs](http://brainydfs.com/)), historic athlete performance data from [sportsdatabase.com](http://sportsdatabase.com/), the news leading up to the particular contest (e.g., "industry" fantasy output projections from [basketballmonster.com](http://basketballmonster.com), [fantasycrunchers.com](http://fantasycrunchers.com), and others, themselves the output of decidedly mediocre regression models, available injury/roster reporting, etc.), and elements of the fantasy game mechanics presumed to impact fantasy gamblers' decisions. (These and others are detailed below.) I trained and validated ~400 player-centered models (estimators include ridge, lasso, random forest, and gradient-boosted regressors) on over 700 "tournament" contests from the 2016 season and the first two months of the 2017 season, holding out January 2017 slates for model testing.
 
 ## Results
-a. training/validating player-centered models
+  * a. training/validating player-centered models
 
    Below is a plot of athletes' average ownerships against their standard deviations. Colors correspond to K-Means decomposition (n=5) of the matrix of player models by respective model coefficients. Clustering of player models (only implicitly included in the model parameters) indicates similar model composition among athletes in close proximity on the mean-standard deviation plane. 
 
@@ -210,7 +210,7 @@ a. training/validating player-centered models
 |E'Twaun Moore|9.55|12.29|7.51|6.81|0.69|
  
   
-b. models in hold-out
+  * b. models in hold-out
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.RandomForestRegressor.gpp.png)
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.mean.gpp.png)
 
