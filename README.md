@@ -23,14 +23,15 @@ I set out to answer these questions using scraped contest records of field owner
 ## Results
   * __training/validating player-centered models__
 
-   Below is a plot of athletes' average ownerships against their standard deviations. Colors correspond to groups coming out of a k-Means decomposition (k=5) of the matrix of player models by respective model coefficients. Clustering of player models (only implicitly included in the model parameters) indicates similar model composition among athletes in close proximity on the mean-standard deviation plane. In other words, it turns out that common factors drive (un)popular athletes' market share.
+   Below is a plot of athletes' average ownerships against their standard deviations. Colors correspond to groups coming out of a k-Means decomposition (k=5) of the matrix of player models by respective model coefficients. Clustering of player models (only implicitly included in the model parameters) indicates similar model composition among athletes in close proximity on the mean-standard deviation plane. In other words, it turns out that common factors drive (un)popular athletes' market share. High-mean, high-spread clusters (colored light blue,light green) include Russell Westbrook, James Harden, and LeBron James for instance. (See pairplots of LeBron's (in)dependent variables in the Model Factors section.) Their ownership models depend on the slate size variable similarly (steeply inversely).  
 
    ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.sig.Lasso.gpp.png )
 
-   The predictive value of a given ownership model increases with mean ownership (and also with the spread around ownership):
+   The predictive value of a given ownership model increases with mean ownership (and also with the spread around ownership): 
    ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.ratio.Lasso.gpp.png )
+   This means athletes that typically dominate the market share are predicted more accurately than unpopular players. The upside is accuracy  
 
-   Find error statistics for your favorite player below:
+   Error statistics for the top third most-popular players are given below.
 
    |name|mean|std|rmse(train)|rmse(val)|R2|
    |---|---|---|---|---|---|
