@@ -110,5 +110,5 @@ if __name__ == '__main__':
 	sns.heatmap(corrmat,center=0.5,annot=True,linewidths=0.5,robust=True)
 	plt.xticks(rotation=0,fontsize=15)
 	plt.yticks(rotation=0,fontsize=15)
-	plt.title(predtype+' residual correlations',fontsize=20)
+	#plt.title(predtype+' residual correlations',fontsize=20)
 	plt.savefig(ttype+'.'+predtype+'.corrmat.png')
