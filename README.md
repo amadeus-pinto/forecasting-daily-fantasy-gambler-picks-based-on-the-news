@@ -211,6 +211,8 @@ I set out to answer these questions using scraped contest records of field owner
  
   
   * __models in hold-out__
+  
+  This is all well and good, but player models are hardly useful in a vacuum. 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.RandomForestRegressor.gpp.png)
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.mean.gpp.png)
 
