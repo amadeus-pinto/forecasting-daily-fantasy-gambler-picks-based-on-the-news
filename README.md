@@ -4,9 +4,9 @@
 
 In October of 2015, an employee of the daily fantasy sports (DFS) gambling site DraftKings leveraged his site's user data to win $350,000 on a competitor site, FanDuel, resulting in [allegations of insider trading, and renewed concern for consumer protection against exploitation by an unregulated industry](https://www.nytimes.com/2015/10/06/sports/fanduel-draftkings-fantasy-employees-bet-rivals.html?_r=0). In a zero-sum game, knowledge of opponents' positions (the field's picks) ahead of market (the contest) represents a serious advantage (or serious abuse when applied by the same people making the market). The expected value of a pick I, ```V(pick_I)```, is a product of the probability ```P``` of pick I's success and its associated payout ```p```:
 
-	V(pick_I) = sum_J P(S_JI)*p(S_JI;w_I).
+	V(pick_I) = sum_J P(S_J)*p(S_J;w_I).
 
-```P(S_JI)``` is the probability of pick I's score J,``` S_JI```, and is independent of gamblers' perceptions, whereas payout ```p``` depends on pick I's score and gamblers' collective valuation of I, where ```w_I``` represents the "market share" (also "weight" or "ownership") in pick I. ```{w_I}``` is the quantity of interest here, and models projecting field ownerships ahead of market are the goal of this project. 
+```P(S_J)``` is the probability of pick I's score J,``` S_J```, and is independent of gamblers' perceptions, whereas payout ```p``` depends on pick I's score and gamblers' collective valuation of I, where ```w_I``` represents the "market share" (also "weight" or "ownership") in pick I. ```{w_I}``` is the quantity of interest here, and models projecting field ownerships ahead of market are the goal of this project. 
 
 Apart from the intrinsic neatness of explaining/predicting the decisions a collection of people make given incomplete information and perceived utility, knowledge of athlete market shares can potentially help one accurately project outcomes of entire fantasy contests themselves... Specifically, if one has a "good" estimate of the covariance matrix of athlete fantasy output, one can collect statistics from an ensemble of Monte-Carlo-sampled contests, each one represented in a set of tickets giving rise to the predicted market. A basic application of such a simulation would be ranking the tickets by probability of profitability, etc.
 
@@ -222,11 +222,9 @@ I set out to answer these questions using scraped contest records of field owner
 
   How well do market share predictions _taken together_ predict the market? For a given contest, the mean fantasy score ```U``` is given by:
 
-  	U = sum_i w_I*S_I
+        U = sum_i w_i*Si,
 
-        U = sum_i w_i*SiI).
-
-
+  with ```S_i``` and ```w_i``` having the same meaning as before. 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.mean.gpp.png)
