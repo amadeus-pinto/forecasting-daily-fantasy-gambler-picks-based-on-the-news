@@ -211,9 +211,9 @@ I set out to answer these questions using scraped contest records of field owner
  
   
   * __models in hold-out__
-  As already mentioned, I held out January 2017 for testing. Predicted versus true ownerships for each player observation for each slate are plotted below. 
+  As already mentioned, I held out January 2017 for testing. Predicted versus true ownerships for each player observation for each slate are plotted below, with colors corresponding to athlete position. 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.RandomForestRegressor.gpp.png)
-  Compare this with taking the player's mean ownership in the training/validation set as a model of his ownership:
+  Compare this with the null model, which guesses the player's mean ownership for each observation:
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.mean.gpp.png)
 
   This is all well and good, but player models are hardly useful in a vacuum. 
