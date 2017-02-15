@@ -33,7 +33,7 @@ I set out to answer these questions using scraped contest records of field owner
    This means that ownerships of athletes who typically dominate the market share are predicted more accurately than ownerships of less popular players. 
    Error statistics for the most popular players in the league are given below. 
 
-   |name|mean|std|rmse(train)|rmse(val)|R2|
+   |name|mean|std|RMSE(train)|RMSE(val)|R2|
    |---|---|---|---|---|---|
    |Russell Westbrook|49.5|20.15|8.14|9.04|0.8|
    |James Harden|45.22|23.94|11.11|10.57|0.81|
@@ -224,7 +224,7 @@ I set out to answer these questions using scraped contest records of field owner
 
         <S> = sum_K w_K*S_K,
 
-  where ```S_K``` and ```w_K``` have the same meaning as before. This is a more intuitive figure of merit than rmse for evaluating the strength of simultaneous predictions spanning a contest, and is also less forgiving.
+  where ```S_K``` and ```w_K``` have the same meaning as before. This is a more intuitive figure of merit than ```{w}``` RMSEs (which, by the way, look similar to their validation counterparts) for evaluating the strength of simultaneous predictions ```{w}```, since it couples predictions explicitly, penalizing the deviation between exact and approximate ```w_i``` by ```S_i```.
 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
 
