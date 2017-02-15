@@ -235,7 +235,7 @@ I set out to answer these questions using scraped contest records of field owner
 
   * __potential for stacked regression__
 
-  I trained/validated/tested on four estimators: lasso(L1), ridge(L2), random forest, and gradient-boosted regressors. the covariance matrix of their test (January hold-out) residuals is plotted below. 
+  I trained/validated/tested models of four estimators: lasso (L1), ridge (L2), random forest, and gradient-boosted regressors. The covariance matrix of their test (January hold-out) residuals is plotted below. Surprisingly. Equal weight versus optimized weighting.   
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/RESIDUALS/gpp.test.corrmat.png )
 
 ##Model factors
