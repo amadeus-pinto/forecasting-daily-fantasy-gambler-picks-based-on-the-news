@@ -221,7 +221,7 @@ I set out to answer these questions using scraped contest records of field owner
   Substituting training set mean ownerships in the tournament mean equation, predicted means are wildly unrealistic.  
 
   * __potential for stacking__
-  ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/RESIDUALS/gpp.test.corrmat.png )
+  ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/RESIDUALS/gpp.val.corrmat.png )
 ##Model factors
   Follow the links below to view pair distributions of dependent and independent variables of LeBron James ownership observations. (Bear in mind that different variables are important for different athlete models).
 
