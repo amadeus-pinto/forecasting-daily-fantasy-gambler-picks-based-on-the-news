@@ -220,16 +220,19 @@ I set out to answer these questions using scraped contest records of field owner
   This is all well and good, but player models are hardly useful in a vacuum... 
   * __bundled predictions of tournament means__
 
-  How well do market share predictions _taken together_ predict the market? For a given contest, the mean fantasy score ```U``` is given by:
+  How well do market share predictions _taken together_ predict the market? An appropriate measure of 'market' is the contest's average fantasy score ```U```, given by:
 
         U = sum_i w_i*S_i,
 
-  where ```S_i``` and ```w_i``` having the same meaning as before.  
+  where ```S_i``` and ```w_i``` have the same meaning as before. Exact ownership data give an exact weight 
+
+
+[comment]: <>#(new loss function: find X',U'(X') minimizing ||U(X) - U'(X') ||**2 ? )
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
 
+  Substituting null-model ownerships in the tournament mean equation, predicted means are wildly unrealistic.  
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.mean.gpp.png)
 
-  Substituting training set mean ownerships in the tournament mean equation, predicted means are wildly unrealistic.  
 
   * __potential for stacked regression__
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/RESIDUALS/gpp.test.corrmat.png )
