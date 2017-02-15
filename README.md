@@ -214,12 +214,13 @@ I set out to answer these questions using scraped contest records of field owner
   
   As already mentioned, I held out January 2017 for testing. Predicted versus true ownerships for each player observation are plotted below, with colors corresponding to athlete position, and where perfect predictions would lie on the line ```predicted ownership=true ownership```. 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.RandomForestRegressor.gpp.png)
-  Compare this with the null model, which guesses the player's mean ownership for each observation:
+  Compare this with the null model, which guesses the player's mean ownership each observation:
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.mean.gpp.png)
 
-  This is all well and good, but player models are hardly useful in a vacuum. 
+  This is all well and good, but player models are hardly useful in a vacuum... 
   * __models of tournament means__
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
+  How well can
 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.mean.gpp.png)
   Substituting training set mean ownerships in the tournament mean equation, predicted means are wildly unrealistic.  
