@@ -211,11 +211,12 @@ I set out to answer these questions using scraped contest records of field owner
  
   
   * __models in hold-out__
-  
-  This is all well and good, but player models are hardly useful in a vacuum. 
+  As already mentioned, I held out January 2017 for testing. Predicted versus true ownerships for each player observation for each slate are plotted below. 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.RandomForestRegressor.gpp.png)
+  Compare this with taking the player's mean ownership in the training/validation set as a model of his ownership:
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.mean.gpp.png)
 
+  This is all well and good, but player models are hardly useful in a vacuum. 
   * __models of tournament means__
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
 
