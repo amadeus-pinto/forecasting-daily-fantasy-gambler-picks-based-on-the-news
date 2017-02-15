@@ -212,19 +212,21 @@ I set out to answer these questions using scraped contest records of field owner
   
   * __player models in hold-out__
   
-  I held out January 2017, which included some ~100 "tournament" contests, for model testing. Predicted versus true ownerships for each player observation are plotted below, with colors corresponding to athlete position, and where perfect predictions would lie on the line ```predicted ownership=true ownership```. 
+  I held out January 2017, which included some 100 contests, for model testing. Predicted versus true ownerships for each player observation are plotted below, with colors corresponding to athlete position, and where perfect predictions would lie on the line ```predicted ownership=true ownership```. 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.RandomForestRegressor.gpp.png)
   Compare this with the null model, which guesses the player's mean ownership each observation:
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.mean.gpp.png)
 
   * __bundled predictions of tournament means__
 
-  Player models are doing great, but player models taken alone are hardly useful in a vacuum... 
-  A better question to ask is: How well do market share predictions _taken together_ predict the market? An appropriate measure of 'market' is the contest's average fantasy score ```<S>```, given by:
+  Player models are doing great, but player models are hardly useful in a vacuum... 
+  A relevant question to ask is: How well do market share predictions _taken together_ predict the market? An appropriate measure of 'market' is the contest's average fantasy score ```<S>```, given by:
 
         <S> = sum_K w_K*S_K,
 
-  where ```S_K``` and ```w_K``` have the same meaning as before. This is a more intuitive figure of merit than RMSEs for raw ```{w}``` player models (which, by the way, look similar to their validation counterparts in the previous section) for evaluating the strength of simultaneous predictions ```{w}```, since it couples predictions explicitly, penalizing the deviation between exact and approximate ```w_i``` by ```S_i```. Directly below are predicted versus true contest means for unseen January 2017. 
+  where ```S_K``` and ```w_K``` are athlete scores and ownerships. Since ```<S>``` couples the ```{w}``` explicitly, it seems like a decent figure of merit*. Below are predicted versus true contest means for unseen January 2017. 
+
+  penalizing the deviation between exact and approximate ```w_i``` by ```S_i```. Thus, for similar error in w, this metric penalizes the term with higher S_i (S_i and w_i influence the mean in their own ways).This is a more intuitive figure of merit than RMSEs for raw player models of ```{w}``` (which, by the way, look similar to their validation counterparts in the previous section) for evaluating the strength of simultaneous predictions ```{w}```, since ```<S>``` couples predictions explicitly, penalizing the deviation between exact and approximate ```w_i``` by ```S_i```. Thus, for similar error in w, this metric penalizes the term with higher S_i (S_i and w_i influence the mean in their own ways). 
 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
 
@@ -233,6 +235,7 @@ I set out to answer these questions using scraped contest records of field owner
 
 
   * __potential for stacked regression__
+  I trained/validated/tested on four estimators: lasso(L1), ridge(L2), random forest, and gradient-boosted regressors. the covariance matrix of their test (January hold-out) residuals is plotted below  
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/RESIDUALS/gpp.test.corrmat.png )
 ##Model factors
 
@@ -271,7 +274,7 @@ I set out to answer these questions using scraped contest records of field owner
   * 	slate_size: number of NBA games in slate 
   * 	log.slate_size: log( number of NBA games in slate)
 
-6. [**fictituous gambler portfolios](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/fict.png) ( X=worldview,Y=max overlap w/previous solution,Z=number of tickets  ) -
+6. [__fictituous gambler portfolios__](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/fict.png) ( X=worldview,Y=max overlap w/previous solution,Z=number of tickets  ) -
    This type of feature is arguably the most interesting, and without a doubt among the most predictive. It is constructed as follows:
    For each contest, initialize a set of "fictitious gamblers", each with a specified "worldview" (tuning bias), some measure of "risk tolerance" (tuning variance), and number of bets. For each fictitious gambler, solve the integer programming problem of constructing a number of unique bets, each maximizing projected fantasy points (enumerated by worldview) subject to feasibility constraints (FanDuel's salary cap, position requirements, etc.) and risk tolerance constraints (maximum number of athelete overlaps with previous integer programming solution in fictitous gambler's portfolio). For each athlete in the slate, construct a feature set of fictitious holdings, each entry of which is the proportion of the fictitious portfolio in that athlete. 
   * 	gpp.fict.proj_X.Y.Z: X=(fantasycrunchers,basketballmonster,their average),Y=(2,4,6); Z=25 
