@@ -210,7 +210,7 @@ I set out to answer these questions using scraped contest records of field owner
    |E'Twaun Moore|9.55|12.29|7.51|6.81|0.69|
  
   
-  * __models in hold-out__
+  * __player models in hold-out__
   
   As already mentioned, I held out January 2017 for testing. Predicted versus true ownerships for each player observation are plotted below, with colors corresponding to athlete position, and where perfect predictions would lie on the line ```predicted ownership=true ownership```. 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.RandomForestRegressor.gpp.png)
@@ -218,13 +218,13 @@ I set out to answer these questions using scraped contest records of field owner
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.mean.gpp.png)
 
   This is all well and good, but player models are hardly useful in a vacuum... 
-  * __models of tournament means__
+  * __bundled predictions of tournament means__
 
   How well do market share predictions _taken together_ predict the market? For a given contest, the mean fantasy score ```U``` is given by:
 
-        U = sum_i w_i*Si,
+        U = sum_i w_i*S_i,
 
-  with ```S_i``` and ```w_i``` having the same meaning as before. 
+  where ```S_i``` and ```w_i``` having the same meaning as before.  
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.mean.gpp.png)
