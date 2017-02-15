@@ -7,18 +7,6 @@ import sys
 
 
 
-
-def remove_one_offs(namel=[],A_pf=None,S=None,modeltype=None):
-	#if modeltype!='Lasso':
-	#	namel = [X+'.'+modeltype for X in namel]
-	#	S['name'] = S['name']+'.'+modeltype
-	for name in namel:
-		A_pf = A_pf.loc[A_pf.index!=name]
-		S =       S.loc[S.name    !=name]
-	
-	return A_pf,S
-
-
 def get_mats(mod_dict=None,modeltype=None,ttype ='gpp'):
 	path = '../DECOMPOSE/DATA/Aplayers.'+ttype+'.'+modeltype+'.csv'
 	spath ='../../'+ttype+'_MYMODELS/SUMMARIES/'+mod_dict[modeltype]+'.csv' 
@@ -29,12 +17,6 @@ def get_mats(mod_dict=None,modeltype=None,ttype ='gpp'):
 	A_pf = A.transpose()
 	A_pf.columns = A.features.values.tolist()
 	A_pf = A_pf[1:]
-
-	#namel=['Brandon Ingram','Jameer Nelson','Arron Afflalo']
-	#A_pf,S = remove_one_offs(namel=namel,A_pf=A_pf,S=S,modeltype=modeltype)
-	#print A_pf
-	#print S
-	#sys.exit()
 
 	return A_pf,S
 
