@@ -227,7 +227,7 @@ I set out to answer these questions using scraped contest records of field owner
   where ```S_i``` and ```w_i``` have the same meaning as before. Exact ownership data give an exact weight 
 
 
-[comment]: <>#(new loss function: find X',U'(X') minimizing ||U(X) - U'(X') ||**2 ? )
+[comment]: <> #(new loss function: find X',U'(X') minimizing ||U(X) - U'(X') ||**2 ? )
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
 
   Substituting null-model ownerships in the tournament mean equation, predicted means are wildly unrealistic.  
