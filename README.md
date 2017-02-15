@@ -23,14 +23,14 @@ I set out to answer these questions using scraped contest records of field owner
 ## Results
   * __training/validating player-centered models__
 
-   Below is a plot of athletes' average ownerships against their standard deviations. Colors correspond to groups coming out of a k-Means decomposition (k=5) of the matrix of player models by respective model coefficients. Clustering of player models (only implicitly included in the model parameters) indicates similar model composition among athletes in close proximity on the mean-standard deviation plane. In other words, it turns out that common factors drive (un)popular athletes' market share. High-mean, high-spread clusters (colored light blue and light green) include Russell Westbrook, James Harden, and LeBron James ownership models, among others you could probably name... Their ownership models depend on, among others, the ```slate_size``` variable similarly (steeply inversely; see the _Model Factors_ section below).  
+   Below is a plot of athletes' average ownerships against their standard deviations. Colors correspond to groups coming out of a k-Means decomposition (k=5) of the matrix of player models by respective model coefficients. Clustering of player models (only implicitly included in the model parameters) indicates similar model composition among athletes in close proximity on the mean-standard deviation plane. In other words, it turns out that common factors drive (un)popular athletes' market share. High-mean, high-spread clusters (colored light blue and light green) include Russell Westbrook, James Harden, and LeBron James ownership models, among others you could probably name... Their ownership models depend on, among others, the ```slate_size``` variable similarly (steeply inversely; see the __Model Factors__ section below).  
 
    ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.sig.Lasso.gpp.png )
 
    The predictive power of an ownership model increases with mean ownership (and also with the spread around ownership): 
    ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.ratio.Lasso.gpp.png )
    
-   This means that ownerships of athletes who typically dominate the market share are predicted more accurately than ownerships of less popular players. On the other hand, lower-signal athlete ownerships are more difficult to predict.
+   This means that ownerships of athletes who typically dominate the market share are predicted more accurately. On the other hand, athletes with higher-variance ownerships (lower mean-to-standard deviation ratio types) are more difficult to predict.
 
    Find your favorite player's stat line here: 
 
@@ -144,20 +144,19 @@ I set out to answer these questions using scraped contest records of field owner
   
   * __player models in hold-out__
   
-  I held out January 2017, which included some 100 contests, for model testing. Predicted versus true ownerships for each player observation are plotted below, with colors corresponding to athlete position, and where perfect predictions would lie on the line ```predicted ownership=true ownership```. 
+  I held out contests from January 2017 for model testing. Predicted versus true ownerships for each ownership observation are plotted below, with colors corresponding to athlete position, and where perfect predictions would lie on the line ```predicted ownership=true ownership```. 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.RandomForestRegressor.gpp.png)
-  Compare this with the null model, which guesses the player's mean ownership each observation:
+  Compare these predictions with the null model, which guesses the player's mean ownership each observation:
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.mean.gpp.png)
 
   * __bundled predictions of tournament means__
 
   Player models are doing great, but player models are hardly useful in a vacuum... 
-  A relevant question to ask is: How well do market share predictions _taken together_ predict the market? An appropriate measure of 'market' is the contest's average fantasy score ```<S>```, given by:
+  A useful question to ask is: How well do market share predictions _taken together_ predict the market? The contest's average fantasy score ```<S>```,
 
         <S> = sum_K w_K*S_K,
 
-  where ```S_K``` and ```w_K``` are athlete scores and ownerships. Since ```<S>``` couples the ```{w}``` explicitly, it seems like a decent figure of merit*. Below are predicted versus true contest means for unseen January 2017. 
-
+  where ```S_K``` and ```w_K``` are athlete fantasy scores and ownerships, respectivey, since it couples the ```{w}``` explicitly, is an appropriate quantity for this purpose. In the limit that predicted minus true ```{w}``` goes to zero, all that's left to determine the contest mean fantasy score are the ```{S}```, which depend on NBA players alone. Below are predicted versus true contest means for unseen January 2017. Each point is a contest mean fantasy score computed from the collection of independent player ownership predictions belonging to that contest. Perfect contest mean predictions would lie on the line ```predicted < contest score > = true < contest score >```. 
 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
 
