@@ -18,7 +18,7 @@ Apart from the intrinsic neatness of explaining/predicting the decisions a colle
 
 What causes gamblers to make the choices they make with the information they have, and how accurately can I predict the field of wagers in a given contest? 
 
-I set out to answer these questions using scraped contest records of field ownerships in past FanDuel NBA contests (thanks to [@brainydfs](http://brainydfs.com/)), historic athlete performance data from [sportsdatabase.com](http://sportsdatabase.com/), the news leading up to the particular contest (e.g., "industry" fantasy output projections from [basketballmonster.com](http://basketballmonster.com), [fantasycrunchers.com](http://fantasycrunchers.com), and others, themselves the output of decidedly mediocre regression models, available injury/roster reporting, etc.), and elements of the fantasy game mechanics presumed to impact fantasy gamblers' decisions. (These and others are detailed below.) I trained and validated ~400 player-centered models (estimators include ridge, lasso, random forest, and gradient-boosted regressors) on over 700 "tournament" contests from the 2016 season and the first two months of the 2017 season, holding out January 2017 slates for model testing.
+I set out to answer these questions using scraped contest records of field ownerships in past FanDuel NBA contests (thanks to [@brainydfs](http://brainydfs.com/)), historic athlete performance data from [sportsdatabase.com](http://sportsdatabase.com/), the news leading up to the particular contest (e.g., "industry" fantasy output projections from [basketballmonster.com](http://basketballmonster.com), [fantasycrunchers.com](http://fantasycrunchers.com), themselves the output of decidedly mediocre regression models, available injury/roster reporting, etc.), and elements of the fantasy game mechanics presumed to impact fantasy gamblers' decisions. (These and others are detailed below.) I trained and validated ~400 player-centered models (estimators include ridge, lasso, random forest, and gradient-boosted regressors) on over 700 "tournament" contests from the 2016 season and the first two months of the 2017 season, holding out January 2017 slates for model testing.
 
 ## Results
   * __training/validating player-centered models__
@@ -30,7 +30,7 @@ I set out to answer these questions using scraped contest records of field owner
    The predictive power of an ownership model increases with mean ownership (and also with the spread around ownership): 
    ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.ratio.Lasso.gpp.png )
    
-   This means that ownerships of athletes who typically dominate the market share are predicted more accurately. On the other hand, athletes with higher-variance ownerships (lower mean-to-standard deviation ratio types) are more difficult to predict.
+   This means ownerships of athletes who typically dominate the market share are predicted more accurately. On the other hand, athletes with higher-variance ownerships (lower mean-to-standard deviation ratio types) are more difficult to predict.
 
    Find your favorite player's stat line here: 
 
@@ -149,24 +149,23 @@ I set out to answer these questions using scraped contest records of field owner
   Compare these predictions with the null model, which guesses the player's mean ownership each observation:
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.mean.gpp.png)
 
-  * __bundled predictions of tournament means__
+  * __bundled predictions of whole-tournament means__
 
   Player models are doing great, but player models are hardly useful in a vacuum... 
-  A useful question to ask is: How well do market share predictions _taken together_ predict the market? The contest's average fantasy score ```<S>```,
+  A useful question to ask is: How well do market share predictions _taken together_ predict the market? A contest's average fantasy score ```<S>```,
 
         <S> = sum_K w_K*S_K,
 
-  where ```S_K``` and ```w_K``` are athlete fantasy scores and ownerships, respectivey, since it couples the ```{w}``` explicitly, is an appropriate quantity for this purpose. In the limit that predicted minus true ```{w}``` goes to zero, all that's left to determine the contest mean fantasy score are the ```{S}```, which depend on NBA players alone. Below are predicted versus true contest means for unseen January 2017. Each point is a contest mean fantasy score computed from the collection of independent player ownership predictions belonging to that contest. Perfect contest mean predictions would lie on the line ```predicted < contest score > = true < contest score >```. 
+  where ```S_K``` and ```w_K``` are athlete fantasy scores and ownerships, respectively, is an appropriate quantity for this purpose since it couples the ```{w}``` explicitly. In the limit predicted minus true ```{w}``` go to zero, all that's left to _analytically_ determine the contest mean fantasy score are the ```{S}```, which depend on NBA players alone. Below are predicted versus true contest means for unseen January 2017. Each point is a contest mean computed from the collection of independent player ownerships (actual and predicted) belonging to that contest. Perfect contest mean predictions would lie on the line ```predicted < contest score > = true < contest score >```. 
 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
 
   Substituting null-model ownerships in the tournament mean equation, predicted means are wildly unrealistic.  
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.mean.gpp.png)
 
-
   * __potential for stacked regression__
 
-  I trained/validated/tested models of four estimators: lasso (L1), ridge (L2), random forest, and gradient-boosted regressors. The covariance matrix of their test (January hold-out) residuals is plotted below. Surprisingly. Equal weight versus optimized weighting.   
+  There's still room to improve the accuracy. I trained/validated/tested models of four estimators: lasso (L1), ridge (L2), random forest, and gradient-boosted regressors. The covariance matrix of their test-set (January hold-out) residuals is plotted below. Surprisingly. Equal weight versus optimized weighting.   
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/RESIDUALS/gpp.test.corrmat.png )
 
 ##Model factors
