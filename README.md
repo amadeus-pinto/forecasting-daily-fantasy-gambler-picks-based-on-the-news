@@ -222,10 +222,9 @@ I set out to answer these questions using scraped contest records of field owner
   Player models are doing great, but player models taken alone are hardly useful in a vacuum... 
   A better question to ask is: How well do market share predictions _taken together_ predict the market? An appropriate measure of 'market' is the contest's average fantasy score ```<S>```, given by:
 
-        <S> = sum_i w_i*S_i,
+        <S> = sum_K w_K*S_K,
 
-  where ```S_i``` and ```w_i``` have the same meaning as before. 
-
+  where ```S_K``` and ```w_K``` have the same meaning as before. This is a more intuitive figure of merit than rmse for evaluating the strength of simultaneous predictions spanning a contest, and is also less forgiving.
 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
 
