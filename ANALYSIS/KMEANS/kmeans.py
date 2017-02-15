@@ -57,14 +57,19 @@ if __name__ == '__main__':
 
 
 	M = pd.merge(S,fdf)
+	#M['mtostd'] = 10*M['mean']/M['std']
+	#mtostd = M.mtostd.values.tolist()
+	#print mtostd
 	x = M['std'].values.tolist()
 	y = M['mean'].values.tolist()
 	r = M['fraction unexplained variance'].values.tolist()
 	plt.scatter(x,y,c = M['cluster'].values.tolist(),alpha=0.5)
+	#plt.scatter(x,mtostd,c='black',label='scaled mean:stddev')
 	plt.xlabel('stddev ownership',size=15)
 	plt.ylabel('avg ownership',size=15)
 	plt.xlim([0,27.5])
 	plt.ylim([0,50])
+	#plt.legend()
 	#plt.title(ttype+' avg. ownership v natural spread')
 	plt.savefig('mu.sig.'+modeltype+'.'+ttype+'.png')
 
