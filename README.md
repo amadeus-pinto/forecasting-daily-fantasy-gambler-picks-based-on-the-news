@@ -163,9 +163,10 @@ I set out to answer these questions using scraped contest records of field owner
   Substituting null-model ownerships in the tournament mean equation, predicted means are wildly unrealistic.  
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.mean.gpp.png)
 
-  * __potential for stacked regression__
+  * __outlook__
 
-  There's still room to improve the accuracy. I trained/validated/tested models of four estimators: lasso (L1), ridge (L2), random forest, and gradient-boosted regressors. The covariance matrix of their test-set (January hold-out) residuals is plotted below. Surprisingly. Equal weight versus optimized weighting.   
+  In view of their performances in hold-out, player models and bundled contest predictions are predictive. 
+  Efforts to improve accuracy the accuracy. One  approach is to introduce more features. Given the relatively high impact of "industry" projection factors on market share, inclusion of data from more sources, e.g., RotoGrinders, fb-ninja and any number of others, in order of the volume of their subscription base   Aside from incorporating new features, I trained four estimators: lasso (L1), ridge (L2), random forest, and gradient-boosted regressors. The covariance matrix of their test-set (January hold-out) residuals is plotted below. Surprisingly. Equal weight versus optimized weighting.   
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/RESIDUALS/gpp.test.corrmat.png )
 
 ##Model factors
