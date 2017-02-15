@@ -72,7 +72,7 @@ def plot_model(df=None,model=None,ttype=None):
 	for i,X in enumerate(posl): 
 		plt.scatter(df.loc[df.position==X].true.values.tolist(),
 				df.loc[df.position==X][model].values.tolist(),
-				color=cmap(i / float(len(posl))    ),label=posl[i] ,alpha=0.25,edgecolor='black',lw=0.2)
+				color=cmap(i / float(len(posl))    ),label=posl[i] ,alpha=0.5,edgecolor='black',lw=0.2)
 	plt.legend(  prop={'size':8},loc='lower right' )
 	mod_dict = {'RandomForestRegressor':'rfr','Lasso':'Lasso','Ridge':'ridge','GradientBoostingRegressor':'gbr','mean':'mean'}
 	#plt.title('model='+model,size=20)
