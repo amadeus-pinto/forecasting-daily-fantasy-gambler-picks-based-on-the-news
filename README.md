@@ -222,7 +222,9 @@ I set out to answer these questions using scraped contest records of field owner
 
   How well do market share predictions _taken together_ predict the market? For a given contest, the mean fantasy score ```U``` is given by:
 
-   U = sum_i w_I*S_I
+  	U = sum_i w_I*S_I
+
+        V(pick_I) = sum_J P(S_JI)*p(S_JI;w_I).
 
 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
