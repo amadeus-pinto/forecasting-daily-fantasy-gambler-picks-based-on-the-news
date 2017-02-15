@@ -224,7 +224,7 @@ I set out to answer these questions using scraped contest records of field owner
 
   	U = sum_i w_I*S_I
 
-        V(pick_I) = sum_J P(S_JI)*p(S_JI;w_I).
+        U = sum_i w_i*SiI).
 
 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
