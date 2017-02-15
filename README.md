@@ -23,7 +23,7 @@ I set out to answer these questions using scraped contest records of field owner
 ## Results
   * __training/validating player-centered models__
 
-   Below is a plot of athletes' average ownerships against their standard deviations. Colors correspond to groups coming out of a k-Means decomposition (k=5) of the matrix of player models by respective model coefficients. Clustering of player models (only implicitly included in the model parameters) indicates similar model composition among athletes in close proximity on the mean-standard deviation plane. In other words, it turns out that common factors drive (un)popular athletes' market share. High-mean, high-spread clusters (colored light blue,light green) include Russell Westbrook, James Harden, and LeBron James for instance. (See pairplots of LeBron's (in)dependent variables in the Model Factors section.) Their ownership models depend on the slate size variable similarly (steeply inversely).  
+   Below is a plot of athletes' average ownerships against their standard deviations. Colors correspond to groups coming out of a k-Means decomposition (k=5) of the matrix of player models by respective model coefficients. Clustering of player models (only implicitly included in the model parameters) indicates similar model composition among athletes in close proximity on the mean-standard deviation plane. In other words, it turns out that common factors drive (un)popular athletes' market share. High-mean, high-spread clusters (colored light blue,light green) include Russell Westbrook, James Harden, and LeBron James ownership models, for instance. Their ownership models, depend on the ```slate_size``` variable similarly (steeply inversely; see the _Model Factors_ section below).  
 
    ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.sig.Lasso.gpp.png )
 
@@ -243,40 +243,40 @@ I set out to answer these questions using scraped contest records of field owner
   Follow the links below to view distributions of regressors for LeBron James' contest observations. (Bear in mind that different variables are important for different athlete models).
 
 1. ["industry" valuation](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/value.png)
-  * proj_fc: fantasycrunchers fantasy score projection
-  * proj_mo: basketballmonster fantasy score projection
-  * v_fc: fantasycrunchers value  (projection /salary)
-  * v_mo: basketballmonster value (projection /salary)
+  * ```proj_fc```: fantasycrunchers fantasy score projection
+  * ```proj_mo```: basketballmonster fantasy score projection
+  * ```v_fc```: fantasycrunchers value  (projection /salary)
+  * ```v_mo```: basketballmonster value (projection /salary)
 
 2. [vegas quantities](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/vegas.png )
-  * 	line: sportsdatabase matchup line            
-  * 	total: sportsdatabase matchup total
+  * 	```line```: sportsdatabase matchup line            
+  * 	```total```: sportsdatabase matchup total
 
 3. [momentum](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/momentum.png) (rolling mean - abbreviated below as "rm" - of previous Y=1-,5-,10-game windows; computed with sportsdatabase queries) - 
-  * 	rm.Y.score: recent score        
-  * 	rm.Y.salary: recent salary        
-  * 	rm.Y.value : recent value
-  * 	rm.Y.val_exceeds.X: recent value has exceeded X=4,5,6
-  * 	rm.Y.opp_total_score: recent opponent total score
-  * 	rm.Y.opp_off_score: recent opponent offensive score
-  * 	rm.Y.opp_def_score: recent opponent defensive score
-  * 	rm.Y.team_total_score: recent team total score   
-  * 	rm.Y.team_def_score: recent team defensive score   
-  * 	rm.Y.team_off_score: recent team offensive score   
+  * 	```rm.Y.score```: recent score        
+  * 	```rm.Y.salary```: recent salary        
+  * 	```rm.Y.value```: recent value
+  * 	```rm.Y.val_exceeds.X```: recent value has exceeded X=4,5,6
+  * 	```rm.Y.opp_total_score```: recent opponent total  score
+  * 	```rm.Y.opp_off_score```: recent opponent total offensive score
+  * 	```rm.Y.opp_def_score```: recent opponent total defensive score
+  * 	```rm.Y.team_total_score```: recent team total score   
+  * 	```rm.Y.team_def_score```: recent team total defensive score   
+  * 	```rm.Y.team_off_score```: recent team total offensive score   
 
 4. [value over replacement](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/environ.png) (standard score within X=salary,position class) - 
-  * 	z.X.proj_fc: z-score of fantasycruncher projections within class X
-  * 	z.X.proj_mo: z-score of basketballmonster projections within class X          
-  * 	z.X.v_fc: z-score of fantasycruncher value within class X 
-  * 	z.X.v_mo: z-score of basketballmonster value within class X       
+  * 	```z.X.proj_fc```: z-score of fantasycruncher projections within class X
+  * 	```z.X.proj_mo```: z-score of basketballmonster projections within class X          
+  * 	```z.X.v_fc```: z-score of fantasycruncher value within class X 
+  * 	```z.X.v_mo```: z-score of basketballmonster value within class X       
 
 5. [game mechanics](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/mechs.png) - 
-  * 	max_user_frac: maximum tickets per user / total contest tickets
-  * 	slate_size: number of NBA games in slate 
-  * 	log.slate_size: log( number of NBA games in slate)
+  * 	```max_user_frac```: maximum tickets per user / total contest tickets
+  * 	```slate_size```: number of NBA games in slate 
+  * 	```log.slate_size```: log( number of NBA games in slate)
 
 6. [__fictituous gambler portfolios__](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/fict.png) ( X=worldview,Y=max overlap w/previous solution,Z=number of tickets  ) -
    This type of feature is arguably the most interesting, and without a doubt among the most predictive. It is constructed as follows:
    For each contest, initialize a set of "fictitious gamblers", each with a specified "worldview" (tuning bias), some measure of "risk tolerance" (tuning variance), and number of bets. For each fictitious gambler, solve the integer programming problem of constructing a number of unique bets, each maximizing projected fantasy points (enumerated by worldview) subject to feasibility constraints (FanDuel's salary cap, position requirements, etc.) and risk tolerance constraints (maximum number of athelete overlaps with previous integer programming solution in fictitous gambler's portfolio). For each athlete in the slate, construct a feature set of fictitious holdings, each entry of which is the proportion of the fictitious portfolio in that athlete. 
-  * 	gpp.fict.proj_X.Y.Z: X=(fantasycrunchers,basketballmonster,their average),Y=(2,4,6); Z=25 
+  * 	```gpp.fict.proj_X.Y.Z```: X=(fantasycrunchers,basketballmonster,their average),Y=(2,4,6); Z=25 
 
