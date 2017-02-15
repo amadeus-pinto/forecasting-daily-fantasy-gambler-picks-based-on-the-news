@@ -23,15 +23,14 @@ I set out to answer these questions using scraped contest records of field owner
 ## Results
   * __training/validating player-centered models__
 
-   Below is a plot of athletes' average ownerships against their standard deviations. Colors correspond to k-Means decomposition (n=5) of the matrix of player models by respective model coefficients. Clustering of player models (only implicitly included in the model parameters) indicates similar model composition among athletes in close proximity on the mean-standard deviation plane. In other words, it turns out that common factors drive (un)popular athletes' market share.
+   Below is a plot of athletes' average ownerships against their standard deviations. Colors correspond to groups coming out of a k-Means decomposition (k=5) of the matrix of player models by respective model coefficients. Clustering of player models (only implicitly included in the model parameters) indicates similar model composition among athletes in close proximity on the mean-standard deviation plane. In other words, it turns out that common factors drive (un)popular athletes' market share.
 
    ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.sig.Lasso.gpp.png )
 
-   see that
+   The predictive value of a given ownership model increases with mean ownership (and also with the spread around ownership):
+   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.ratio.Lasso.gpp.png )
 
-   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/sig.ratio.Lasso.gpp.png )
-
-   the table below
+   Find error statistics for your favorite player below:
 
    |name|mean|std|rmse(train)|rmse(val)|R2|
    |---|---|---|---|---|---|
@@ -220,10 +219,10 @@ I set out to answer these questions using scraped contest records of field owner
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.mean.gpp.png)
   Substituting training set mean ownerships in the tournament mean equation, predicted means are wildly unrealistic.  
 
-  * __potential for stacking__
+  * __potential for stacked regression__
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/RESIDUALS/gpp.test.corrmat.png )
 ##Model factors
-  Follow the links below to view pair distributions of dependent and independent variables of LeBron James ownership observations. (Bear in mind that different variables are important for different athlete models).
+  Follow the links below to view distributions of regressors for LeBron James' contest observations. (Bear in mind that different variables are important for different athlete models).
 
 1. ["industry" valuation](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/value.png)
   * proj_fc: fantasycrunchers fantasy score projection

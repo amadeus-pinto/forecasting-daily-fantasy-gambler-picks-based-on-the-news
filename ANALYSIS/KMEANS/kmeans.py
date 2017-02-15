@@ -27,6 +27,9 @@ if __name__ == '__main__':
         try:	
 		modeltype = sys.argv[1]
 		ttype = sys.argv[2]
+		if modeltype!='Lasso':
+			print 'modeltype {} NYI!'.format(modeltype)
+			sys.exit()
         except Exception:
 		modeltype = 'Lasso'
 		ttype = 'gpp'
@@ -42,7 +45,8 @@ if __name__ == '__main__':
 
 	fdf = pd.DataFrame(A_pf.index.values.tolist(),columns=['name'])
 	fdf['cluster'] = labels
-	fdf['name'] = [x.replace('_',' ').strip('c.') for x in  fdf.name.values.tolist()] 
+	print fdf
+	#fdf['name'] = [x.replace('_',' ').strip('c.') for x in  fdf.name.values.tolist()] 
 	for cluster in np.unique(fdf.cluster):
 		df = fdf.loc[fdf.cluster==cluster]
 		print "cluster:{},len:{}".format(cluster,len(df))
