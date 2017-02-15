@@ -31,7 +31,7 @@ I set out to answer these questions using scraped contest records of field owner
    ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.ratio.Lasso.gpp.png )
    
    This means that ownerships of athletes who typically dominate the market share are predicted more accurately than ownerships of less popular players. 
-   Error statistics for the top third most-popular players in the league are given below. 
+   Error statistics for the most popular players in the league are given below. 
 
    |name|mean|std|rmse(train)|rmse(val)|R2|
    |---|---|---|---|---|---|
@@ -217,14 +217,14 @@ I set out to answer these questions using scraped contest records of field owner
   Compare this with the null model, which guesses the player's mean ownership each observation:
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.mean.gpp.png)
 
-  This is all well and good, but player models are hardly useful in a vacuum... 
   * __bundled predictions of tournament means__
 
-  How well do market share predictions _taken together_ predict the market? An appropriate measure of 'market' is the contest's average fantasy score ```<S>```, given by:
+  Player models are doing great, but player models taken alone are hardly useful in a vacuum... 
+  A better question to ask is: How well do market share predictions _taken together_ predict the market? An appropriate measure of 'market' is the contest's average fantasy score ```<S>```, given by:
 
         <S> = sum_i w_i*S_i,
 
-  where ```S_i``` and ```w_i``` have the same meaning as before. Exact ownership data give an exact weight 
+  where ```S_i``` and ```w_i``` have the same meaning as before. 
 
 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
