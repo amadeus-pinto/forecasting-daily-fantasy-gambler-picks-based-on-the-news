@@ -226,7 +226,6 @@ I set out to answer these questions using scraped contest records of field owner
 
   where ```S_K``` and ```w_K``` are athlete scores and ownerships. Since ```<S>``` couples the ```{w}``` explicitly, it seems like a decent figure of merit*. Below are predicted versus true contest means for unseen January 2017. 
 
-  penalizing the deviation between exact and approximate ```w_i``` by ```S_i```. Thus, for similar error in w, this metric penalizes the term with higher S_i (S_i and w_i influence the mean in their own ways).This is a more intuitive figure of merit than RMSEs for raw player models of ```{w}``` (which, by the way, look similar to their validation counterparts in the previous section) for evaluating the strength of simultaneous predictions ```{w}```, since ```<S>``` couples predictions explicitly, penalizing the deviation between exact and approximate ```w_i``` by ```S_i```. Thus, for similar error in w, this metric penalizes the term with higher S_i (S_i and w_i influence the mean in their own ways). 
 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
 
@@ -235,8 +234,10 @@ I set out to answer these questions using scraped contest records of field owner
 
 
   * __potential for stacked regression__
-  I trained/validated/tested on four estimators: lasso(L1), ridge(L2), random forest, and gradient-boosted regressors. the covariance matrix of their test (January hold-out) residuals is plotted below  
+
+  I trained/validated/tested on four estimators: lasso(L1), ridge(L2), random forest, and gradient-boosted regressors. the covariance matrix of their test (January hold-out) residuals is plotted below. 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/RESIDUALS/gpp.test.corrmat.png )
+
 ##Model factors
 
   Follow the links below to view distributions of regressors for LeBron James' contest observations. (Bear in mind that different variables are important for different athlete models).
