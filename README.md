@@ -32,7 +32,7 @@ I set out to answer these questions using scraped contest records of field owner
    
    This means that ownerships of athletes who typically dominate the market share are predicted more accurately than ownerships of less popular players. On the other hand, lower-signal athlete ownerships are more difficult to predict.
 
-   Error statistics for the most popular players in the league are given below. 
+   Find your favorite player's stat line here: 
 
    |name|mean|std|RMSE(train)|RMSE(val)|R2|
    |---|---|---|---|---|---|
@@ -140,75 +140,6 @@ I set out to answer these questions using scraped contest records of field owner
    |Jamal Crawford|15.64|15.25|5.2|8.85|0.66|
    |Jordan Clarkson|15.38|14.98|7.11|8.51|0.68|
    |Nikola Jokic|15.35|16.74|7.21|9.24|0.7|
-   |Rudy Gobert|15.16|16.48|9.07|7.89|0.77|
-   |Michael Kidd-Gilchrist|15.15|15.58|8.87|8.9|0.67|
-   |Jrue Holiday|15.09|13.46|8.18|6.17|0.79|
-   |Aaron Gordon|14.83|15.17|4.7|8.01|0.72|
-   |Luol Deng|14.82|15.32|6.46|9.15|0.64|
-   |Marc Gasol|14.6|13.37|12.23|9.12|0.53|
-   |Tristan Thompson|14.46|10.95|5.94|6.04|0.7|
-   |Jarrett Jack|14.34|11.72|10.31|9.0|0.41|
-   |Deron Williams|14.16|14.28|8.37|9.88|0.52|
-   |Enes Kanter|14.08|12.35|6.05|7.4|0.64|
-   |Andre Iguodala|14.03|15.37|7.34|8.19|0.72|
-   |J.R. Smith|14.02|11.92|10.39|6.15|0.73|
-   |Darren Collison|13.98|15.38|7.35|8.49|0.7|
-   |Marvin Williams|13.9|14.53|9.38|8.61|0.65|
-   |D'Angelo Russell|13.81|16.42|5.8|8.84|0.71|
-   |Matt Barnes|13.7|13.81|6.19|8.6|0.61|
-   |Alec Burks|13.36|11.57|5.99|5.18|0.8|
-   |Patrick Beverley|13.35|11.72|6.25|6.55|0.69|
-   |Marcin Gortat|13.26|12.64|5.21|8.59|0.54|
-   |Trevor Booker|13.22|15.66|11.43|6.47|0.83|
-   |Brook Lopez|13.19|14.36|9.19|7.41|0.73|
-   |Jeff Green|12.84|12.96|9.11|8.54|0.57|
-   |Archie Goodwin|12.83|14.57|7.05|10.04|0.53|
-   |Elfrid Payton|12.69|12.61|7.74|7.08|0.68|
-   |Kobe Bryant|12.64|12.56|4.18|8.47|0.55|
-   |George Hill|12.52|14.42|9.14|7.22|0.75|
-   |Willie Cauley-Stein|12.52|15.34|7.53|8.16|0.72|
-   |Al Horford|12.28|10.96|5.06|5.69|0.73|
-   |Dwight Howard|12.27|10.95|5.48|6.37|0.66|
-   |Evan Turner|12.19|14.86|7.0|7.85|0.72|
-   |Lance Stephenson|12.15|14.17|6.53|8.14|0.67|
-   |Jahlil Okafor|12.11|11.01|11.22|6.6|0.64|
-   |Jon Leuer|11.92|11.44|5.61|6.42|0.69|
-   |Ersan Ilyasova|11.89|11.6|6.05|7.47|0.59|
-   |Dennis Schroder|11.8|13.0|7.0|7.24|0.69|
-   |Thomas Robinson|11.76|15.66|5.77|8.76|0.69|
-   |Mason Plumlee|11.72|11.81|6.94|6.4|0.71|
-   |P.J. Tucker|11.7|14.71|11.65|6.82|0.79|
-   |Clint Capela|11.66|11.1|7.54|6.43|0.66|
-   |Michael Beasley|11.65|13.74|3.99|7.89|0.67|
-   |Ed Davis|11.6|13.21|6.71|7.37|0.69|
-   |Jonas Valanciunas|11.58|10.69|4.47|6.52|0.63|
-   |Tyler Johnson|11.57|11.14|8.96|9.1|0.33|
-   |Josh Richardson|11.53|11.17|7.74|8.97|0.36|
-   |Mo Williams|11.39|11.84|4.85|6.36|0.71|
-   |Arron Afflalo|11.37|11.32|156.47|5.4|0.77|
-   |Montrezl Harrell|11.24|12.13|24.69|6.11|0.75|
-   |O.J. Mayo|11.18|11.36|3.58|8.39|0.45|
-   |Nikola Vucevic|11.18|10.51|8.2|5.72|0.7|
-   |Seth Curry|11.17|13.15|6.46|7.83|0.65|
-   |Bojan Bogdanovic|11.14|12.89|11.14|7.27|0.68|
-   |Tony Parker|10.82|10.26|5.61|6.01|0.66|
-   |Alex Len|10.78|11.79|5.26|6.56|0.69|
-   |Justise Winslow|10.77|12.72|6.57|8.17|0.59|
-   |DeMarre Carroll|10.65|12.37|5.81|9.36|0.43|
-   |Greg Monroe|10.56|9.0|3.54|5.35|0.65|
-   |Jerryd Bayless|10.47|12.68|6.61|5.84|0.79|
-   |J.J. Hickson|10.37|12.42|10.67|7.28|0.66|
-   |Toney Douglas|10.36|10.38|10.18|8.64|0.31|
-   |Jordan Hamilton|10.25|8.03|96.71|5.18|0.58|
-   |Jeremy Lin|10.19|11.39|7.66|5.57|0.76|
-   |David Lee|10.15|13.54|8.56|7.09|0.73|
-   |Andrew Harrison|10.13|11.75|6.46|6.01|0.74|
-   |Dion Waiters|10.08|10.5|7.95|6.78|0.58|
-   |Gary Harris|9.99|10.83|9.94|5.63|0.73|
-   |Kris Dunn|9.74|13.8|9.46|5.27|0.85|
-   |Dwight Powell|9.71|11.29|6.64|7.07|0.61|
-   |Robin Lopez|9.69|9.88|5.41|5.27|0.72|
-   |E'Twaun Moore|9.55|12.29|7.51|6.81|0.69|
  
   
   * __player models in hold-out__
