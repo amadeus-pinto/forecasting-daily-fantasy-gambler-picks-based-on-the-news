@@ -165,8 +165,13 @@ I set out to answer these questions using scraped contest records of field owner
 
   * __outlook__
 
-  In view of their performances in hold-out, player models and bundled contest predictions are predictive. 
-  Efforts to improve accuracy the accuracy. One  approach is to introduce more features. Given the relatively high impact of "industry" projection factors on market share, inclusion of data from more sources, e.g., RotoGrinders, fb-ninja and any number of others, in order of the volume of their subscription base   Aside from incorporating new features, I trained four estimators: lasso (L1), ridge (L2), random forest, and gradient-boosted regressors. The covariance matrix of their test-set (January hold-out) residuals is plotted below. Surprisingly. Equal weight versus optimized weighting.   
+  In view of their performances in hold-out tests, player models and bundled contest predictions enjoy a great degree of predictive power. 
+
+  Efforts to improve accuracy might focus on introducing more features, and/or linearly-combining models of player ownerships. 
+
+  To the first point, Given the relatively high impact of "industry" player valuations on ownership models, inclusion of daily projections from more sources, e.g., [RotoGrinders](https://rotogrinders.com/), [fb-ninja](www.fb-ninja.com), and any number of others, preferably in order of decreasing volume of their subscription base (after all, the same people buying into industry projections are the same people using these numbers to gamble in contests, and the same people generating the dependent variable modeled here).   
+
+Aside from incorporating new features, I trained four estimators: lasso (L1), ridge (L2), random forest, and gradient-boosted regressors. The covariance matrix of their test-set (January hold-out) residuals is plotted below. Surprisingly. Equal weight versus optimized weighting.   
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/RESIDUALS/gpp.test.corrmat.png )
 
 ##Model factors
