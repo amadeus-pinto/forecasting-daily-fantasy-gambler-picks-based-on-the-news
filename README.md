@@ -30,9 +30,8 @@ I set out to answer these questions using scraped contest records of field owner
    The predictive value of a given ownership model increases with mean ownership (and also with the spread around ownership): 
    ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.ratio.Lasso.gpp.png )
    
-   This means athletes that typically dominate the market share are predicted more accurately than unpopular players. The upside is accuracy  
-
-   Error statistics for the top third most-popular players are given below.
+   This means that ownerships of athletes who typically dominate the market share are predicted more accurately than ownerships of less popular players. 
+   Error statistics for the top third most-popular players in the league are given below. 
 
    |name|mean|std|rmse(train)|rmse(val)|R2|
    |---|---|---|---|---|---|
