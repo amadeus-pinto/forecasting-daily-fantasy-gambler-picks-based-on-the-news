@@ -224,7 +224,7 @@ I set out to answer these questions using scraped contest records of field owner
 
         <S> = sum_K w_K*S_K,
 
-  where ```S_K``` and ```w_K``` have the same meaning as before. This is a more intuitive figure of merit than ```{w}``` RMSEs (which, by the way, look similar to their validation counterparts) for evaluating the strength of simultaneous predictions ```{w}```, since it couples predictions explicitly, penalizing the deviation between exact and approximate ```w_i``` by ```S_i```. Directly below are predicted versus true contest means for unseen January 2017. 
+  where ```S_K``` and ```w_K``` have the same meaning as before. This is a more intuitive figure of merit than RMSEs for raw ```{w}``` player models (which, by the way, look similar to their validation counterparts) for evaluating the strength of simultaneous predictions ```{w}```, since it couples predictions explicitly, penalizing the deviation between exact and approximate ```w_i``` by ```S_i```. Directly below are predicted versus true contest means for unseen January 2017. 
 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
 
