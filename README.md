@@ -220,14 +220,13 @@ I set out to answer these questions using scraped contest records of field owner
   This is all well and good, but player models are hardly useful in a vacuum... 
   * __bundled predictions of tournament means__
 
-  How well do market share predictions _taken together_ predict the market? An appropriate measure of 'market' is the contest's average fantasy score ```U```, given by:
+  How well do market share predictions _taken together_ predict the market? An appropriate measure of 'market' is the contest's average fantasy score ```<S>```, given by:
 
-        U = sum_i w_i*S_i,
+        <S> = sum_i w_i*S_i,
 
   where ```S_i``` and ```w_i``` have the same meaning as before. Exact ownership data give an exact weight 
 
 
-[comment]: <> (new loss function: find X',U'(X') minimizing ||U(X) - U'(X') ||**2 ? )
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
 
   Substituting null-model ownerships in the tournament mean equation, predicted means are wildly unrealistic.  
@@ -275,6 +274,6 @@ I set out to answer these questions using scraped contest records of field owner
 
 6. [**fictituous gambler portfolios](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/fict.png) ( X=worldview,Y=max overlap w/previous solution,Z=number of tickets  ) -
    This type of feature is arguably the most interesting, and without a doubt among the most predictive. It is constructed as follows:
-   For each contest, initialize a set of fictitious gamblers, each with a specified "worldview", risk-reward tolerance, and number of bets. For each fictitious gambler, solve the integer programming problem of constructing a number of unique bets (tickets), each maximizing projected fantasy points (enumerated by worldview) subject to feasibility constraints (FanDuel's salary cap, position requirements, etc.) and risk-reward tolerance constraints (maximum number of athelete overlaps with previous integer programming solution in fictitous gambler's portfolio). For each athlete in the slate, construct a feature set of fictitious holdings, each entry of which is the proportion of the fictitious portfolio in that athlete. 
+   For each contest, initialize a set of "fictitious gamblers", each with a specified "worldview" (tuning bias), some measure of "risk tolerance" (tuning variance), and number of bets. For each fictitious gambler, solve the integer programming problem of constructing a number of unique bets, each maximizing projected fantasy points (enumerated by worldview) subject to feasibility constraints (FanDuel's salary cap, position requirements, etc.) and risk tolerance constraints (maximum number of athelete overlaps with previous integer programming solution in fictitous gambler's portfolio). For each athlete in the slate, construct a feature set of fictitious holdings, each entry of which is the proportion of the fictitious portfolio in that athlete. 
   * 	gpp.fict.proj_X.Y.Z: X=(fantasycrunchers,basketballmonster,their average),Y=(2,4,6); Z=25 
 
