@@ -220,7 +220,7 @@ I set out to answer these questions using scraped contest records of field owner
   This is all well and good, but player models are hardly useful in a vacuum... 
   * __models of tournament means__
 
-  How well can
+  How well do market share predictions _taken together_ predict the market? 
 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
 
