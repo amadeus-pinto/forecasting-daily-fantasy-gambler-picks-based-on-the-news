@@ -18,7 +18,9 @@ Apart from the intrinsic neatness of explaining/predicting the decisions a colle
 
 What causes gamblers to make the choices they make with the information they have, and how accurately can I predict the field of wagers in a given contest? 
 
-I set out to answer these questions using scraped contest records of field ownerships in past FanDuel NBA contests (thanks to [@brainydfs](http://brainydfs.com/)), historic athlete performance data from [sportsdatabase.com](http://sportsdatabase.com/), the news leading up to the particular contest (e.g., "industry" fantasy output projections from [basketballmonster.com](http://basketballmonster.com), [fantasycrunchers.com](http://fantasycrunchers.com), themselves the output of decidedly mediocre regression models, available injury/roster reporting, etc.), and elements of the fantasy game mechanics presumed to impact fantasy gamblers' decisions. (These and others are detailed below.) I trained and validated ~400 player-centered models (estimators include ridge, lasso, random forest, and gradient-boosted regressors) on over 700 "tournament" contests from the 2016 season and the first two months of the 2017 season, holding out January 2017 slates for model testing.
+I set out to answer these questions using scraped contest records of field ownerships in past FanDuel NBA contests (thanks to [@brainydfs](http://brainydfs.com/)), historic athlete performance data from [sportsdatabase.com](http://sportsdatabase.com/), the news leading up to the particular contest (e.g., "industry" fantasy output projections from [BasketballMonster](http://basketballmonster.com) and [FantasyCrunchers.com](http://fantasycrunchers.com), themselves the output of _decidedly mediocre_ regression models, available injury/roster reports), and elements of the DFS game mechanics presumed to impact gamblers' decisions. (These and others are detailed in the __Model Factors__ section below.) 
+
+I trained and validated ~400 player-centered models (estimators include ridge, lasso, random forest, and gradient-boosted regressors) on over 700 "tournament" contests from the 2016 season and the first two months of the 2017 season, holding out January 2017 slates for model testing.
 
 ## Results
   * __training/validating player-centered models__
@@ -169,9 +171,9 @@ I set out to answer these questions using scraped contest records of field owner
 
   Efforts to improve accuracy might focus on introducing more features, and/or linearly-combining models of player ownerships. 
 
-  To the first point, Given the relatively high impact of "industry" player valuations on ownership models, inclusion of daily projections from more sources, e.g., [RotoGrinders](https://rotogrinders.com/), [fb-ninja](www.fb-ninja.com), and any number of others, preferably in order of decreasing volume of their subscription base (after all, the same people buying into industry projections are the same people using these numbers to gamble in contests, and the same people generating the dependent variable modeled here).   
+  To the first point, given the relatively high impact of "industry" player valuations on ownership models, inclusion of daily projections from more sources, e.g., [RotoGrinders](https://rotogrinders.com/), [fb-ninja](www.fb-ninja.com), and any number of others, preferably in order of decreasing volume of their subscription base (after all, the same people buying into industry projections are the same people using these numbers to gamble in contests, and the same people generating the dependent variable modeled here) should decrease.   
 
-Aside from incorporating new features, I trained four estimators: lasso (L1), ridge (L2), random forest, and gradient-boosted regressors. The covariance matrix of their test-set (January hold-out) residuals is plotted below. Surprisingly. Equal weight versus optimized weighting.   
+  To the second point, higher accuracy  I trained four estimators: lasso (L1), ridge (L2), random forest, and gradient-boosted regressors. The covariance matrix of their test-set (January hold-out) residuals is plotted below. Surprisingly. Equal weight versus optimized weighting.   
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/RESIDUALS/gpp.test.corrmat.png )
 
 ##Model factors
