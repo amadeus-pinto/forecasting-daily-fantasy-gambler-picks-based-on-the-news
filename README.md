@@ -20,7 +20,7 @@ What causes gamblers to make the choices they make with the information they hav
 
 I set out to answer these questions using scraped contest records of field ownerships in past FanDuel NBA contests (thanks to [@brainydfs](http://brainydfs.com/)), historic athlete performance data from [sportsdatabase.com](http://sportsdatabase.com/), the news leading up to the particular contest (e.g., "industry" fantasy output projections from [BasketballMonster](http://basketballmonster.com) and [FantasyCrunchers](http://fantasycrunchers.com), and available injury/roster reports), and elements of the DFS game mechanics presumed to impact gamblers' decisions. (These and others are detailed in the __Models__ section below.) 
 
-I trained and validated ~400 player-centered models (estimators include ridge, lasso, random forest, and gradient-boosted regressors) on over 700 "tournament" contests from the 2016 season and the first two months of the 2017 season, holding out January 2017 slates for model testing.
+I trained and validated ~400 player-centered models (estimators include ridge, lasso, random forest, and gradient-boosted regressors) on over 700 "tournament" contests from the 2016 season and the first two months of the 2017 season, holding out January 2017 slates for tests.
 
 ## Results
   * __training/validating player-centered models__
@@ -146,7 +146,7 @@ I trained and validated ~400 player-centered models (estimators include ridge, l
   
   * __player models in hold-out__
   
-  I held out contests from January 2017 for model testing. Predicted versus true ownerships for each ownership observation are plotted below, with colors corresponding to athlete position, and where perfect predictions would lie on the line ```predicted ownership=true ownership```. 
+  I held out contests from January 2017 for testing. Predicted versus true ownerships for each ownership observation are plotted below, with colors corresponding to athlete position, and where perfect predictions would lie on the line ```predicted ownership=true ownership```. 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.RandomForestRegressor.gpp.png)
   Compare these predictions with the null model, which guesses the player's mean ownership each observation:
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/jan.mean.gpp.png)
