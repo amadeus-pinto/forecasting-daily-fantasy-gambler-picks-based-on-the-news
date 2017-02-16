@@ -222,8 +222,6 @@ I trained and validated ~400 player-centered models (estimators include ridge, l
 
 ### Coefficients
 
-  For each estimator, below are aggreg
-
   |rfr feature|%time_in_top_5|
   |---|---|
   |gpp.fict.proj_mu.04.025.006|50.8860759494|
@@ -292,6 +290,7 @@ I trained and validated ~400 player-centered models (estimators include ridge, l
   |gpp.fict.proj_fc.04.025.006|8.60759493671|
   
   |ridge feature|%time_in_top_5|
+  |---|---|
   |z.salary|48.6075949367|
   |rm.05.val_exceeds.06|45.3164556962|
   |log.slate_size|44.0506329114|
@@ -311,7 +310,3 @@ I trained and validated ~400 player-centered models (estimators include ridge, l
   |gpp.fict.proj_fc.04.025.006|9.11392405063|
   |gpp.fict.proj_mo.06.025.006|8.86075949367|
   |gpp.fict.proj_fc.08.025.006|6.32911392405|
-
-
-
-
