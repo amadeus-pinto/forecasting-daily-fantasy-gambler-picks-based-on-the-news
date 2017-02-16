@@ -209,7 +209,8 @@ I trained and validated ~400 player-centered models (estimators include ridge, l
   * 	```z.X.v_fc```: z-score of fantasycruncher value within class X 
   * 	```z.X.v_mo```: z-score of basketballmonster value within class X       
 
-5. [game mechanics](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/mechs.png) - 
+5. [game specs/mechanics](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/mechs.png) - 
+  *     ```total_entries```: total contest tickets
   * 	```max_user_frac```: maximum tickets per user / total contest tickets
   * 	```slate_size```: number of NBA games in slate 
   * 	```log.slate_size```: log( number of NBA games in slate)
@@ -218,4 +219,100 @@ I trained and validated ~400 player-centered models (estimators include ridge, l
    This type of feature is arguably the most interesting, and without a doubt among the most predictive. It is constructed as follows:
    For each contest, initialize a set of "fictitious gamblers", each with a specified "worldview" (tuning bias), some measure of "risk tolerance" (tuning variance), and number of bets. For each fictitious gambler, solve the integer programming problem of constructing a number of unique bets, each maximizing projected fantasy points (enumerated by worldview) subject to feasibility constraints (FanDuel's salary cap, position requirements, etc.) and risk tolerance constraints (maximum number of athelete overlaps with previous integer programming solution in fictitous gambler's portfolio). For each athlete in the slate, construct a feature set of fictitious holdings, each entry of which is the proportion of the fictitious portfolio in that athlete. 
   * 	```gpp.fict.proj_X.Y.Z```: X=(fantasycrunchers,basketballmonster,their average),Y=(2,4,6); Z=25 
+
+### Coefficients
+
+
+
+   For each estimator, below are aggreg
+   |rfr feature|%time_in_top_5|
+   |---|---|
+   |gpp.fict.proj_mu.04.025.006|50.8860759494|
+   |gpp.fict.proj_mo.04.025.006|41.0126582278|
+   |gpp.fict.proj_fc.04.025.006|33.164556962|
+   |gpp.fict.proj_mu.06.025.006|29.1139240506|
+   |z.proj_mo|23.0379746835|
+   |z.proj_fc|22.2784810127|
+   |slate_size|22.0253164557|
+   |z.salary|21.5189873418|
+   |log.slate_size|21.5189873418|
+   |gpp.fict.proj_fc.06.025.006|20.7594936709|
+   |gpp.fict.proj_mo.06.025.006|20.5063291139|
+   |gpp.fict.proj_mu.08.025.006|18.4810126582|
+   |z.sbin.proj_mo|16.9620253165|
+   |max_user_frac|16.4556962025|
+   |z.sbin.proj_fc|15.1898734177|
+   |gpp.fict.proj_mo.08.025.006|13.417721519|
+   |gpp.fict.proj_fc.08.025.006|11.8987341772|
+   |rm.01.score|9.11392405063|
+   |rm.05.value|8.35443037975|
+   
+   
+   |gbr feature|%time_in_top_5|
+   |---|---|
+   |z.salary|52.1518987342|
+   |z.proj_fc|32.1518987342|
+   |z.sbin.proj_mo|30.3797468354|
+   |z.proj_mo|29.6202531646|
+   |max_user_frac|27.3417721519|
+   |z.v_fc|24.0506329114|
+   |total_entries|22.5316455696|
+   |z.v_mo|21.2658227848|
+   |z.sbin.proj_fc|20.7594936709|
+   |z.sbin.v_mo|20.0|
+   |z.sbin.v_fc|20.0|
+   |slate_size|15.6962025316|
+   |log.slate_size|15.1898734177|
+   |gpp.fict.proj_mu.04.025.006|13.9240506329|
+   |gpp.fict.proj_mo.04.025.006|13.6708860759|
+   |gpp.fict.proj_fc.04.025.006|13.417721519|
+   |rm.01.value|9.36708860759|
+   |rm.01.score|8.86075949367|
+   |rm.05.value|7.84810126582|
+   
+   |lasso feature|%time_in_top_5|
+   |---|---|
+   |log.slate_size|55.4430379747|
+   |z.salary|43.5443037975|
+   |rm.05.val_exceeds.06|22.7848101266|
+   |rm.05.val_exceeds.05|20.5063291139|
+   |z.proj_mo|18.7341772152|
+   |status|18.2278481013|
+   |rm.01.val_exceeds.06|16.4556962025|
+   |rm.05.val_exceeds.04|15.4430379747|
+   |rm.01.val_exceeds.05|15.4430379747|
+   |rm.05.salary|14.9367088608|
+   |z.proj_fc|13.6708860759|
+   |v_mo|13.164556962|
+   |rm.01.score|12.6582278481|
+   |v_fc|12.1518987342|
+   |rm.01.val_exceeds.04|11.3924050633|
+   |proj_mo|10.8860759494|
+   |gpp.fict.proj_mo.04.025.006|10.6329113924|
+   |rm.01.salary|10.6329113924|
+   |gpp.fict.proj_fc.04.025.006|8.60759493671|
+   
+   |ridge feature|%time_in_top_5|
+   |z.salary|48.6075949367|
+   |rm.05.val_exceeds.06|45.3164556962|
+   |log.slate_size|44.0506329114|
+   |rm.05.val_exceeds.05|41.2658227848|
+   |rm.05.val_exceeds.04|33.164556962|
+   |max_user_frac|27.8481012658|
+   |rm.05.salary|22.2784810127|
+   |rm.01.salary|18.7341772152|
+   |status|17.7215189873|
+   |z.proj_mo|15.9493670886|
+   |rm.01.val_exceeds.06|15.4430379747|
+   |rm.01.score|10.6329113924|
+   |gpp.fict.proj_mo.04.025.006|9.87341772152|
+   |rm.01.val_exceeds.05|9.62025316456|
+   |z.proj_fc|9.62025316456|
+   |gpp.fict.proj_mo.08.025.006|9.36708860759|
+   |gpp.fict.proj_fc.04.025.006|9.11392405063|
+   |gpp.fict.proj_mo.06.025.006|8.86075949367|
+   |gpp.fict.proj_fc.08.025.006|6.32911392405|
+
+
+
 
