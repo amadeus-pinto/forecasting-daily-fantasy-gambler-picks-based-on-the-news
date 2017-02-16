@@ -162,7 +162,7 @@ I trained and validated ~400 player-centered models (estimators include ridge, l
 
         <S> = sum_K w_K*S_K.
 
-  ```S_K``` and ```w_K``` are athlete fantasy scores and ownerships, respectively. In the limit predicted minus true ```{w}``` go to zero, all that's left to _analytically_ determine the contest mean fantasy score are the ```{S}```, which depend on NBA players alone. Below are predicted versus true contest means for unseen January 2017. Each point is a contest mean computed from the collection of independent player ownerships (actual and predicted) belonging to that contest. Perfect contest mean predictions would lie on the line ```predicted < contest score > = true < contest score >```. 
+  ```S_K``` and ```w_K``` are athlete fantasy scores and ownerships, respectively. In the limit predicted minus true ```{w}``` go to zero, all that's left to _analytically_ determine the exact contest mean fantasy score are the ```{S}```, which depend on NBA players alone. Below are predicted versus true contest means for unseen January 2017. Each point is a contest mean computed from the collection of independent player ownerships (actual and predicted) belonging to that contest. Perfect contest mean predictions would lie on the line ```predicted < contest score > = true < contest score >```. 
 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
 
