@@ -36,7 +36,7 @@ I trained and validated ~400 player-centered models (estimators include ridge, l
    The predictive power of an ownership model increases with mean ownership (and also with the spread around ownership): 
    ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.ratio.Lasso.gpp.png)
    
-   This means ownerships of athletes who typically dominate the market share are predicted more accurately. On the other hand, athletes with higher-variance ownerships (lower mean-to-standard deviation ratio types) are more difficult to predict.
+   This means ownerships of athletes who typically dominate the market share are predicted more accurately. On the other hand, athletes with higher-variance ownerships (specifically, lower mean-to-standard deviation ratio types) are more difficult to predict.
 
    Find your favorite player's stat line here: 
 
