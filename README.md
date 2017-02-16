@@ -167,11 +167,11 @@ I trained and validated ~400 player-centered models (estimators include ridge, l
 
   * __outlook__
 
-  In view of their performances in hold-out tests, player models and bundled contest predictions enjoy a great degree of predictive power. 
+  In view of their performances in hold-out tests, player ownership models and bundled contest predictions seem to enjoy a great degree of predictive power... 
 
   Efforts to improve accuracy might focus on introducing more features, and/or linearly-combining models of player ownerships. 
 
-  To the first point, given the relatively high impact of "industry" player valuations on ownership models, inclusion of daily projections from more sources, e.g., [RotoGrinders](https://rotogrinders.com/), [fb-ninja](www.fb-ninja.com), and any number of others, preferably in order of decreasing volume of their subscription base (after all, the same people buying into industry projections are the same people using these numbers to gamble in contests, and the same people generating the dependent variable modeled here) should decrease.   
+  To the first point, given the relatively high impact of "industry" player valuations on ownership models, inclusion of daily projections from more sources, e.g., [RotoGrinders](https://rotogrinders.com/), [fb-ninja](www.fb-ninja.com), and any number of others, preferably in order of decreasing volume of their subscription base (after all, the same people buying into industry projections are the same people using these numbers to gamble in contests, and the same people generating the dependent variable modeled here) should increase accuracy.   
 
   To the second point, lower-variance ownership predictions are probably obtainable via [model stacking](http://statistics.berkeley.edu/sites/default/files/tech-reports/367.pdf). I trained four estimators: lasso (L1), ridge (L2), random forest, and gradient-boosted regressors. The correlation matrix of their test-set (January hold-out) residuals is plotted below. Surprisingly, lasso and ridge regressors aren't too positively correlated, which isn't the case with the ensemble models. A preliminary investigation of a solution via stacked regression might check errors of an equally-weighted composite model against individual errors.  
 
