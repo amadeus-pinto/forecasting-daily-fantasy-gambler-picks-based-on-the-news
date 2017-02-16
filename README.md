@@ -1,6 +1,6 @@
 #Forecasting Daily Fantasy Gamblers' Picks Based on the News
 
-## Introduction
+##Introduction
 
 In October of 2015, an employee of the daily fantasy sports (DFS) gambling site DraftKings leveraged his site's user data to win $350,000 on a competitor site, FanDuel, resulting in [allegations of insider trading, and renewed concern for consumer protection against exploitation by an unregulated industry](https://www.nytimes.com/2015/10/06/sports/fanduel-draftkings-fantasy-employees-bet-rivals.html?_r=0). In a zero-sum game, knowledge of opponents' positions (the field's picks) ahead of market (the contest) represents a serious advantage (or serious abuse when applied by the same people making the market). The expected value of a pick I, ```V(pick_I)```, is a product of the probability ```P``` of pick I's success and its associated payout ```p```:
 
@@ -14,23 +14,23 @@ Apart from the intrinsic neatness of explaining/predicting the decisions a colle
 
 "Fantasy owners" (the gamblers) submit one or multiple ticket(s) of athletes' names together satisfying a set of constraints (e.g., on the total fantasy salary of the athletes, fantasy positions, etc.) to an online site (a.k.a. the bookie - FanDuel, DraftKings, etc.) which takes a rake and pays out a subset of tickets as a function of ticket score, determined as a linear combination of ticket athletes' accumulated game stats after bets are locked. Broadly, there are two (very different) contest types: a "tournament" game pays out the top ~20%, with payout odds growing ~exponentially from 1:1 at the ~20th percentile line (a typical first place ticket's return is ~1000:1); a "cash" game pays out the top ~50% fixed 1:1 odds. Naturally, these payouts force fantasy owners to favor higher-variance players (riskier positions) in "tournaments" and lower-variance players (safer positions) in "cash" games. This causes lower-mean/higher-variance distributions of ticket scores in the former and higher-mean/lower-variance distributions in the latter. See [this](https://www.fanduel.com/nba-guide?t=rules) FanDuel tutorial for more (or less).
 
-##Specifics
+##Project Specifics
 
 What causes gamblers to make the choices they make with the information they have, and how accurately can I predict the field of wagers in a given contest? 
 
-I set out to answer these questions using scraped contest records of field ownerships in past FanDuel NBA contests (thanks to [@brainydfs](http://brainydfs.com/)), historic athlete performance data from [sportsdatabase.com](http://sportsdatabase.com/), the news leading up to the particular contest (e.g., "industry" fantasy output projections from [BasketballMonster](http://basketballmonster.com) and [FantasyCrunchers.com](http://fantasycrunchers.com), themselves the output of _decidedly mediocre_ regression models, available injury/roster reports), and elements of the DFS game mechanics presumed to impact gamblers' decisions. (These and others are detailed in the __Model Factors__ section below.) 
+I set out to answer these questions using scraped contest records of field ownerships in past FanDuel NBA contests (thanks to [@brainydfs](http://brainydfs.com/)), historic athlete performance data from [sportsdatabase.com](http://sportsdatabase.com/), the news leading up to the particular contest (e.g., "industry" fantasy output projections from [BasketballMonster](http://basketballmonster.com) and [FantasyCrunchers.com](http://fantasycrunchers.com), themselves the output of _decidedly mediocre_ regression models, available injury/roster reports), and elements of the DFS game mechanics presumed to impact gamblers' decisions. (These and others are detailed in the __Models__ section below.) 
 
 I trained and validated ~400 player-centered models (estimators include ridge, lasso, random forest, and gradient-boosted regressors) on over 700 "tournament" contests from the 2016 season and the first two months of the 2017 season, holding out January 2017 slates for model testing.
 
 ## Results
   * __training/validating player-centered models__
 
-   Below is a plot of athletes' average ownerships against their standard deviations. Colors correspond to groups coming out of a k-Means decomposition (k=5) of the matrix of player models by respective model coefficients. Clustering of player models (only implicitly included in the model parameters) indicates similar model composition among athletes in close proximity on the mean-standard deviation plane. In other words, it turns out that common factors drive (un)popular athletes' market share. High-mean, high-spread clusters (colored light blue and light green) include Russell Westbrook, James Harden, and LeBron James ownership models, among others you could probably name... Their ownership models depend on, among others, the ```slate_size``` variable similarly (steeply inversely; see the __Model Factors__ section below).  
+   Below is a plot of athletes' average ownerships against their standard deviations. Colors correspond to groups coming out of a k-Means decomposition (k=5) of the matrix of player models by respective model coefficients. Clustering of player models (only implicitly included in the model parameters) indicates similar model composition among athletes in close proximity on the mean-standard deviation plane. In other words, it turns out that common factors drive (un)popular athletes' market share. High-mean, high-spread clusters (colored light blue and light green) include Russell Westbrook, James Harden, and LeBron James ownership models, among others you could probably name... Their ownership models depend on, among others, the ```slate_size``` variable similarly (steeply inversely; see the __Models__ section below).  
 
-   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.sig.Lasso.gpp.png )
+   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.sig.Lasso.gpp.png)
 
    The predictive power of an ownership model increases with mean ownership (and also with the spread around ownership): 
-   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.ratio.Lasso.gpp.png )
+   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/KMEANS/FIGS/mu.ratio.Lasso.gpp.png)
    
    This means ownerships of athletes who typically dominate the market share are predicted more accurately. On the other hand, athletes with higher-variance ownerships (lower mean-to-standard deviation ratio types) are more difficult to predict.
 
@@ -173,13 +173,13 @@ I trained and validated ~400 player-centered models (estimators include ridge, l
 
   To the first point, given the relatively high impact of "industry" player valuations on ownership models, inclusion of daily projections from more sources, e.g., [RotoGrinders](https://rotogrinders.com/), [fb-ninja](www.fb-ninja.com), and any number of others, preferably in order of decreasing volume of their subscription base (after all, the same people buying into industry projections are the same people using these numbers to gamble in contests, and the same people generating the dependent variable modeled here) should increase accuracy.   
 
-  To the second point, lower-variance ownership predictions are probably obtainable via [model stacking](http://statistics.berkeley.edu/sites/default/files/tech-reports/367.pdf). I trained four estimators: lasso (L1), ridge (L2), random forest, and gradient-boosted regressors. The correlation matrix of their test-set (January hold-out) residuals is plotted below. Surprisingly, lasso and ridge regressors aren't too positively correlated, which isn't the case with the ensemble models. A preliminary investigation of a solution via stacked regression might check errors of an equally-weighted composite model against individual models' errors.  
+  To the second point, lower-variance ownership predictions are probably obtainable via [stacked regression](http://statistics.berkeley.edu/sites/default/files/tech-reports/367.pdf). I trained four estimators: lasso (L1), ridge (L2), random forest, and gradient-boosted regressors. The correlation matrix of their test-set (January hold-out) residuals is plotted below. Surprisingly, lasso and ridge regressors aren't too positively correlated, which isn't the case with the ensemble models. A preliminary investigation of a solution via stacked regression might check errors of an equally-weighted composite model against individual models' errors.  
 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/RESIDUALS/gpp.test.corrmat.png )
 
-##Model factors
+##Models
 
-### Definitions
+### Feature Definitions
   Follow the links below to view distributions of regressors for LeBron James' contest observations. (Bear in mind that different variables are important for different athlete models).
 
 1. ["industry" valuation](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/value.png)
@@ -192,7 +192,7 @@ I trained and validated ~400 player-centered models (estimators include ridge, l
   * 	```line```: sportsdatabase matchup line            
   * 	```total```: sportsdatabase matchup total
 
-3. [momentum](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/momentum.png) (rolling mean - abbreviated below as "rm" - of previous Y=1-,5-,10-game windows; computed with sportsdatabase queries) - 
+3. [momentum](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/momentum.png) (rolling mean - abbreviated below as "rm" - of previous Y=1-,5-game windows; computed with sportsdatabase queries) - 
   * 	```rm.Y.score```: recent score        
   * 	```rm.Y.salary```: recent salary        
   * 	```rm.Y.value```: recent value
@@ -216,13 +216,13 @@ I trained and validated ~400 player-centered models (estimators include ridge, l
   * 	```slate_size```: number of NBA games in slate 
   * 	```log.slate_size```: log( number of NBA games in slate)
 
-6. [__fictituous gambler portfolios__](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/fict.png) ( X=worldview,Y=max overlap w/previous solution,Z=number of tickets  ) -
+6. [__fictituous gambler portfolios__](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/fict.png) (X=worldview,Y=max overlap w/previous solution,Z=number of tickets) -
 
    This type of feature is arguably the most interesting, and without a doubt among the most predictive. It is constructed as follows:
    For each contest, initialize a set of "fictitious gamblers", each with a specified "worldview" (tuning bias), some measure of "risk tolerance" (tuning variance), and number of bets. For each fictitious gambler, solve the integer programming problem of constructing a number of unique bets, each maximizing projected fantasy points (enumerated by worldview) subject to feasibility constraints (FanDuel's salary cap, position requirements, etc.) and risk tolerance constraints (maximum number of athelete overlaps with previous integer programming solution in fictitous gambler's portfolio). For each athlete in the slate, construct a feature set of fictitious holdings, each entry of which is the proportion of the fictitious portfolio in that athlete. 
   * 	```gpp.fict.proj_X.Y.Z```: X=(fantasycrunchers,basketballmonster,their average),Y=(2,4,6); Z=25 
 
-### Features
+### Feature Importance
 
 To better understand which features are important for ownership models, I computed the percentage of time a feature is in the top 5 over all player models. ('top 5' is defined for ensemble models as the 5 features with the highest gini importance, and for linear models, as the 5 features with the highest absolute-magnitude coefficients). They're tabulated for each estimator below. 
 

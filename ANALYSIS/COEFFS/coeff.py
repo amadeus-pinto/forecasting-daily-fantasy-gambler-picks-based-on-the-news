@@ -52,7 +52,7 @@ if __name__ == '__main__':
 	ldf = get_top_coeff(modeltype=modeltype,ttype=ttype,ntop=ntop)
 	adf = do_counts(ldf)
 	adf['%time_in_top_'+str(ntop)] =100.0*adf['count']/len(ldf)
-	adf = adf[['feature','%time_in_top_'+str(ntop)]]
+	adf = adf[['feature','%time_in_top_'+str(ntop)]].round(1)
 	adf.to_csv('./DATA/'+modeltype+'.csv',index=False)
 	print adf
 
