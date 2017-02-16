@@ -217,13 +217,14 @@ I trained and validated ~400 player-centered models (estimators include ridge, l
   * 	```log.slate_size```: log( number of NBA games in slate)
 
 6. [__fictituous gambler portfolios__](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/PLAYER/fict.png) ( X=worldview,Y=max overlap w/previous solution,Z=number of tickets  ) -
+
    This type of feature is arguably the most interesting, and without a doubt among the most predictive. It is constructed as follows:
    For each contest, initialize a set of "fictitious gamblers", each with a specified "worldview" (tuning bias), some measure of "risk tolerance" (tuning variance), and number of bets. For each fictitious gambler, solve the integer programming problem of constructing a number of unique bets, each maximizing projected fantasy points (enumerated by worldview) subject to feasibility constraints (FanDuel's salary cap, position requirements, etc.) and risk tolerance constraints (maximum number of athelete overlaps with previous integer programming solution in fictitous gambler's portfolio). For each athlete in the slate, construct a feature set of fictitious holdings, each entry of which is the proportion of the fictitious portfolio in that athlete. 
   * 	```gpp.fict.proj_X.Y.Z```: X=(fantasycrunchers,basketballmonster,their average),Y=(2,4,6); Z=25 
 
 ### Features
 
-To better understand which features are important, I computed the percentage of time a feature is in the top 5 over all player models. ('top 5' is defined for ensemble models as the 5 features with the highest gini importance, and for linear models, as the 5 features with the highest absolute magnitude coefficients). They're tabulated for each estimator below. 
+To better understand which features are important for ownership models, I computed the percentage of time a feature is in the top 5 over all player models. ('top 5' is defined for ensemble models as the 5 features with the highest gini importance, and for linear models, as the 5 features with the highest absolute-magnitude coefficients). They're tabulated for each estimator below. 
 
 |rfr feature|%time_in_top_5|
 |---|---|
