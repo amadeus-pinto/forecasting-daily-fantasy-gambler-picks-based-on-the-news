@@ -169,7 +169,7 @@ I trained and validated ~400 player-centered models (estimators include ridge, l
   Substituting null-model ownerships in the tournament mean equation, predicted means are wildly unrealistic.  
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.mean.gpp.png)
 
-  * __outlook__
+## Outlook
 
   In view of their performances in hold-out tests, player ownership models and bundled contest predictions seem to enjoy a great degree of predictive power... 
 
