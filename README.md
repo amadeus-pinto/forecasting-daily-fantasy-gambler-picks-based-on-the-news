@@ -2,7 +2,7 @@
 
 ##Introduction
 
-In October of 2015, an employee of the daily fantasy sports (DFS) gambling site DraftKings leveraged his site's user data to win $350,000 on a competitor site, FanDuel, resulting in [allegations of insider trading and concern regarding the potential for abuses committed by an unregulated industry](https://www.nytimes.com/2015/10/06/sports/fanduel-draftkings-fantasy-employees-bet-rivals.html?_r=0). 
+In October of 2015, an employee of the daily fantasy sports (DFS) gambling site DraftKings leveraged his site's user data to win $350,000 on a competitor site, FanDuel, resulting in [allegations of insider trading and concern regarding the potential for abuses committed by the largely-unregulated DFS industry](https://www.nytimes.com/2015/10/06/sports/fanduel-draftkings-fantasy-employees-bet-rivals.html?_r=0). 
 
 In a zero-sum game, knowledge of opponents' positions (the field's picks) ahead of market (the contest) represents a serious advantage (or serious abuse when applied by the same people making the market). The expected value of pick I, ```V(pick_I)```, is a product of the probability ```P``` of pick I's success and its associated payout ```p```:
 
