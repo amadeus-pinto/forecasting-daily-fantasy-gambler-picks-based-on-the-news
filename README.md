@@ -158,11 +158,11 @@ I trained and validated ~400 player-centered models (estimators include ridge, l
   * __bundled predictions of whole-tournament means__
 
   Player models are doing great, but player models are hardly useful in a vacuum... 
-  A useful question to ask is: How well do market share predictions _taken together_ predict the market? A contest's average fantasy score ```<S>```,
+  A useful question to ask is: How well do market share predictions _taken together_ predict the market? A contest's average fantasy score ```<S>``` is an appropriate quantity for this purpose since it couples the ```{w}``` explicitly,
 
-        <S> = sum_K w_K*S_K,
+        <S> = sum_K w_K*S_K.
 
-  where ```S_K``` and ```w_K``` are athlete fantasy scores and ownerships, respectively, is an appropriate quantity for this purpose since it couples the ```{w}``` explicitly. In the limit predicted minus true ```{w}``` go to zero, all that's left to _analytically_ determine the contest mean fantasy score are the ```{S}```, which depend on NBA players alone. Below are predicted versus true contest means for unseen January 2017. Each point is a contest mean computed from the collection of independent player ownerships (actual and predicted) belonging to that contest. Perfect contest mean predictions would lie on the line ```predicted < contest score > = true < contest score >```. 
+  ```S_K``` and ```w_K``` are athlete fantasy scores and ownerships, respectively. In the limit predicted minus true ```{w}``` go to zero, all that's left to _analytically_ determine the contest mean fantasy score are the ```{S}```, which depend on NBA players alone. Below are predicted versus true contest means for unseen January 2017. Each point is a contest mean computed from the collection of independent player ownerships (actual and predicted) belonging to that contest. Perfect contest mean predictions would lie on the line ```predicted < contest score > = true < contest score >```. 
 
   ![alt text](https://github.com/amadeus-pinto/forecasting-daily-fantasy-gambler-picks-based-on-the-news/blob/master/ANALYSIS/SLATES/FIGS/field.Lasso.gpp.png)
 
