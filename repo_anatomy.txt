@@ -1,0 +1,54 @@
+the long and short of the code-base - i left out explicit directions for running anything because i wanted to give you a sense first of what's available. i can give you a step-by-step set of command-line commands to run that would furnishing the csvs, models, pickles, etc., as i have them if you want.   
+
+
+
+
+the code PYTHON/model.py does all the player-centered model building (training-validation/testing/writes pickles/summaries/model coeffs)
+
+all of the data it uses comes from  ./DATA/merged/X.merged.csv, where X is 'gpp' or 'dou'
+
+most everything else in the repo exists for the purposes of building ./DATA/merged/merged.csv by merging dataframes from other sources, e.g., sportsdatabase,bbmall monster projections, the 'fictitious gambler' variables, FD historic ownerships (target variable), etc. the work to create all those dfs is in the subdirectories of ./raw/
+
+each of these other mergeable dataframes is placed in ./DATA/mergeable/ after created in the other directories by other manipulations (i can plan on automating that process). 
+
+the code PYTHON/merge.py does the merging of files in ./DATA/mergeable/  . 
+the same code with diff. inputs writes a ./DATA/merged/X.proto_merged.csv file (which is used by other .py codes elsewhere to write the individual dataframes eventually merged in ./DATA/merged/X.merged.csv). the above is probably confusing and the result of bad planning. so i'll plan on streamlining this merge step.
+
+
+i wrote the code PYTHON/predict_contest.py to load the pickled models and predict on the january hold-out. it reads from ./DATA/merged/test.X.merged.csv  and X_MYMODELS/PICKLES/ where X is 'gpp' or 'dou'.
+
+
+---------------------
+the repo's contents-
+
+./PYTHON:
+estgrids.py - model parameters. read by model.py
+merge.py - does the grand dataframe prep from component csvs. 
+model.py - does the modeling, pickling
+predict_contest.py - jan holdout predictions,write data
+
+./DATA:
+mergeable - has mergeable csvs
+merged - has merged csvs from mergeable
+parsed_raw - has parsed FD gpp, dou tournament data
+
+./X_MYMODELS:  (X=gpp,dou)
+COEFFS - playerwise model coeffs
+PICKLES - playerwise compressed models
+SUMMARIES - playerwise error stats
+cv_PREDS - train/validation predictions
+test_PREDS -  test predictions after train/validation hold-out
+test_SLATE_PREDS - january hold-out predictions - predicted from january batch
+
+./raw:
+FD_RECORDS - raw jsons 
+IPslns  - code for generating integer programming solutions for fictitous gambler  variables, eventally merged in ./DATA/merged/merged.csv
+PROJ  - bbm, fc projection data, eventually merged in ./DATA/merged/merged.csv
+SPDATABASE  - sportsdatabase team/player quantities, eventually merged in ./DATA/merged/merged.csv
+TEAMS -  team fantasy environment variables, eventually merged in ./DATA/merged/merged.csv
+PLAYERS - player fantasy environment variables, eventually merged in ./DATA/merged/merged.csv
+JAN_FD_RECORDS - january targets,data
+
+./ANALYSIS:
+for figs, etc.
+unimportant for our purposes
